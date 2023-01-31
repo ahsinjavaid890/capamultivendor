@@ -1,0 +1,142 @@
+.form-detail .info-input input, .form-detail .info-input select, .form-detail .info-input textarea {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #c5c4c4;
+        padding: 15px;
+    }
+    .featured-image input {display: none;}
+#layoutSidenav_content main .col-right .shadow-block {padding: 50px 25px;}
+.featured-image {justify-content: space-between;align-items: center;}
+.featured-image label {
+    background: #01a0bd;
+    color: #fff;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.featured-image p {margin: 0;font-size: 18px;font-weight: 600;}
+.featured-image label img {margin-right: 8px;}
+.upload-content .uploaded-img img {width: 100%; margin-top: 20px;}
+.uploaded-img {position: relative;}
+.edit-trash {position: absolute; top: 10px; right: 35px;}
+.upload-content .edit-trash .black {display: none;}
+.upload-content .edit-trash .white {
+/*    border: 1px solid black;*/
+    padding: 0px;
+    margin: 4px;
+    width: 0px;
+    height: -1px;
+    cursor: pointer;
+}
+.video.upload-content .edit-trash .white{border-color: #000;}
+.featured-img.upload-content {margin-top: 0;}
+.upload-content {margin-top: 60px;}
+.modify-variants .info-input {margin-right: 40px;width: 130px;}
+.modify-variants .info-input:last-child {margin-right: 0; width: 200px;}
+.modify-variants .info-input:last-child input {height: 100px;}
+.order-tax {position: relative;}
+p.percentage {
+    position: absolute;
+    right: 0;
+    bottom: -16px;
+    background: #01a0bd;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+}
+.switch {
+  align-items: center;
+  border-radius: 1000px;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  height: 32px;
+  padding: 0 0;
+  position: relative;
+  width: 64px;
+}
+
+  .switch:hover {
+    cursor: pointer;
+  }
+
+.switch__input, .switch__label {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.switch__input {
+  height: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  pointer-events: none;
+  width: 0;
+}
+
+  .switch__input:checked + .switch__label {
+    background-color: #008ec7;
+  }
+
+  .switch__input:checked + .switch__label + .switch__marker {
+    left: 35px;
+  }
+
+.switch__label {
+  cursor: pointer;
+  background-color: hsl(240, 1%, 83%);
+  border-radius: inherit;
+  color: transparent;
+  height: 100%;
+  transition: background 0.2s;
+  user-select: none;
+  width: 100%;
+  z-index: 1;
+}
+
+.switch__marker {
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.25);
+  left: 3px;
+  transition: left 0.2s;
+  will-change: left;
+}
+.product-design .next.btn {width: auto;}
+.product-design .next.btn a{ margin-top: 0px; width: 320px;}
+.product-design .back.btn a{ margin-top: 0px; width: 320px;}
+.next.btn {width: 100%;}
+.next.btn a {
+    background: #01a0bd;
+    color: #fff;
+    padding: 14px;
+    display: inline-block;
+    width: 250px;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: unset;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+.next.btn a:hover {background: #363f44;}
+.back.btn a {
+    background: #ECE7E7;
+    color: #000;
+    padding: 14px;
+    display: inline-block;
+    width: 250px;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: unset;
+    border-radius: 5px;
+    margin-top: 40px;
+}
