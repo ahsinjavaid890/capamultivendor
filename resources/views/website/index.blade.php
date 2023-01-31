@@ -12,8 +12,8 @@
                     @foreach($banners->where('type' , 'homepagemain') as $banner)
                     <img class="swiper-slide bg-img d-flex" src="{{asset('uploads/'.$banner->banner)}}">
                     @endforeach
-                    <!-- <img class="swiper-slide bg-img d-flex" src="{{asset('website/assets/images/slider-image/sample-2.jpg')}}">
-                    <img class="swiper-slide bg-img d-flex" src="{{asset('website/assets/images/slider-image/sample-2.jpg')}}"> -->
+                    <!-- <img class="swiper-slide bg-img d-flex" src="{{asset('public/website/assets/images/slider-image/sample-2.jpg')}}">
+                    <img class="swiper-slide bg-img d-flex" src="{{asset('public/website/assets/images/slider-image/sample-2.jpg')}}"> -->
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination swiper-pagination-white"></div>
@@ -28,19 +28,19 @@
                                 <!-- Left Side start -->
                                 <div class="banner-tab nav">
                                     <a href="#tab-1" data-bs-toggle="tab" class="active">
-                                        <img src="{{asset('website/assets/images/icons/b-tab-icon-1.png')}}">
+                                        <img src="{{asset('public/website/assets/images/icons/b-tab-icon-1.png')}}">
                                         <p class="text-center">Buy</p>
                                     </a>
                                     <a class="" href="#tab-2" data-bs-toggle="tab">
-                                        <img src="{{asset('website/assets/images/icons/b-tab-icon-2.png')}}">
+                                        <img src="{{asset('public/website/assets/images/icons/b-tab-icon-2.png')}}">
                                         <p class="text-center">Sell</p>
                                     </a>
                                     <a class="" href="#tab-3" data-bs-toggle="tab">
-                                        <img src="{{asset('website/assets/images/icons/b-tab-icon-3.png')}}">
+                                        <img src="{{asset('public/website/assets/images/icons/b-tab-icon-3.png')}}">
                                         <p class="text-center">Rent</p>
                                     </a>
                                     <a class="" href="#tab-4" data-bs-toggle="tab">
-                                        <img src="{{asset('website/assets/images/icons/b-tab-icon-4.png')}}">
+                                        <img src="{{asset('public/website/assets/images/icons/b-tab-icon-4.png')}}">
                                         <p class="text-center">Design Own Products</p>
                                     </a>
                                 </div>
@@ -125,7 +125,7 @@
                                     <div class="card-body text-center">
                                         <div class="category-img">
                                         @if($getcat->icon==null)
-                                            <img src="{{asset('website/assets/images/icons/speakers.svg')}}" alt="{{$getcat->category_name}}" />
+                                            <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$getcat->category_name}}" />
                                             @else
                                             <img src="{{asset('products/'.$getcat->icon)}}" alt="{{$getcat->category_name}}" />
                                         @endif
@@ -162,8 +162,8 @@
                                 <div class="img-content">
                                     <h1>{{$seller->shop_name}}</h1>
 
-                                    <h4><img src="{{ asset('website/assets/images/icons/map-pin.png') }}" class="map-pin">{{$seller->shop_address}}</h4>
-                                    <h4><img src="{{ asset('website/assets/images/icons/phone.png') }}" class="phone">{{$seller->shop_phone}}</h4>
+                                    <h4><img src="{{ asset('public/website/assets/images/icons/map-pin.png') }}" class="map-pin">{{$seller->shop_address}}</h4>
+                                    <h4><img src="{{ asset('public/website/assets/images/icons/phone.png') }}" class="phone">{{$seller->shop_phone}}</h4>
                                 </div>
                                 <div class="cate-footer-area">
                                     <div class="visit-store"><a href="{{url('vendor')}}/{{ $seller->shop_url }}">Visit Store<i class="ion-ios-arrow-thin-right"></i></a></div>
@@ -289,17 +289,17 @@
                 <div class="row">
                     <div class="col-md-4 col-xs-12">
                         <div class="banner-wrapper">
-                            <a href="shop-4-column.html"><img src="{{asset('website/assets/images/banner-image/1.jpg')}}" alt="" /></a>
+                            <a href="shop-4-column.html"><img src="{{asset('public/website/assets/images/banner-image/1.jpg')}}" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-xs-12">
                         <div class="banner-wrapper">
-                            <a href="shop-4-column.html"><img src="{{asset('website/assets/images/banner-image/2.jpg')}}" alt="" /></a>
+                            <a href="shop-4-column.html"><img src="{{asset('public/website/assets/images/banner-image/2.jpg')}}" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-xs-12">
                         <div class="banner-wrapper">
-                            <a href="shop-4-column.html"><img src="{{asset('website/assets/images/banner-image/3.jpg')}}" alt="" /></a>
+                            <a href="shop-4-column.html"><img src="{{asset('public/website/assets/images/banner-image/3.jpg')}}" alt="" /></a>
                         </div>
                     </div>
                 </div>
@@ -345,7 +345,7 @@
                         <!-- Static Single Item Start -->
                         <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mb-md-30px mb-lm-30px">
                             <div class="single-static">
-                                <img src="{{asset('website/assets/images/icons/static-icons-1.png')}}" alt="" class="img-responsive" />
+                                <img src="{{asset('public/website/assets/images/icons/static-icons-1.png')}}" alt="" class="img-responsive" />
                                 <div class="single-static-meta">
                                     <h4>Free Shipping</h4>
                                 </div>
@@ -355,7 +355,7 @@
                         <!-- Static Single Item Start -->
                         <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mb-md-30px mb-lm-30px">
                             <div class="single-static">
-                                <img src="{{asset('website/assets/images/icons/static-icons-2.png')}}" alt="" class="img-responsive" />
+                                <img src="{{asset('public/website/assets/images/icons/static-icons-2.png')}}" alt="" class="img-responsive" />
                                 <div class="single-static-meta">
                                     <h4>Online Support</h4>
                                 </div>
@@ -365,7 +365,7 @@
                         <!-- Static Single Item Start -->
                         <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mb-sm-30px">
                             <div class="single-static">
-                                <img src="{{asset('website/assets/images/icons/static-icons-4.png')}}" alt="" class="img-responsive" />
+                                <img src="{{asset('public/website/assets/images/icons/static-icons-4.png')}}" alt="" class="img-responsive" />
                                 <div class="single-static-meta">
                                     <h4>Money-back Gurantee</h4>
                                 </div>
@@ -375,7 +375,7 @@
                         <!-- Static Single Item Start -->
                         <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
                             <div class="single-static">
-                                <img src="{{asset('website/assets/images/icons/static-icons-3.png')}}" alt="" class="img-responsive" />
+                                <img src="{{asset('public/website/assets/images/icons/static-icons-3.png')}}" alt="" class="img-responsive" />
                                 <div class="single-static-meta">
                                     <h4>Members Discount</h4>
                                 </div>
@@ -398,7 +398,7 @@
             <section class="testimonial">
                 <div class="row">
                     <div class="col-md-4">
-                      <img class="img-responsive w-100" src="{{asset('website/assets/images/testimonial-image/photo2.png')}}" alt="description of image" alt="description of image">
+                      <img class="img-responsive w-100" src="{{asset('public/website/assets/images/testimonial-image/photo2.png')}}" alt="description of image" alt="description of image">
                     </div>
                     <div class="col-md-8"><p class="pt-3 pe-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p><div class="author">Lesslie John</div></div>
                 </div>
@@ -408,7 +408,7 @@
             <section class="testimonial">
                 <div class="row">
                     <div class="col-md-4">
-                      <img class="img-responsive w-100" src="{{asset('website/assets/images/testimonial-image/photo1.png')}}" alt="description of image" alt="description of image">
+                      <img class="img-responsive w-100" src="{{asset('public/website/assets/images/testimonial-image/photo1.png')}}" alt="description of image" alt="description of image">
                     </div>
                     <div class="col-md-8"><p class="pt-3 pe-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p><div class="author">Lesslie John</div></div>
                 </div>
@@ -418,7 +418,7 @@
             <section class="testimonial">
                 <div class="row">
                     <div class="col-md-4">
-                      <img class="img-responsive w-100" src="{{asset('website/assets/images/testimonial-image/photo22.png')}}" alt="description of image" alt="description of image">
+                      <img class="img-responsive w-100" src="{{asset('public/website/assets/images/testimonial-image/photo22.png')}}" alt="description of image" alt="description of image">
                     </div>
                     <div class="col-md-8"><p class="pt-3 pe-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p><div class="author">Lesslie John</div></div>
                 </div>
@@ -428,7 +428,7 @@
             <section class="testimonial">
                 <div class="row">
                     <div class="col-md-4">
-                      <img class="img-responsive w-100" src="{{asset('website/assets/images/testimonial-image/photo11.png')}}" alt="description of image" alt="description of image">
+                      <img class="img-responsive w-100" src="{{asset('public/website/assets/images/testimonial-image/photo11.png')}}" alt="description of image" alt="description of image">
                     </div>
                     <div class="col-md-8"><p class="pt-3 pe-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p><div class="author">Lesslie John</div></div>
                 </div>
@@ -443,25 +443,25 @@
         <div class="brand-slider slider-nav-style-1 slider-nav-style-2 ">
             <div class="brand-slider-wrapper swiper-wrapper">
                 <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('website/assets/images/brand-logo/1.jpg')}}" alt="" /></a>
+                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/1.jpg')}}" alt="" /></a>
                 </div>
                 <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('website/assets/images/brand-logo/2.jpg')}}" alt="" /></a>
+                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/2.jpg')}}" alt="" /></a>
                 </div>
                 <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('website/assets/images/brand-logo/3.jpg')}}" alt="" /></a>
+                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/3.jpg')}}" alt="" /></a>
                 </div>
                 <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('website/assets/images/brand-logo/4.jpg')}}" alt="" /></a>
+                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/4.jpg')}}" alt="" /></a>
                 </div>
                 <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('website/assets/images/brand-logo/5.jpg')}}" alt="" /></a>
+                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/5.jpg')}}" alt="" /></a>
                 </div>
                 <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('website/assets/images/brand-logo/1.jpg')}}" alt="" /></a>
+                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/1.jpg')}}" alt="" /></a>
                 </div>
                 <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('website/assets/images/brand-logo/2.jpg')}}" alt="" /></a>
+                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/2.jpg')}}" alt="" /></a>
                 </div>
             </div>
             <!-- Add Arrows -->
@@ -496,32 +496,32 @@
                       <div class="swiper-container gallery-top">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/11.jpg')}}" alt="">
+                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/11.jpg')}}" alt="">
                               </div>
                               <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/12.jpg')}}" alt="">
+                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/12.jpg')}}" alt="">
                               </div>
                               <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/13.jpg')}}" alt="">
+                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/13.jpg')}}" alt="">
                               </div>
                               <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/14.jpg')}}" alt="">
+                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/14.jpg')}}" alt="">
                               </div>
                             </div>
                       </div>
                       <div class="swiper-container gallery-thumbs">
                         <div class="swiper-wrapper">
                               <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/11.jpg')}}" alt="">
+                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/11.jpg')}}" alt="">
                               </div>
                               <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/12.jpg')}}" alt="">
+                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/12.jpg')}}" alt="">
                               </div>
                               <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/13.jpg')}}" alt="">
+                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/13.jpg')}}" alt="">
                               </div>
                               <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/14.jpg')}}" alt="">
+                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/14.jpg')}}" alt="">
                               </div>
                             </div>
                       </div>

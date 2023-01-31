@@ -11,13 +11,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
+                <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('public/website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
             </div>
             <div class="col-md-6">
                 <div class="helpful-links">
                     <span><a href="javascript:void(0)">Need help?</a></span>
-                    <span><a href="javascript:void(0)"><img src="{{asset('website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
-                    <span><a href="javascript:void(0)"><img src="{{asset('website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
+                    <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
+                    <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
                 </div>
             </div>
         </div>
@@ -32,15 +32,15 @@
             <div class="container">
                 <div class="checkout-tab nav">
                     <a href="javascript:void(0)">
-                        <img src="{{asset('website/assets/images/icons/free-delivery.svg')}}">
+                        <img src="{{asset('public/website/assets/images/icons/free-delivery.svg')}}">
                         <span>Shipping Address</span>
                     </a>
                     <a class="active" href="javascript:void(0)">
-                        <img src="{{asset('website/assets/images/icons/credit-card.svg')}}">
+                        <img src="{{asset('public/website/assets/images/icons/credit-card.svg')}}">
                         <span>Payment Information</span>
                     </a>
                     <a href="javascript:void(0)">
-                        <img src="{{asset('website/assets/images/icons/thumbs-up-hand-symbol.svg')}}">
+                        <img src="{{asset('public/website/assets/images/icons/thumbs-up-hand-symbol.svg')}}">
                         <span>Thank You</span>
                     </a>
                 </div>
@@ -154,7 +154,7 @@
                                         </div>
                                     </div>
                                     <div class="payment-method mt-25">
-                                        <img src="{{asset('website/assets/images/icons/LO.svg')}}"/>
+                                        <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
                                     </div>
                                 </div>
                             </div>
@@ -175,6 +175,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script type="text/javascript" src="{{ asset('website/assets/js/checkout.js') }}"></script>
+<script type="text/javascript" src="{{ asset('public/website/assets/js/checkout.js') }}"></script>
 
 @endpush

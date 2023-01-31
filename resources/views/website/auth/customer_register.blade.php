@@ -6,7 +6,7 @@
 <!-- Slider Start -->
 <div class="slider-area slider-height-1">
     <!-- Single Slider  -->
-    <div class="swiper-slide bg-img d-flex" style="background-image: url({{asset('website/assets/images/slider-image/sample-2.jpg')}});">
+    <div class="swiper-slide bg-img d-flex" style="background-image: url({{asset('public/website/assets/images/slider-image/sample-2.jpg')}});">
     </div>
 </div>
 <!-- Slider End -->
@@ -21,10 +21,10 @@
     @include('website.layouts.flash')
     <div class="row">
         <div class="col-lg-6 text-center">
-             <a href="{{ url('auth/google') }}" class="submit btn sign-up-with" type="submit"><img src="{{asset('website/assets/images/icons/google.png')}}"/>Sign Up with Google</a>
+             <a href="{{ url('auth/google') }}" class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/google.png')}}"/>Sign Up with Google</a>
         </div>
         <div class="col-lg-6 text-center">
-            <a class="submit btn sign-up-with" type="submit"><img src="{{asset('website/assets/images/icons/facebook.png')}}"/>Sign Up with Facebook</a>
+            <a class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/facebook.png')}}"/>Sign Up with Facebook</a>
         </div>
     </div>
     <div class="title mb-30">

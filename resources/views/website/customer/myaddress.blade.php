@@ -1,6 +1,6 @@
 @extends('website.layouts.master')
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ asset('website/assets/css/customerdashboard.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/website/assets/css/customerdashboard.css') }}">
 
 <main class="main bg-grey min-height-600">
     <div class="page-content pt-2">

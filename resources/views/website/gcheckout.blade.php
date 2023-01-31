@@ -5,13 +5,13 @@
         <div class="container">
             <div class="row">
                     <div class="col-md-6">
-                        <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
+                        <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('public/website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
                     </div>
                     <div class="col-md-6">
                         <div class="helpful-links">
                             <span><a href="javascript:void(0)">Need help?</a></span>
-                            <span><a href="javascript:void(0)"><img src="{{asset('website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
-                            <span><a href="javascript:void(0)"><img src="{{asset('website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
+                            <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
+                            <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
                         </div>
                     </div>
                 </div>
@@ -27,15 +27,15 @@
                                 <div class="container">
                                 <div class="checkout-tab nav">
                                     <a href="#shipping-address" data-bs-toggle="tab" class="active">
-                                        <img src="{{asset('website/assets/images/icons/free-delivery.svg')}}">
+                                        <img src="{{asset('public/website/assets/images/icons/free-delivery.svg')}}">
                                         <span>Shipping Address</span>
                                     </a>
                                     <!-- <a class="" href="#payment-information" data-bs-toggle="tab" id="paymentopt">
-                                        <img src="{{asset('website/assets/images/icons/credit-card.svg')}}">
+                                        <img src="{{asset('public/website/assets/images/icons/credit-card.svg')}}">
                                         <span>Payment Information</span>
                                     </a>
                                     <a class="" href="#thank-you" data-bs-toggle="tab">
-                                        <img src="{{asset('website/assets/images/icons/thumbs-up-hand-symbol.svg')}}">
+                                        <img src="{{asset('public/website/assets/images/icons/thumbs-up-hand-symbol.svg')}}">
                                         <span>Thank You</span>
                                     </a> -->
                                 </div>
@@ -122,7 +122,7 @@
                                                                     <h5>OR</h5>
                                                                     <label>Pick Your Location Through Google Map</label>
                                                                     <input type="text" id="personal_companyadd" />
-                                                                    <img src="{{asset('website/assets/images/icons/location-pin.svg')}}"/>
+                                                                    <img src="{{asset('public/website/assets/images/icons/location-pin.svg')}}"/>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-12 billing-select">
@@ -240,7 +240,7 @@
                         -->
                                                         </div>
                                                         <div class="payment-method mt-25">
-                                                            <img src="{{asset('website/assets/images/icons/LO.svg')}}"/>
+                                                            <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
                                                         </div>
                                                     </div>
                                                 </div>

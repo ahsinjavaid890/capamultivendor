@@ -5,13 +5,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
+                        <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('public/website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
                     </div>
                     <div class="col-md-6">
                         <div class="helpful-links">
                             <span><a href="javascript:void(0)">Need help?</a></span>
-                            <span><a href="javascript:void(0)"><img src="{{asset('website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
-                            <span><a href="javascript:void(0)"><img src="{{asset('website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
+                            <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
+                            <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
                         </div>
                     </div>
                 </div>
@@ -26,15 +26,15 @@
                         <div class="container">
                             <div class="checkout-tab nav">
                                 <a  href="javascript:void(0)">
-                                    <img src="{{asset('website/assets/images/icons/free-delivery.svg')}}">
+                                    <img src="{{asset('public/website/assets/images/icons/free-delivery.svg')}}">
                                     <span>Shipping Address</span>
                                 </a>
                                 <a href="javascript:void(0)">
-                                    <img src="{{asset('website/assets/images/icons/credit-card.svg')}}">
+                                    <img src="{{asset('public/website/assets/images/icons/credit-card.svg')}}">
                                     <span>Payment Information</span>
                                 </a>
                                 <a class="active" href="javascript:void(0)">
-                                    <img src="{{asset('website/assets/images/icons/thumbs-up-hand-symbol.svg')}}">
+                                    <img src="{{asset('public/website/assets/images/icons/thumbs-up-hand-symbol.svg')}}">
                                     <span>Thank You</span>
                                 </a>
                             </div>
@@ -47,7 +47,7 @@
                                 <div class="checkout-area mt-60px mb-40px">
                                     <div class="container order-successfully-placed">
                                         <div class="thank-you-title content-box text-center">
-                                            <img src="{{asset('website/assets/images/icons/check.png')}}" class="check">
+                                            <img src="{{asset('public/website/assets/images/icons/check.png')}}" class="check">
                                             <h1>Thank You</h1>
                                             <h3>For shopping At Oben!</h3>
                                         </div>
@@ -81,7 +81,7 @@
                                             <div class="main row first">
 
                                                 <div class="head-text" style="background:#f1f0f0"><h4>
-                                                        <img src="{{asset('website/assets/images/icons/outline-email.png')}}">
+                                                        <img src="{{asset('public/website/assets/images/icons/outline-email.png')}}">
                                                         An email confirmation has been sent to {{$email}}</h4>
                                                 </div>
                                                 <div class="inner-content-box d-flex">
@@ -129,7 +129,7 @@
                                                     <div class="col-lg-4 left-col">
                                                         <div class="next-step content-box">
                                                             <div class="img-box">
-                                                                <img src="{{asset('website/assets/images/icons/shopping-bag.png')}}">
+                                                                <img src="{{asset('public/website/assets/images/icons/shopping-bag.png')}}">
 
                                                             </div>
                                                             <h5>1- Order Placed</h5>
@@ -139,7 +139,7 @@
                                                     <div class="col-lg-4 center-col">
                                                         <div class="not-complete line-bar next-step content-box">
                                                             <div class="img-box">
-                                                                <img src="{{asset('website/assets/images/icons/shipping-truck.png')}}">
+                                                                <img src="{{asset('public/website/assets/images/icons/shipping-truck.png')}}">
                                                             </div>
                                                             <h5>2 - Order Shipped</h5>
                                                             <!-- <p>You will recieve an SMS with an estimated time of arrival as your order leaves the warehouse.</p> -->
@@ -148,7 +148,7 @@
                                                     <div class="col-lg-4 right-col">
                                                         <div class="not-complete line-bar next-step content-box">
                                                             <div class="img-box">
-                                                                <img src="{{asset('website/assets/images/icons/home.png')}}">
+                                                                <img src="{{asset('public/website/assets/images/icons/home.png')}}">
                                                             </div>
                                                             <h5>3- Order Arrived</h5>
                                                             <p>Your shipment with you by 7th October.</p>

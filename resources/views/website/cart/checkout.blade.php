@@ -5,13 +5,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
+                        <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('public/website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
                     </div>
                     <div class="col-md-6">
                         <div class="helpful-links">
                             <span><a href="javascript:void(0)">Need help?</a></span>
-                            <span><a href="javascript:void(0)"><img src="{{asset('website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
-                            <span><a href="javascript:void(0)"><img src="{{asset('website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
+                            <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
+                            <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
                         </div>
                     </div>
                 </div>
@@ -26,15 +26,15 @@
                         <div class="container">
                             <div class="checkout-tab nav">
                                 <a class="active">
-                                    <img src="{{asset('website/assets/images/icons/free-delivery.svg')}}">
+                                    <img src="{{asset('public/website/assets/images/icons/free-delivery.svg')}}">
                                     <span>Shipping Address</span>
                                 </a>
                                 <a href="javascript:void(0)">
-                                    <img src="{{asset('website/assets/images/icons/credit-card.svg')}}">
+                                    <img src="{{asset('public/website/assets/images/icons/credit-card.svg')}}">
                                     <span>Payment Information</span>
                                 </a>
                                 <a href="javascript:void(0)">
-                                    <img src="{{asset('website/assets/images/icons/thumbs-up-hand-symbol.svg')}}">
+                                    <img src="{{asset('public/website/assets/images/icons/thumbs-up-hand-symbol.svg')}}">
                                     <span>Thank You</span>
                                 </a>
                             </div>
@@ -135,7 +135,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="payment-method mt-25">
-                                                        <img src="{{asset('website/assets/images/icons/LO.svg')}}"/>
+                                                        <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -159,7 +159,7 @@
                                                                 <a href="#credit-card" data-bs-toggle="tab">
                                                         <span>
 {{--                                                            <img src="assets/images/icons/">--}}
-                                                            <img src="{{asset('website/assets/images/icons/green-credit-card.png')}}">
+                                                            <img src="{{asset('public/website/assets/images/icons/green-credit-card.png')}}">
                                                             Credit Card</span>
                                                                 </a>
                                                                 <a href="#paypal" data-bs-toggle="tab" class="active">
@@ -193,7 +193,7 @@
                                                                                         </div>
                                                                                         <div class="payment-method">
                                                                                             {{--                                                                                <img src="assets/images/icons/LO.svg"/>--}}
-                                                                                            <img src="{{asset('website/assets/images/icons/LO.svg')}}">
+                                                                                            <img src="{{asset('public/website/assets/images/icons/LO.svg')}}">
 
                                                                                         </div>
                                                                                     </div>
@@ -241,16 +241,16 @@
                                                                                 <div class="col-md-5">
                                                                                     <div class="credit-card-area">
                                                                                         {{--                                                                            <img src="assets/images/icons/payment-card.png">--}}
-                                                                                        <img src="{{asset('website/assets/images/icons/payment-card.png')}}">
+                                                                                        <img src="{{asset('public/website/assets/images/icons/payment-card.png')}}">
                                                                                     </div>
                                                                                     <div class="secure-info">
                                                                                         {{--                                                                            <img src="assets/images/icons/secure-sheild.png">--}}
-                                                                                        <img src="{{asset('website/assets/images/icons/secure-sheild.png')}}">
+                                                                                        <img src="{{asset('public/website/assets/images/icons/secure-sheild.png')}}">
                                                                                         <p><span>100% Secure data encrytion</span>We guarantee security of every transaction</p>
                                                                                     </div>
                                                                                     <div class="secure-info">
                                                                                         {{--                                                                            <img src="assets/images/icons/outline-thumb.png">--}}
-                                                                                        <img src="{{asset('website/assets/images/icons/outline-thumb.png')}}">
+                                                                                        <img src="{{asset('public/website/assets/images/icons/outline-thumb.png')}}">
                                                                                         <p><span>Buy with confidence!</span>Free easy returns up to 30 days. <a href="#">Learn more</a></p>
                                                                                     </div>
                                                                                 </div>
@@ -315,12 +315,12 @@
                                                                 <ul>
 
                                                                     <li>{{--                                                        <img src="assets/images/product-image/1.jpg"/>--}}
-                                                                        <img src="{{asset('website/assets/images/product-image/1.jpg')}}" >
+                                                                        <img src="{{asset('public/website/assets/images/product-image/1.jpg')}}" >
                                                                         <span class="order-middle-left">Large Fairy Light -10 X 10 Feet - Green Color - With Multi Function Box</span><span class="order-price">AED 529.00</span>
                                                                     </li>
                                                                     <li>
                                                                         {{--                                                        <img src="assets/images/product-image/17.jpg"/>--}}
-                                                                        <img src="{{asset('website/assets/images/product-image/17.jpg')}}" >
+                                                                        <img src="{{asset('public/website/assets/images/product-image/17.jpg')}}" >
                                                                         <span class="order-middle-left">Large Fairy Light -10 X 10 Feet - Green Color - With Multi Function Box</span> <span class="order-price">AED 529.00</span>
                                                                     </li>
                                                                 </ul>
@@ -347,7 +347,7 @@
                                     <div class="container order-successfully-placed">
                                         <div class="thank-you-title content-box text-center">
                                             {{--                                <img src="assets/images/icons/check.png" class="check">--}}
-                                            <img src="{{asset('website/assets/images/icons/check.png')}}" class="check">
+                                            <img src="{{asset('public/website/assets/images/icons/check.png')}}" class="check">
                                             <h1>Thank You</h1>
                                             <h3>For shopping At Oben!</h3>
                                         </div>
@@ -355,7 +355,7 @@
                                             <div class="main row first">
 
                                                 <div class="head-text" style="background:#f1f0f0"><h4>
-                                                        <img src="{{asset('website/assets/images/icons/outline-email.png')}}">
+                                                        <img src="{{asset('public/website/assets/images/icons/outline-email.png')}}">
                                                         {{--                                            <img src="assets/images/icons/outline-email.png">--}}
                                                         An email confirmation has been sent to abc@gmail.com</h4></div>
                                                 <div class="inner-content-box d-flex">
@@ -404,7 +404,7 @@
                                                         <div class="next-step content-box">
                                                             <div class="img-box">
                                                                 {{--                                                    <img src="assets/images/icons/shopping-bag.png"/>--}}
-                                                                <img src="{{asset('website/assets/images/icons/shopping-bag.png')}}">
+                                                                <img src="{{asset('public/website/assets/images/icons/shopping-bag.png')}}">
 
                                                             </div>
                                                             <h5>1- Order Placed</h5>
@@ -415,7 +415,7 @@
                                                         <div class="complete line-bar next-step content-box">
                                                             <div class="img-box">
                                                                 {{--                                                    <img src="assets/images/icons/shipping-truck.png"/>--}}
-                                                                <img src="{{asset('website/assets/images/icons/shipping-truck.png')}}">
+                                                                <img src="{{asset('public/website/assets/images/icons/shipping-truck.png')}}">
                                                             </div>
                                                             <h5>2 - Order Shipped</h5>
                                                             <p>You will recieve an SMS with an estimated time of arrival as your order leaves the warehouse.</p>
@@ -425,7 +425,7 @@
                                                         <div class="not-complete line-bar next-step content-box">
                                                             <div class="img-box">
                                                                 {{--                                                    <img src="assets/images/icons/home.png"/>--}}
-                                                                <img src="{{asset('website/assets/images/icons/home.png')}}">
+                                                                <img src="{{asset('public/website/assets/images/icons/home.png')}}">
 
                                                             </div>
                                                             <h5>3- Order Arrived</h5>

@@ -24,8 +24,8 @@
                             </div>
                         </div>
                         <div class="product-show-style">
-                            <a href="#"><img src="{{asset('website/assets/images/icons/grid.png')}}" class="grid"></a>
-                            <a href="#"><img src="{{asset('website/assets/images/icons/list.png')}}" class="list"></a>
+                            <a href="#"><img src="{{asset('public/website/assets/images/icons/grid.png')}}" class="grid"></a>
+                            <a href="#"><img src="{{asset('public/website/assets/images/icons/list.png')}}" class="list"></a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                         <div class="card-body text-center">
                             <div class="category-img">
                             @if($getcat->icon==null)
-                                <img src="{{asset('website/assets/images/icons/speakers.svg')}}" alt="{{$getcat->category_name}}" />
+                                <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$getcat->category_name}}" />
                                 @else
                                 <img src="{{asset('products/'.$getcat->icon)}}" alt="{{$getcat->category_name}}" />
                             @endif

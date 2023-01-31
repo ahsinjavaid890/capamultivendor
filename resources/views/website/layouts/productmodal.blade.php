@@ -11,32 +11,32 @@
                           <div class="swiper-container gallery-top">
                                 <div class="swiper-wrapper">
                                   <div class="swiper-slide"> 
-                                        <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/11.jpg')}}" alt="">
+                                        <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/11.jpg')}}" alt="">
                                   </div>
                                   <div class="swiper-slide"> 
-                                        <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/12.jpg')}}" alt="">
+                                        <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/12.jpg')}}" alt="">
                                   </div>
                                   <div class="swiper-slide"> 
-                                        <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/13.jpg')}}" alt="">
+                                        <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/13.jpg')}}" alt="">
                                   </div>
                                   <div class="swiper-slide"> 
-                                        <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/14.jpg')}}" alt="">
+                                        <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/14.jpg')}}" alt="">
                                   </div>
                                 </div>
                           </div>
                           <div class="swiper-container gallery-thumbs">
                             <div class="swiper-wrapper">
                                   <div class="swiper-slide"> 
-                                        <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/11.jpg')}}" alt="">
+                                        <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/11.jpg')}}" alt="">
                                   </div>
                                   <div class="swiper-slide"> 
-                                        <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/12.jpg')}}" alt="">
+                                        <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/12.jpg')}}" alt="">
                                   </div>
                                   <div class="swiper-slide"> 
-                                        <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/13.jpg')}}" alt="">
+                                        <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/13.jpg')}}" alt="">
                                   </div>
                                   <div class="swiper-slide"> 
-                                        <img class="img-responsive m-auto" src="{{asset('website/assets/images/product-image/14.jpg')}}" alt="">
+                                        <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/14.jpg')}}" alt="">
                                   </div>
                                 </div>
                           </div>

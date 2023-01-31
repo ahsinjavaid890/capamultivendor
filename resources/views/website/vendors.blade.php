@@ -16,8 +16,8 @@
                         <div class="img-content">
                             <h1>{{$seller->shop_name}}</h1>
 
-                            <h4><img src="{{ asset('website/assets/images/icons/map-pin.png') }}" class="map-pin">{{$seller->shop_address}}</h4>
-                            <h4><img src="{{ asset('website/assets/images/icons/phone.png') }}" class="phone">{{$seller->shop_phone}}</h4>
+                            <h4><img src="{{ asset('public/website/assets/images/icons/map-pin.png') }}" class="map-pin">{{$seller->shop_address}}</h4>
+                            <h4><img src="{{ asset('public/website/assets/images/icons/phone.png') }}" class="phone">{{$seller->shop_phone}}</h4>
                         </div>
                         <div class="cate-footer-area">
                             <div class="visit-store"><a href="{{url('vendor')}}/{{ $seller->shop_url }}">Visit Store<i class="ion-ios-arrow-thin-right"></i></a></div>

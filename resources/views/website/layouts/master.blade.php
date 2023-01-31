@@ -9,7 +9,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{asset('website/assets/images/favicon/favicon.png')}}" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/website/assets/images/favicon/favicon.png')}}" />
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&display=swap" rel="stylesheet" />
 
@@ -28,9 +28,9 @@
         <link rel="stylesheet" href="assets/css/plugins/swiper.css">  -->
 
         <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-        <link rel="stylesheet" href="{{asset('website/assets/css/vendor/vendor.min.css')}}" />
-        <link rel="stylesheet" href="{{asset('website/assets/css/plugins/plugins.min.css')}}" />
-        <link rel="stylesheet" href="{{asset('website/assets/css/style.min.css')}}">
+        <link rel="stylesheet" href="{{asset('public/website/assets/css/vendor/vendor.min.css')}}" />
+        <link rel="stylesheet" href="{{asset('public/website/assets/css/plugins/plugins.min.css')}}" />
+        <link rel="stylesheet" href="{{asset('public/website/assets/css/style.min.css')}}">
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.css" rel="stylesheet" />
@@ -69,15 +69,15 @@
         <script src="assets/js/plugins/elevateZoom.js"></script> -->
 
         <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-        <script src="{{asset('website/assets/js/vendor/vendor.min.js')}}"></script>
-        <script src="{{asset('website/assets/js/plugins/plugins.min.js')}}"></script>
+        <script src="{{asset('public/website/assets/js/vendor/vendor.min.js')}}"></script>
+        <script src="{{asset('public/website/assets/js/plugins/plugins.min.js')}}"></script>
         
         <!-- Main Activation JS -->
 
-        <script src="{{asset('website/assets/js/main.js')}}"></script>
+        <script src="{{asset('public/website/assets/js/main.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/js/toastr.js"></script>
-        <script src="{{asset('website/assets/js/custom.js')}}"></script>
+        <script src="{{asset('public/website/assets/js/custom.js')}}"></script>
         <script>
         $(document).ready(function() {
             toastr.options.timeOut = 10000; 

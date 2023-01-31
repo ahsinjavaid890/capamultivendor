@@ -24,7 +24,7 @@
             <input type="hidden" name="prod_id" value="{{$r->id}}"/>
         </form>
         <span class="wishlist" onclick="addproductinwishlist({{$r->id}})">
-            <img src="{{asset('website/assets/images/icons/like.svg')}}"/>
+            <img src="{{asset('public/website/assets/images/icons/like.svg')}}"/>
         </span>
         @else
 
@@ -33,13 +33,13 @@
             <input type="hidden" name="prod_id" value="{{$r->id}}"/>
         </form>
         <span title="Click To Remove Wishlist" class="wishlist" onclick="removeproductinwishlist({{$r->id}})">
-            <img style="width: 25px;height: 25px" src="{{asset('website/assets/images/icons/liked.svg')}}"/>
+            <img style="width: 25px;height: 25px" src="{{asset('public/website/assets/images/icons/liked.svg')}}"/>
         </span>
 
         @endif
         @else
         <a href="{{ url('customer-login') }}">
-            <span class="wishlist"><img src="{{asset('website/assets/images/icons/like.svg')}}"/></span>
+            <span class="wishlist"><img src="{{asset('public/website/assets/images/icons/like.svg')}}"/></span>
         </a>
         @endif
         <div class="product-decs text-center">

@@ -36,19 +36,19 @@
                   <a href="#event-details" data-bs-toggle="tab" @if(!isset($data)) class="active"  @endif>
                      <span>Event Details</span>
                      <div id="basictab" class="event-icon">
-                        <img src="{{asset('website/assets/images/icons/event-poster-with-white-details.png')}}">
+                        <img src="{{asset('public/website/assets/images/icons/event-poster-with-white-details.png')}}">
                      </div>
                   </a>
                   <a  href="#choose-products" data-bs-toggle="tab">
                      <span>Choose Required Products</span>
                      <div id="choseproducts" class="event-icon">
-                        <img src="{{ asset('website/assets/images/icons/categories.png')}}">
+                        <img src="{{ asset('public/website/assets/images/icons/categories.png')}}">
                      </div>
                   </a>
                   <a href="#recommended-products" data-bs-toggle="tab" @if(isset($data)) class="active"  @endif>
                      <span>Recommended Products</span>
                      <div class="event-icon">
-                        <img src="{{ asset('website/assets/images/icons/new-product.png')}}">
+                        <img src="{{ asset('public/website/assets/images/icons/new-product.png')}}">
                      </div>
                   </a>
                </div>
@@ -83,14 +83,14 @@
                                     <div class="info-input mb-20px">
                                        <label>Event Location</label>
                                        <input type="text" name="google_location" id="personal_companyadd" />
-                                       <div class="map-pin icon"><a href="#"><img src="{{ asset('website/assets/images/icons/location-pin.svg')}}"></a></div>
+                                       <div class="map-pin icon"><a href="#"><img src="{{ asset('public/website/assets/images/icons/location-pin.svg')}}"></a></div>
                                     </div>
                                  </div>
                                  <div class="col-md-12">
                                     <div class="info-input mb-20px">
                                        <label>Event Date</label>
                                        <input type="date" placeholder="Choose event date from calendar or enter manually" class="form-control">
-                                       <!--  <div class="map-pin icon"><a href="#"><img src="{{ asset('website/assets/images/icons/calendar.png')}}"></a></div> -->
+                                       <!--  <div class="map-pin icon"><a href="#"><img src="{{ asset('public/website/assets/images/icons/calendar.png')}}"></a></div> -->
                                     </div>
                                  </div>
                                  <div class="col-md-12">

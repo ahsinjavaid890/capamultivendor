@@ -7,7 +7,7 @@
         <!-- Slider Start -->
         <div class="slider-area slider-height-1">
             <!-- Single Slider  -->
-            <div class="swiper-slide bg-img d-flex" style="background-image: url({{asset('website/assets/images/slider-image/sample-2.jpg')}});">
+            <div class="swiper-slide bg-img d-flex" style="background-image: url({{asset('public/website/assets/images/slider-image/sample-2.jpg')}});">
             </div>
         </div>
         <!-- Slider End -->
@@ -26,10 +26,10 @@
 		<div class="customer form">
             <div class="row">
                 <div class="col-lg-6 text-center">
-                     <a href="{{ url('auth/google') }}" class="submit btn sign-up-with" type="submit"><img src="{{asset('website/assets/images/icons/google.png')}}"/>Google Login</a>
+                     <a href="{{ url('auth/google') }}" class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/google.png')}}"/>Google Login</a>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <a class="submit btn sign-up-with" type="submit"><img src="{{asset('website/assets/images/icons/facebook.png')}}"/>Facebook Login</a>
+                    <a class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/facebook.png')}}"/>Facebook Login</a>
                 </div>
             </div>
             @include('website.layouts.flash')
@@ -67,13 +67,13 @@
                         <p class="hv-account">Don't have any account ?<a href="{{route('website.register')}}">Sign Up</a></p>
                     </div>
                     <!-- <div class="col-lg-4 text-center">
-                        <button class="submit btn sign-up-with" type="submit"><img src="{{asset('website/assets/images/icons/google.png')}}"/>Sign Up with Google</button>
+                        <button class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/google.png')}}"/>Sign Up with Google</button>
                     </div>
                     <div class="col-lg-4 text-center">
-                        <button class="submit btn sign-up-with" type="submit"><img src="{{asset('website/assets/images/icons/facebook.png')}}"/>Sign Up with Facebook</button>
+                        <button class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/facebook.png')}}"/>Sign Up with Facebook</button>
                     </div>
                     <div class="col-lg-4 text-center">
-                        <button class="submit btn sign-up-with" type="submit"><img src="{{asset('website/assets/images/icons/twitter.png')}}"/>Sign Up with Twitter</button>
+                        <button class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/twitter.png')}}"/>Sign Up with Twitter</button>
                     </div> -->
                 </div>
             </form>

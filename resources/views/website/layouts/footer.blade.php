@@ -2,7 +2,7 @@
         <!-- Footer Area Start -->
         <div class="footer">
            <!--  <div class="footer-logo">
-                <div class="container"><a href="index.html"><img class="img-responsive" src="{{asset('website/assets/images/oben-01__logo.png')}}" alt="logo.jpg" /></a></div>
+                <div class="container"><a href="index.html"><img class="img-responsive" src="{{asset('public/website/assets/images/oben-01__logo.png')}}" alt="logo.jpg" /></a></div>
             </div> -->
             
             <div class="footer-area">

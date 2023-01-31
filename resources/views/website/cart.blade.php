@@ -80,8 +80,8 @@
 
                                                     </a>
                                                     <div class="wishlish-or-remove">
-                                                        <a href="javascript:void(0)"><img src="{{asset('website/assets/images/icons/like.svg')}}"/>Move to Wishlist</a>
-                                                        <a href="javascript:void(0)" onclick="removecartpage({{$r['id']}})"><img src="{{asset('website/assets/images/icons/trash.svg')}}"/>Remove</a>
+                                                        <a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/like.svg')}}"/>Move to Wishlist</a>
+                                                        <a href="javascript:void(0)" onclick="removecartpage({{$r['id']}})"><img src="{{asset('public/website/assets/images/icons/trash.svg')}}"/>Remove</a>
                                                     </div>
 
                                                 </td>
@@ -102,7 +102,7 @@
 {{--                                                    </span>--}}
                                                 </div>
                                                 </td>
-{{--                                                <td><a href="javascript:void(0)" class="removeprod"  onclick="removecartpage({{$r['id']}})"><img src="{{asset('website/assets/images/icons/trash.svg')}}"/>Remove</a></td>--}}
+{{--                                                <td><a href="javascript:void(0)" class="removeprod"  onclick="removecartpage({{$r['id']}})"><img src="{{asset('public/website/assets/images/icons/trash.svg')}}"/>Remove</a></td>--}}
                                             </tr>
                                             @php
                                                 $subtotal += $r['price']*$r['quantity'];
@@ -120,7 +120,7 @@
                             <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <img src="{{asset('website/assets/images/icons/coupon.svg')}}"/>Apply Coupon
+                            <img src="{{asset('public/website/assets/images/icons/coupon.svg')}}"/>Apply Coupon
                             </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -132,7 +132,7 @@
                             <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <img src="{{asset('website/assets/images/icons/gift-box.svg')}}"/>Add Your Gift Note
+                            <img src="{{asset('public/website/assets/images/icons/gift-box.svg')}}"/>Add Your Gift Note
                             </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -144,7 +144,7 @@
                             <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            <img src="{{asset('website/assets/images/icons/reward.svg')}}"/>Rewards- Earn & Redeem
+                            <img src="{{asset('public/website/assets/images/icons/reward.svg')}}"/>Rewards- Earn & Redeem
                             </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -156,7 +156,7 @@
                             <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            <img src="{{asset('website/assets/images/icons/calendar.svg')}}"/>Want to pay in 0% installments? Learn more
+                            <img src="{{asset('public/website/assets/images/icons/calendar.svg')}}"/>Want to pay in 0% installments? Learn more
                             </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
@@ -176,7 +176,7 @@
                         <div class="secure-checkout"><a href="{{route('website.checkoutpage')}}">Secure Checkout</a></div>
                         </div>
                         <div class="payment-method mt-25">
-                          <img src="{{asset('website/assets/images/icons/LO.svg')}}"/>
+                          <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
                         </div>
 
                         </div>
@@ -208,7 +208,7 @@
                             </div>
                         </div>
                         <ul class="product-flag"><li class="new">-5%</li></ul>
-                        <span class="wishlist"><img src="{{asset('website/assets/images/icons/like.svg')}}"/></span>
+                        <span class="wishlist"><img src="{{asset('public/website/assets/images/icons/like.svg')}}"/></span>
                         <div class="product-decs text-center">
                             <a class="inner-link" href="shop-4-column.html"><span>Outdoor Fan</span></a>
                             <div class="pricing-meta">
@@ -247,7 +247,7 @@
                             </div>
                         </div>
                         <ul class="product-flag"><li class="new">-5%</li></ul>
-                        <span class="wishlist"><img src="{{asset('website/assets/images/icons/like.svg')}}"/></span>
+                        <span class="wishlist"><img src="{{asset('public/website/assets/images/icons/like.svg')}}"/></span>
                         <div class="product-decs text-center">
                             <a class="inner-link" href="shop-4-column.html"><span>Outdoor Fan</span></a>
                             <div class="pricing-meta">
@@ -286,7 +286,7 @@
                             </div>
                         </div>
                         <ul class="product-flag"><li class="new">-5%</li></ul>
-                        <span class="wishlist"><img src="{{asset('website/assets/images/icons/like.svg')}}"/></span>
+                        <span class="wishlist"><img src="{{asset('public/website/assets/images/icons/like.svg')}}"/></span>
                         <div class="product-decs text-center">
                             <a class="inner-link" href="shop-4-column.html"><span>Outdoor Fan</span></a>
                             <div class="pricing-meta">
@@ -325,7 +325,7 @@
                             </div>
                         </div>
                         <ul class="product-flag"><li class="new">-5%</li></ul>
-                        <span class="wishlist"><img src="{{asset('website/assets/images/icons/like.svg')}}"/></span>
+                        <span class="wishlist"><img src="{{asset('public/website/assets/images/icons/like.svg')}}"/></span>
                         <div class="product-decs text-center">
                             <a class="inner-link" href="shop-4-column.html"><span>Outdoor Fan</span></a>
                             <div class="pricing-meta">

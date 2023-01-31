@@ -70,7 +70,7 @@
             <h5>OR</h5>
             <label>Pick Your Location Through Google Map</label>
             <input type="text" name="google_location" id="personal_companyadd" />
-            <img src="{{asset('website/assets/images/icons/location-pin.svg')}}"/>
+            <img src="{{asset('public/website/assets/images/icons/location-pin.svg')}}"/>
         </div>
     </div>
 

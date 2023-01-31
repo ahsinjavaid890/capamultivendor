@@ -14,28 +14,28 @@
         <div class="row">
             <div class="col-lg-3 col-sm-12">
                 <div class="single-detail">
-                <div class="img-box"><img src="{{ asset('website/assets/images/icons/green-envelope.png')}}" class="email"></div>
+                <div class="img-box"><img src="{{ asset('public/website/assets/images/icons/green-envelope.png')}}" class="email"></div>
                 <h3>E-mail Address</h3>
                 <p>mail@example.com</p>
                 </div>    
             </div>
             <div class="col-lg-3 col-sm-12">
                 <div class="single-detail">
-                <div class="img-box"><img src="{{ asset('website/assets/images/icons/green-telefone.png')}}" class="phone"></div>
+                <div class="img-box"><img src="{{ asset('public/website/assets/images/icons/green-telefone.png')}}" class="phone"></div>
                 <h3>Phone Number</h3>
                 <p>123-456-7890</p>
                 </div>    
             </div>
             <div class="col-lg-3 col-sm-12">
                 <div class="single-detail">
-                <div class="img-box"><img src="{{ asset('website/assets/images/icons/green-map-pin.png')}}" class="map-pin"></div>
+                <div class="img-box"><img src="{{ asset('public/website/assets/images/icons/green-map-pin.png')}}" class="map-pin"></div>
                 <h3>Address</h3>
                 <p>Lawrance,12345 Dubai</p>
                 </div>    
             </div>
             <div class="col-lg-3 col-sm-12">
                 <div class="single-detail">
-                <div class="img-box"><img src="{{ asset('website/assets/images/icons/green-fax.png')}}" class="fax"></div>
+                <div class="img-box"><img src="{{ asset('public/website/assets/images/icons/green-fax.png')}}" class="fax"></div>
                 <h3>Fax</h3>
                 <p>1-800-570-777</p>
                 </div>    

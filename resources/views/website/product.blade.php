@@ -52,14 +52,14 @@
                     <div class="shop-bottom-area mt-35">
                       
                        <!-- <div class="shop-banner>">
-                            <img src="{{asset('website/assets/images/banner-image/shop-banner.png')}}" alt=" " class="w-100 mb-4">
+                            <img src="{{asset('public/website/assets/images/banner-image/shop-banner.png')}}" alt=" " class="w-100 mb-4">
                         </div> -->
                         <!-- <div class="shop-categories">
                             <div class="row">
                                 <div class="col-2">
                                     <a href="#" class="product-link">
                                         <div class="cat-image">
-                                            <img src="{{asset('website/assets/images/product-image/chair.png')}}">
+                                            <img src="{{asset('public/website/assets/images/product-image/chair.png')}}">
                                         </div>
                                         <div class="cat-title text-center">Chairs</div>
                                     </a>
@@ -67,7 +67,7 @@
                                 <div class="col-2">
                                     <a href="#" class="product-link">
                                        <div class="cat-image">
-                                            <img src="{{asset('website/assets/images/product-image/ce.png')}}">
+                                            <img src="{{asset('public/website/assets/images/product-image/ce.png')}}">
                                         </div>
                                         <div class="cat-title text-center">Lights</div>
                                     </a>
@@ -75,7 +75,7 @@
                                 <div class="col-2">
                                     <a href="#" class="product-link">
                                       <div class="cat-image">
-                                            <img src="{{asset('website/assets/images/product-image/faa.png')}}">
+                                            <img src="{{asset('public/website/assets/images/product-image/faa.png')}}">
                                         </div>
                                         <div class="cat-title text-center">Fans</div>
                                     </a>   
@@ -83,7 +83,7 @@
                                 <div class="col-2">
                                     <a href="#" class="product-link">
                                        <div class="cat-image">
-                                            <img src="{{asset('website/assets/images/product-image/lights2.png')}}">
+                                            <img src="{{asset('public/website/assets/images/product-image/lights2.png')}}">
                                         </div>
                                         <div class="cat-title text-center">Lights</div>
                                     </a>
@@ -91,7 +91,7 @@
                                 <div class="col-2">
                                      <a href="#" class="product-link">
                                       <div class="cat-image">
-                                            <img src="{{asset('website/assets/images/product-image/gg.png')}}">
+                                            <img src="{{asset('public/website/assets/images/product-image/gg.png')}}">
                                         </div>
                                         <div class="cat-title text-center">Generators</div>
                                     </a>
@@ -99,7 +99,7 @@
                                 <div class="col-2">
                                     <a href="#" class="product-link">
                                         <div class="cat-image">
-                                            <img src="{{asset('website/assets/images/product-image/tent.png')}}">
+                                            <img src="{{asset('public/website/assets/images/product-image/tent.png')}}">
                                         </div>
                                         <div class="cat-title text-center">Tents</div>
                                     </a>
@@ -168,7 +168,7 @@
                                                         </div>
                                                     </div>
                                                     <ul class="product-flag"><li class="new">-5%</li></ul>
-                                                    <span class="wishlist"><img src="{{asset('website/assets/images/icons/like.svg')}}"/></span>
+                                                    <span class="wishlist"><img src="{{asset('public/website/assets/images/icons/like.svg')}}"/></span>
                                                     <div class="product-decs text-center">
                                                         <a class="inner-link" href="{{route('website.productDetails',[encrypt($product->id)])}}"><span>{{$product->product_title}}</span></a>
                                                         <div class="pricing-meta">

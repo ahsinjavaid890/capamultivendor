@@ -10,7 +10,7 @@
                             <div class="dropdown">
                                 <button type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false"><img
-                                        src="{{asset('website/assets/images/flag/dubai.svg')}}" alt="" />Currency :
+                                        src="{{asset('public/website/assets/images/flag/dubai.svg')}}" alt="" />Currency :
                                     AED<i class="ion-ios-arrow-down"></i></button>
 
                                 <ul class="dropdown-menu animation slideDownIn" aria-labelledby="dropdownMenuButton-2">
@@ -21,12 +21,12 @@
                         </li>
                         @if(Auth::guard('cust')->check())
                         <li><a href="{{route('website.wishlist')}}"><img
-                                    src="{{ asset('website/assets/images/icons/heart.svg')}}" alt=""> Wishlist</a></li>
+                                    src="{{ asset('public/website/assets/images/icons/heart.svg')}}" alt=""> Wishlist</a></li>
                         <li>
                             <div class="dropdown">
                                 <button type="button" id="dropdownMenuButton-2" data-bs-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false"><img
-                                        src="{{asset('website/assets/images/icons/user.svg')}}" alt="" />My Account<i
+                                        src="{{asset('public/website/assets/images/icons/user.svg')}}" alt="" />My Account<i
                                         class="ion-ios-arrow-down"></i></button>
 
                                 <ul class="dropdown-menu animation slideDownIn" aria-labelledby="dropdownMenuButton">
@@ -37,10 +37,10 @@
                         </li>
                         @endif
                         <li><a href="{{route('seller.register')}}"><img
-                                    src="{{asset('website/assets/images/icons/shop.svg')}}" alt="" /> Become A
+                                    src="{{asset('public/website/assets/images/icons/shop.svg')}}" alt="" /> Become A
                                 Vendor</a></li>
                         <li><a href="{{route('website.trackorder')}}"><img
-                                    src="{{asset('website/assets/images/icons/order.svg')}}" alt="" /> Track Your
+                                    src="{{asset('public/website/assets/images/icons/order.svg')}}" alt="" /> Track Your
                                 Order</a></li>
 
                         <!--                            <li class="pr-0 language">
@@ -71,7 +71,7 @@
                 <div class="col-md-2">
                     <div class="logo">
                         <a href="{{route('website.index')}}"><img class="img-responsive"
-                                src="{{asset('website/assets/images/logo1.svg')}}" alt="logo.jpg" /></a>
+                                src="{{asset('public/website/assets/images/logo1.svg')}}" alt="logo.jpg" /></a>
                     </div>
                 </div>
                 <div class="col-md-10 align-self-center">
@@ -93,7 +93,7 @@
                         @if(Auth::guard('cust')->check())
                         <div class="reg-sign-btn">
                             <div class="register"><img
-                                    src="{{asset('website/assets/images/icons/select-arrow.svg')}}" /><span><a
+                                    src="{{asset('public/website/assets/images/icons/select-arrow.svg')}}" /><span><a
                                         href="{{route('website.logout')}}" onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();"
                                         role="button">Logout</a></span>
@@ -106,7 +106,7 @@
                         @else
                         <div class="reg-sign-btn">
                             <div class="register" id="hedrSgnup"><img
-                                    src="{{asset('website/assets/images/icons/select-arrow.svg')}}" /><span><a
+                                    src="{{asset('public/website/assets/images/icons/select-arrow.svg')}}" /><span><a
                                         href="{{route('website.register')}}">Register</a> | <a
                                         href="{{route('website.login')}}">Sign in</a></span>
 
@@ -118,7 +118,7 @@
                             <div class="cart-info d-flex align-self-center">
                                 <a onclick="showcart()" href="#offcanvas-cart" class="bag offcanvas-toggle cartnumber"
                                     data-number="{{ count((array) session('cart')) }}" id="headercarticon"><img
-                                        src="{{asset('website/assets/images/icons/cart.svg')}}" /></a>
+                                        src="{{asset('public/website/assets/images/icons/cart.svg')}}" /></a>
                             </div>
                         </div>
                     </div>
