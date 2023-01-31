@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123" height="122" viewBox="0 0 123 122">
+  <g id="Group_2163" data-name="Group 2163" transform="translate(0.383 -0.498)">
+    <ellipse id="Ellipse_16" data-name="Ellipse 16" cx="61.5" cy="61" rx="61.5" ry="61" transform="translate(-0.383 0.498)" fill="#fff"/>
+    <g id="tent" transform="translate(21.358 39.429)">
+      <g id="Group_623" data-name="Group 623" transform="translate(0 0)">
+        <g id="Group_622" data-name="Group 622" transform="translate(0)">
+          <path id="Path_157" data-name="Path 157" d="M24.593,114.674v-4.648a1.343,1.343,0,0,0-2.687,0v5.736c-.833,2.324-8.88,24.652-18.056,33.021L2.615,145.25a1.345,1.345,0,1,0-2.539.887l1.867,5.374a1.21,1.21,0,0,0,.081.148,1.269,1.269,0,0,0,.121.215,1.2,1.2,0,0,0,.228.161l.134.134a1.252,1.252,0,0,0,.215.107l.161.081a1.342,1.342,0,0,0,.416,0H32.64a1.052,1.052,0,0,1-.094-.161l-.793-2.526-1.236-3.936a1.077,1.077,0,1,1,2.055-.645l1.437,4.581.107.336.336-.336c7.886-7.51,14.039-22.529,17.464-32.363q.47-1.37.887-2.633Z" transform="translate(0 -108.682)" fill="#009fbd"/>
+        </g>
+      </g>
+      <g id="Group_625" data-name="Group 625" transform="translate(34.655 7.577)">
+        <g id="Group_624" data-name="Group 624">
+          <path id="Path_158" data-name="Path 158" d="M226.279,153.8l-.363,1.1c-3.2,9.364-9.028,23.926-16.766,32.35a29.567,29.567,0,0,1-2.781,2.687h20.017Z" transform="translate(-206.37 -153.802)" fill="#009fbd"/>
+        </g>
+      </g>
+      <g id="Group_627" data-name="Group 627" transform="translate(57.238 7.348)">
+        <g id="Group_626" data-name="Group 626" transform="translate(0 0)">
+          <path id="Path_159" data-name="Path 159" d="M363.21,180.36a1.322,1.322,0,0,0-.153-.083,1.343,1.343,0,0,0-1.811.573l0,0-2.257,4.339c-10.747-11.432-17.115-29.716-18.136-32.753v7.738l.081,25.941v2.687h18.4a1.412,1.412,0,0,0,.363,0h.134l.215-.107.121-.094.161-.148.094-.134.094-.121,3.117-5.992A1.343,1.343,0,0,0,363.21,180.36Z" transform="translate(-340.85 -152.442)" fill="#009fbd"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
