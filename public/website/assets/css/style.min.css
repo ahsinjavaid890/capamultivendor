@@ -70,8 +70,8 @@ p {
 }
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
 	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 50px;
+	padding-left: 50px;
 	margin-right: auto;
 	margin-left: auto
 }
@@ -448,7 +448,7 @@ transform:translateY(20px)
 	font-size: 14px;
 	border-bottom: 1px solid #ebebeb;
 	color: #ffffff;
-    background: #000;
+    background: #6C4646;
 }
 .header-nav li {
     padding: 0 20px;
@@ -3131,7 +3131,7 @@ offcanvas-menu>ul>li .menu-expand {
     border-radius: 10px;
     height: 60px;
     line-height: 60px;
-    padding: 20px 20px 20px 200px;
+    padding: 20px 20px 20px 20px;
 }
 @media only screen and (max-width:575px) {
 .search-element input {

@@ -8,102 +8,13 @@
         <div class="slider-area slider-height-1">
             <div class="hero-slider swiper-container">
                 <div class="swiper-wrapper">
-                    <!-- Single Slider  -->
                     @foreach($banners->where('type' , 'homepagemain') as $banner)
                     <img class="swiper-slide bg-img d-flex" src="{{asset('public/uploads/'.$banner->banner)}}">
                     @endforeach
-                    <!-- <img class="swiper-slide bg-img d-flex" src="{{asset('public/website/assets/images/slider-image/sample-2.jpg')}}">
-                    <img class="swiper-slide bg-img d-flex" src="{{asset('public/website/assets/images/slider-image/sample-2.jpg')}}"> -->
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination swiper-pagination-white"></div>
             </div>
-            <div id="banner-tabs">
-                     <div class="container">
-                        <div class="row">
-                    
-                          <div class="banner-tab-block order-md-first">
-                            <!-- Shop Top Area Start -->
-                            <div class="banner-tab-top-bar">
-                                <!-- Left Side start -->
-                                <div class="banner-tab nav">
-                                    <a href="#tab-1" data-bs-toggle="tab" class="active">
-                                        <img src="{{asset('public/website/assets/images/icons/b-tab-icon-1.png')}}">
-                                        <p class="text-center">Buy</p>
-                                    </a>
-                                    <a class="" href="#tab-2" data-bs-toggle="tab">
-                                        <img src="{{asset('public/website/assets/images/icons/b-tab-icon-2.png')}}">
-                                        <p class="text-center">Sell</p>
-                                    </a>
-                                    <a class="" href="#tab-3" data-bs-toggle="tab">
-                                        <img src="{{asset('public/website/assets/images/icons/b-tab-icon-3.png')}}">
-                                        <p class="text-center">Rent</p>
-                                    </a>
-                                    <a class="" href="#tab-4" data-bs-toggle="tab">
-                                        <img src="{{asset('public/website/assets/images/icons/b-tab-icon-4.png')}}">
-                                        <p class="text-center">Design Own Products</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Banner Tabs Top Area End -->
-
-                            <!-- Banner Tabs Bottom Area Start -->
-                            <div class="tab-bottom-area mt-35">
-                                <!-- Banner Tabs Content Start -->
-                                <div class="tab-content jump">
-                                    <!-- Tab One Start -->
-                                    <div id="tab-1" class="tab-pane active">
-                                        <div class="row responsive-md-class responsive-xl-class responsive-lg-class">
-                                            <h2>Make your Events More Elegant with our Products!</h2>
-                                            <hr>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                            <a class="btn buy-now" href="#">Buy Now</a>
-                                        </div>
-                                    </div>
-                                    <!-- Tab One End -->
-                                    
-                                    <!-- Tab Two Start -->
-                                    <div id="tab-2" class="tab-pane">
-                                        <div class="shop-list-wrap shop-list-page mb-30px scroll-zoom">
-                                            <h2>Sell Products</h2>
-                                            <hr>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                            <a class="btn buy-now" href="#">Sell Now</a>
-                                        </div>
-                                    </div>
-                                    <!-- Tab Two End -->
-                                    
-                                    <!-- Tab Three Start -->
-                                    <div id="tab-3" class="tab-pane">
-                                        <div class="shop-list-wrap shop-list-page mb-30px scroll-zoom">
-                                            <h2>Rent Products</h2>
-                                            <hr>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                            <a class="btn buy-now" href="#">Rent Now</a>
-                                        </div>
-                                    </div>
-                                    <!-- Tab Three End -->
-                                    
-                                    <!-- Tab Four Start -->
-                                    <div id="tab-4" class="tab-pane">
-                                        <div class="shop-list-wrap shop-list-page mb-30px scroll-zoom">
-                                            <h2>Design own Products</h2>
-                                            <hr>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                            <a class="btn buy-now" href="#">Buy Now</a>
-                                        </div>
-                                    </div>
-                                    <!-- Tab Four End -->
-                                </div>
-                                <!-- Banner Tabs Content End -->
-                            </div>
-                            <!-- Banner Tabs Bottom Area End -->
-                        </div>
-                        
-                        
-                        </div>
-                    </div>
-                    </div>
         </div>
         <!-- Slider End -->
 
