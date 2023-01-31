@@ -10,7 +10,7 @@
                 <div class="swiper-wrapper">
                     <!-- Single Slider  -->
                     @foreach($banners->where('type' , 'homepagemain') as $banner)
-                    <img class="swiper-slide bg-img d-flex" src="{{asset('uploads/'.$banner->banner)}}">
+                    <img class="swiper-slide bg-img d-flex" src="{{asset('public/uploads/'.$banner->banner)}}">
                     @endforeach
                     <!-- <img class="swiper-slide bg-img d-flex" src="{{asset('public/website/assets/images/slider-image/sample-2.jpg')}}">
                     <img class="swiper-slide bg-img d-flex" src="{{asset('public/website/assets/images/slider-image/sample-2.jpg')}}"> -->
@@ -127,7 +127,7 @@
                                         @if($getcat->icon==null)
                                             <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$getcat->category_name}}" />
                                             @else
-                                            <img src="{{asset('products/'.$getcat->icon)}}" alt="{{$getcat->category_name}}" />
+                                            <img src="{{asset('public/products/'.$getcat->icon)}}" alt="{{$getcat->category_name}}" />
                                         @endif
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@
                                     <div class="visit-store"><a href="{{url('vendor')}}/{{ $seller->shop_url }}">Visit Store<i class="ion-ios-arrow-thin-right"></i></a></div>
                                     <div class="client-profile">
                                         @if($seller->shop_logo)
-                                        <img src="{{asset('images/'.$seller->shop_logo)}}">
+                                        <img src="{{asset('public/images/'.$seller->shop_logo)}}">
                                         @else
                                         <img src="https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png">
                                         @endif

@@ -2,7 +2,7 @@
     <article class="list-product">
         <div class="img-block">
             <a href="{{ url('product') }}/{{ $r->url }}" class="thumbnail">
-                <img class="first-img" src="{{asset('products/'.$r->featured_img)}}" alt="" />
+                <img class="first-img" src="{{asset('public/products/'.$r->featured_img)}}" alt="" />
             </a>
             <div class="quick-view">
                 <a onclick="quickproductview({{$r->id}})" class="quick_view" href="javascript:void(0)"  title="{{ $r->product_title }}" >
