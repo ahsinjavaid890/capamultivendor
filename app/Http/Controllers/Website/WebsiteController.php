@@ -586,7 +586,8 @@ class WebsiteController extends Controller
         ->paginate(9); 
         $vendors = $this->listVendors();
         $getcatlist = $this->listcat();
-        return view('website.category-details',compact('products','vendors','getcatlist','category_id'));
+        $category = Category::where('url' , $id)->get()->first();
+        return view('website.category-details',compact('products','vendors','getcatlist','category_id','category'));
     }
 
 

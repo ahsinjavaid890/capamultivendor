@@ -11,7 +11,7 @@
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('public/website/assets/imgs/theme/favicon.svg') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url('public/website/assets/imgs/theme/favicon.jpg') }}" />
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ url('public/website/assets/css/plugins/animate.min.css') }}" />
     <link rel="stylesheet" href="{{ url('public/website/assets/css/main.css?v=5.6') }}" />
@@ -24,8 +24,6 @@
 
 <body class="event-plan">
     @include('website.layouts.header')
-    @include('website.layouts.mobileheader')
-    @include('website.layouts.cart_search')
     @yield('content')
     @include('website.layouts.footer')
     @include('website.layouts.loader')
