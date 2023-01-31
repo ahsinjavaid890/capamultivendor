@@ -2,18 +2,20 @@
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
+    <title>Nest - Multipurpose eCommerce HTML Template</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Cake Uncle</title>
-    <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url('public/website/assets/imgs/theme/favicon.svg') }}" />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{{ url('public/website/assets/css/plugins/animate.min.css') }}" />
+    <link rel="stylesheet" href="{{ url('public/website/assets/css/main.css?v=5.6') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/website/assets/images/favicon/favicon.png')}}" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{asset('public/website/assets/css/vendor/vendor.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('public/website/assets/css/plugins/plugins.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('public/website/assets/css/style.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/website/assets/css/flaticon.css')}}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.css" rel="stylesheet" />
     <input type="hidden" id="app_url" value="{{ url('') }}" name="">
@@ -27,12 +29,28 @@
     @yield('content')
     @include('website.layouts.footer')
     @include('website.layouts.loader')
-    <script src="{{asset('public/website/assets/js/vendor/vendor.min.js')}}"></script>
-    <script src="{{asset('public/website/assets/js/plugins/plugins.min.js')}}"></script>
-    <script src="{{asset('public/website/assets/js/main.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/js/toastr.js"></script>
-    <script src="{{asset('public/website/assets/js/custom.js')}}"></script>
+    <script data-cfasync="false " src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js "></script><script src="{{ url('public/website/assets/js/vendor/modernizr-3.6.0.min.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/vendor/jquery-3.6.0.min.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/vendor/jquery-migrate-3.3.0.min.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/vendor/bootstrap.bundle.min.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/slick.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/jquery.syotimer.min.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/waypoints.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/wow.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/perfect-scrollbar.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/magnific-popup.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/select2.min.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/counterup.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/jquery.countdown.min.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/images-loaded.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/isotope.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/scrollup.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/jquery.vticker-min.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/jquery.theia.sticky.js') }} "></script>
+    <script src="{{ url('public/website/assets/js/plugins/jquery.elevatezoom.js') }} "></script>
+    <!-- Template  JS -->
+    <script src="{{ url('public/website/assets/js/main.js?v=5.6') }} "></script>
+    <script src="{{ url('public/website/assets/js/shop.js?v=5.6') }} "></script>
     <script>
         $(document).ready(function() {
             toastr.options.timeOut = 10000; 
