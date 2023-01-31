@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-xl-5 col-lg-5 col-md-5">
                             <div class="product-details-img product-details-tab">
-                                <img class="img-thumbnail" src="{{asset('uploads/'.$designRequests->product_img )}}">
+                                <img class="img-thumbnail" src="{{asset('public/uploads/'.$designRequests->product_img )}}">
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-7 col-md-7">

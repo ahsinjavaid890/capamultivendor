@@ -173,7 +173,7 @@
                                         <div class="info-input mb-20px">
                                             <label>Address <span style="color:red">*</span></label>
                                             <input type="text" class="form-control" placeholder="" value="{{$vendors->contact_address}}">
-                                            <div class="map-pin icon"><img src="{{asset('seller/assets/img/location-pin.svg')}}"></div>
+                                            <div class="map-pin icon"><img src="{{asset('public/seller/assets/img/location-pin.svg')}}"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -250,7 +250,7 @@
                                         </div>
                                         <div class="col-md-4 cmp_logo">
                                         <div class="info-input upload">
-                                            <img src="{{asset('uploads/'.$vendors->company_logo)}}" style="width:50px;"/>
+                                            <img src="{{asset('public/uploads/'.$vendors->company_logo)}}" style="width:50px;"/>
                                           <label class="control-label mb-2">Upload Company Logo <span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle form-control" placeholder="IMG-1.png" value="{{$vendors->company_logo}}"> 
                                          <button class="btn">View</button>
@@ -258,7 +258,7 @@
                                         </div>
                                         <div class="col-md-4 cmp_logo">
                                         <div class="info-input upload">
-                                        <img src="{{asset('uploads/'.$vendors->trade_license_img)}}" style="width:50px;"/>
+                                        <img src="{{asset('public/uploads/'.$vendors->trade_license_img)}}" style="width:50px;"/>
                                           <label class="control-label mb-2">Upload Trade license <span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle form-control" placeholder="IMG-1.png" value="{{$vendors->trade_license_img}}"> 
                                          <button class="btn">View</button>
@@ -266,7 +266,7 @@
                                         </div>
                                         <div class="col-md-4 cmp_logo">
                                         <div class="info-input upload">
-                                        <img src="{{asset('uploads/'.$vendors->passport_img)}}" style="width:50px;"/>
+                                        <img src="{{asset('public/uploads/'.$vendors->passport_img)}}" style="width:50px;"/>
                                           <label class="control-label mb-2">Upload Passport <span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle form-control" placeholder="IMG-1.png" value="{{$vendors->passport_img}}"> 
                                          <button class="btn">View</button>
@@ -275,7 +275,7 @@
                                         @elseif($vendors->registered_as=="Freelancer")
                                         <div class="col-md-4 ">
                                         <div class="info-input upload">
-                                        <img src="{{asset('uploads/'.$vendors->passport_img)}}" style="width:100px;"/>
+                                        <img src="{{asset('public/uploads/'.$vendors->passport_img)}}" style="width:100px;"/>
                                           <label class="control-label mb-2">Passport <span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle form-control" placeholder="IMG-1.png" value="{{$vendors->passport_img}}"> 
                                          <button class="btn">View</button>
@@ -283,7 +283,7 @@
                                         </div>
                                         <div class="col-md-4 ">
                                         <div class="info-input upload">
-                                        <img src="{{asset('uploads/'.$vendors->emirates_id_img)}}" style="width:100px;"/>
+                                        <img src="{{asset('public/uploads/'.$vendors->emirates_id_img)}}" style="width:100px;"/>
                                           <label class="control-label mb-2">Emirates Id <span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle form-control" placeholder="IMG-1.png" value="{{$vendors->emirates_id_img}}"> 
                                          <button class="btn">View</button>

@@ -41,7 +41,7 @@
 
                               @foreach($cat as $category)
                                 <tr>
-                                	<td><img src="{{asset('products/'.$category->icon)}}" width="120" /></td>
+                                	<td><img src="{{asset('public/products/'.$category->icon)}}" width="120" /></td>
                                     <td>{{$category->category_name}}</td>
                                     
                                     <td>

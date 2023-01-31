@@ -144,13 +144,13 @@
                                   <div class="featured-image d-flex">
                                      <p>Main Image<span class="link-danger">*</span></p>
                                      <input class="form-control" type="file" id="featured_img" onchange="previewFile()" name="featured_img">
-                                     <label for="featured_img"><img src="{{asset('seller/assets/img/upload.svg')}}"/>Upload</label> 
+                                     <label for="featured_img"><img src="{{asset('public/seller/assets/img/upload.svg')}}"/>Upload</label> 
                                   </div>
 
                                   <div class="uploaded-img">
                                      <img style="width:120px;height: 120px;" class="featured_prev_img img-thumbnail" />
                                      <div class="edit-trash d-flex">
-                                        <img class="white featured_img_delete" onclick="removeFeatured()" src="{{asset('seller/assets/img/white-trash.svg')}}" style="display:none"/>
+                                        <img class="white featured_img_delete" onclick="removeFeatured()" src="{{asset('public/seller/assets/img/white-trash.svg')}}" style="display:none"/>
                                      </div>
                                   </div>
                                </div>
@@ -463,7 +463,7 @@ $(function() {
                 var reader = new FileReader();
 
                 reader.onload = function(event) {
-                    $("div.previe_multiple_image").append('<div class="col-md-3 prev_mul_img"> <div class="uploaded-img"> <img style="width:120px;height:120px;" class="img-thumbnail" src="'+event.target.result+'"/> <div class="edit-trash d-flex"> <img class="white remove_prod_mul_img" src="{{asset("seller/assets/img/white-trash.svg")}}"/> </div></div></div>').show();
+                    $("div.previe_multiple_image").append('<div class="col-md-3 prev_mul_img"> <div class="uploaded-img"> <img style="width:120px;height:120px;" class="img-thumbnail" src="'+event.target.result+'"/> <div class="edit-trash d-flex"> <img class="white remove_prod_mul_img" src="{{asset("public/seller/assets/img/white-trash.svg")}}"/> </div></div></div>').show();
                    
                 }
 

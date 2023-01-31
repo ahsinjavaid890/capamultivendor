@@ -32,7 +32,7 @@
                         <tbody id="catlist">
                             @foreach($banners as $banner)
                                 <tr>
-                                    <td><img src="{{asset('uploads/'.$banner->banner)}}" style="width:200px"/></td>
+                                    <td><img src="{{asset('public/uploads/'.$banner->banner)}}" style="width:200px"/></td>
                                     <td>{{ $banner->type }}</td>
                                     <td>{{ $banner->url }}</td>
                                     <td>

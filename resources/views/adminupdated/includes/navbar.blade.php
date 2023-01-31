@@ -2,7 +2,7 @@
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
         <!--begin::Logo-->
         <a href="{{url('/dashboard')}}">
-            <img alt="Logo" src="{{asset('public/carrier/assets/media/custom/rtr-logo.png')}}" />
+            <img alt="Logo" src="{{asset('public/public/carrier/assets/media/custom/rtr-logo.png')}}" />
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->

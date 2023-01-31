@@ -52,7 +52,7 @@
                                   @foreach($product_list as $product)
                                   <tr>
                                      <td><input type="checkbox" id="makecheckbox" class="makecheckbox" value="{{$product->id}}"/></td>
-                                     <td><img class="img-thumbnail" src="{{asset('products/'.$product->featured_img)}}" style="width:100px;height: 100px;"/></td>
+                                     <td><img class="img-thumbnail" src="{{asset('public/products/'.$product->featured_img)}}" style="width:100px;height: 100px;"/></td>
                                      <td>{{$product->product_title}}</td>
                                      <td>{{$product->cat_name}}</td>
                                      <td>{{$product->subcat_name}}</td>

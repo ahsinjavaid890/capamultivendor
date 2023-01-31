@@ -34,7 +34,7 @@
                         <tbody>
                              @foreach($services as $service)
                                 <tr>
-                                    <td><img src="{{asset('uploads/'.$service->image)}}" width="120" /></td>
+                                    <td><img src="{{asset('public/uploads/'.$service->image)}}" width="120" /></td>
                                     <td>{{$service->service_name}}</td>
                                     <td>{{$service->catname}}</td>
                                     <td>{{$service->subcat_name}}</td>

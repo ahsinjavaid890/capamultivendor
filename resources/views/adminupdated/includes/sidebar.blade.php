@@ -4,7 +4,7 @@ begin::Aside-->
     <div class="brand flex-column-auto" id="kt_brand">
         <!--begin::Logo-->
         <a style=" border: 1px solid white; border-radius: 10px; padding: 10px; background-color: white; " href="{{route('admin.home')}}"> 
-            <img alt="Logo" src="{{asset('seller/assets/img/oben-01__logo.png')}}" />
+            <img alt="Logo" src="{{asset('public/seller/assets/img/oben-01__logo.png')}}" />
         </a>
         <!--end::Logo-->
         <!--begin::Toggle-->
