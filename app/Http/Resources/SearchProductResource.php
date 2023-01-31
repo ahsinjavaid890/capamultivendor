@@ -17,7 +17,7 @@ class SearchProductResource extends JsonResource
         $result = [
             'name' => $this->product_title,
             'price' => number_format($this->prod_price, 2),
-            'image' => asset("products/{$this->featured_img}"),
+            'image' => asset("public/products/{$this->featured_img}"),
             'product_url' => route('website.productDetails', ['id' => $this->url])
         ];
 

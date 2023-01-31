@@ -10,7 +10,7 @@ body {
 	visibility: visible;
 	overflow-x: hidden;
 	color: #000;
-	background-color: #fff
+	background-color: #efe6dda8;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Nunito Sans", sans-serif;
@@ -342,7 +342,7 @@ transform:translateY(0)
 #scrollUp {
 	width: 50px;
 	height: 50px;
-	background-color: #009FBD;
+	background-color: #6c4646;
 	color: #fff;
 	right: 20px;
 	bottom: 60px;
@@ -3127,9 +3127,9 @@ offcanvas-menu>ul>li .menu-expand {
 }
 .search-element input {
     width: 100%;
-    border: 2px solid #009fbd;
+    border: 2px solid #63317b;
     border-radius: 10px;
-    height: 60px;
+    height: 45px;
     line-height: 60px;
     padding: 20px 20px 20px 20px;
 }
@@ -3144,14 +3144,14 @@ offcanvas-menu>ul>li .menu-expand {
     position: absolute;
     top: 0;
     right: 0;
-    height: 60px;
+    height: 45px;
     line-height: 60px;
     text-align: center;
     width: 80px;
     text-align: center;
-    color: #009fbd;
+    color: #63317b;
     border-radius: 0px 8px 8px 0;
-    border-left: 2px solid #009fbd;
+    border-left: 2px solid #63317b;
     padding: 0;
     -webkit-transition: all .3s linear;
     transition: all .3s linear;
@@ -3173,7 +3173,7 @@ offcanvas-menu>ul>li .menu-expand {
 }
 }
 .search-element button:hover {
-    background-color: #009fbd;
+    background-color: #63317b;
     color: #fff;
 }
 @media only screen and (max-width:360px) {
@@ -8109,4 +8109,172 @@ body.contact-page .static-area {margin: 0;}
 }
 .category-discript{
 	margin-top: 20px;
+}
+
+
+.footer-description{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+.footer-list ul li::before {
+    content: "\2022";
+    color: #ffffff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
+.footer-list ul li{
+    display: flex;
+}
+
+.footer-list ul li a{
+    color: white !important;
+}
+.footer-list ul li {
+    color: white !important;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+.footer-list h3 {
+    color: #1bbc9b;
+    font-size: 22px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+.footer-icon ul{
+    margin-left: -35px;
+    list-style: none;
+}
+.footer-icon .favicon{
+    border: 1px solid white;
+    border-radius: 100%;
+    padding: 10px;
+    color: white;
+}
+
+.footer{
+    background-color: #404041 !important;
+}
+.footer-list .contact-list li::before{
+    content: unset !important;
+}
+.contact-list li .nav-link{
+    display: flex;
+    padding: 0;
+}
+.contact-list li  i{
+    font-size: 20px;
+}
+.contact-list li  p{
+    padding-left: 10px;
+    font-size: 16px;
+}
+.footer-description p{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+.contact-card{
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+
+.newsletter_form2 button {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+}
+.newsletter_form2 input {
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 0;
+    height: 59px;
+}
+.newsletter_form2 {
+    position: relative;
+}
+
+.newsletter_form2 button{
+	 position: absolute;
+    right: 6px;
+    top: 6px;
+    border-radius: 30px;
+    height: 48px;
+    background-color: #6C4646;
+}
+.newsletter_text h3{
+	color: white !important;
+}
+.newsletter_text p{
+	color: white;
+}
+.sectionhomepage{
+	padding: 50px 0;
+}
+.inner-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+.box_shadow1 {
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+.icon_box_style1 {
+    padding: 0 40px;
+    position: relative;
+    text-align: center;
+}
+.icon_box_style1:before {
+    background-color: #ddd;
+    bottom: 15%;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 1px;
+}
+.icon {
+    margin-bottom: 15px;
+}
+.icon_box_content h1, .icon_box_content h2, .icon_box_content h3, .icon_box_content h4, .icon_box_content h5, .icon_box_content h6 {
+    text-transform: capitalize;
+}
+.icon_box p:last-child {
+    margin: 0;
+}
+.icon_box_style1:before {
+    background-color: #ddd;
+    bottom: 15%;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 1px;
+}
+
+.icon_box_style1 .icon i {
+    font-size: 46px;
+    line-height: 1;
+}
+.homepage-text {
+    margin-top: 20px;
+    height: 400px;
+    overflow: auto;
+    border-radius: unset;
+    text-align: justify;
+}
+
+
+.homepage-text p {
+    color: #687188;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.categoryname{
+	text-align: center;
+    background-color: white;
+    height: 40px;
+    font-size: 30px;
 }

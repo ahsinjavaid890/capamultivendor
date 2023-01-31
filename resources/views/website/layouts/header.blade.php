@@ -3,12 +3,18 @@
         <div class="container">
             <div class="header-nav-wrapper d-md-flex d-sm-flex d-xl-flex d-lg-flex justify-content-between">
                 <div class="header-static-nav">
+                    <ul class="menu-nav">
+                        <li><a href="javascript:void(0)">+91 79732-45822</a></li>
+                        <li><a href="javascript:void(0)">cakeuncle.com@gmail.com</a></li>
+                    </ul>
                 </div>
                 <div class="header-menu-nav">
                     <ul class="menu-nav">
                         @if(Auth::guard('cust')->check())
                         <li><a href="{{route('website.wishlist')}}">Wishlist</a></li>
                         <li><a href="{{route('website.customerDashboard')}}">My Account</a></li>
+                        @else
+                        <li><a href="{{route('website.login')}}">Sign in</a></li>
                         @endif
                         <li><a href="{{route('seller.register')}}">Become A Vendor</a></li>
                         <li><a href="{{route('website.trackorder')}}">Track Your Order</a></li>
@@ -26,7 +32,7 @@
                                 src="{{asset('public/website/assets/images/mainlogo.png')}}" alt="logo.jpg" /></a>
                     </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <div class="search-element media-body">
                         <form class="d-flex" action="{{route('website.searchFRM')}}" method="GET">
                             <input type="text" placeholder="Enter your search key ... " id="searchItem"
@@ -59,42 +65,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5 align-self-center">
+                <div class="col-md-1 text-center">
+                    <img style=" margin-top: 10px; height:50px;" alt="Fast Delivery | Leather Wear Clothing" src="https://leatherwearclothing.com/storage/products/leather-jackets/men/ezsthep/fast-delivery.png">
+                </div>
+                <div class="col-md-4 align-self-center">
                     <div class="header-right-element d-flex">
                         <div class="header-horizontal-menu">
                             <ul class="menu-content">
                                 <li class=""><a href="{{route('website.index')}}">Home</a></li>
-                                <li><a href="{{route('website.categoriesPage')}}">Buy</a></li>
-                                <li><a href="{{route('website.playevent')}}">Plan event</a></li>
-                                <li><a href="{{route('website.vendors')}}">Vendor</a></li>
+                                <li class=""><a href="{{route('website.index')}}">About US</a></li>
+                                <li class=""><a href="{{route('website.index')}}">Contact US</a></li>
+                                <li><a href="{{route('website.vendors')}}">All Sellers</a></li>
                             </ul>
                         </div>
-                        <!-- header horizontal menu -->
-                        @if(Auth::guard('cust')->check())
-                        <div class="reg-sign-btn">
-                            <div class="register"><img
-                                    src="{{asset('public/website/assets/images/icons/select-arrow.svg')}}" /><span><a
-                                        href="{{route('website.logout')}}" onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();"
-                                        role="button">Logout</a></span>
-
-                            </div>
-                        </div>
-                        <form id="logout-form" action="{{ route('website.logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                        @else
-                        <div class="reg-sign-btn">
-                            <div class="register" id="hedrSgnup"><img
-                                    src="{{asset('public/website/assets/images/icons/select-arrow.svg')}}" /><span><a
-                                        href="{{route('website.register')}}">Register</a> | <a
-                                        href="{{route('website.login')}}">Sign in</a></span>
-
-                            </div>
-                        </div>
-                        @endif
-                        <!--Cart info Start -->
-                        <div class="header-tools d-flex">
+                        <div style="padding-left: 30px;" class="header-tools d-flex">
                             <div class="cart-info d-flex align-self-center">
                                 <a onclick="showcart()" href="#offcanvas-cart" class="bag offcanvas-toggle cartnumber"
                                     data-number="{{ count((array) session('cart')) }}" id="headercarticon"><img
@@ -102,7 +86,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--Cart info End -->
                 </div>
             </div>
         </div>

@@ -59,7 +59,7 @@ $(function () {
                             ? ` > <a href="${product.subcategory_url}" class="text-decoration-none text-reset">Pools and Simms</a>`
                             : ""
                     }</small>
-                    <p class="mb-0 fw-bold">QAR ${product.price}</p>
+                    <p class="mb-0 fw-bold">INR ${product.price}</p>
                 </div>
             </div>
           `);

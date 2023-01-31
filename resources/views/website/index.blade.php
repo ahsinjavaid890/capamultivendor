@@ -18,38 +18,25 @@
         </div>
         <!-- Slider End -->
 
-        <!-- category Area Start -->
-        <div class="popular-categories-area pt-md-5 pb-md-5" style="background-color: #f1f5ff;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title text-center">
-                            <h2 class="section-heading">Categories</h2>
-                        </div>
+<div class="container-fluid">
+    <div class="" style="padding:10px 7px 1px">
+        <ul class="row" style="margin:0 auto 5px;">
+            @foreach($getcatlist as $getcat)
+            <li class="col-md-3">
+                <div class="categorybox">
+                    <a href="{{ url('category') }}/{{ $getcat->url }}">
+                        <img class="img-thumbnail" style="width: 100%;height: 250px;" alt="{{$getcat->category_name}}" class="responsive-img" src="{{asset('public/products/'.$getcat->icon)}}">
+                    </a>
+                    <div class="categoryname">
+                        <a href="{{ url('category') }}/{{ $getcat->url }}">{{$getcat->category_name}}</a>
                     </div>
                 </div>
-                <div class="row">
-                    @foreach($getcatlist as $getcat)
-                        <div class="col-md-2 mb-3">
-                            <a href="{{ url('category') }}/{{ $getcat->url }}" class="category-list text-center">
-                                <div class="card category-card">
-                                    <div class="card-body text-center">
-                                        <div class="category-img">
-                                        @if($getcat->icon==null)
-                                            <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$getcat->category_name}}" />
-                                            @else
-                                            <img src="{{asset('public/products/'.$getcat->icon)}}" alt="{{$getcat->category_name}}" />
-                                        @endif
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="category-discript"><span>{{$getcat->category_name}}</span></div>
-                            </a>
-                        </div>
-                    @endforeach
-                </div>           
-            </div>
-        </div>
+                
+            </li>
+            @endforeach
+        </ul>
+    </div>
+</div>
         <!-- category Area End -->
         
         <!-- Top Vendor Area start -->
@@ -192,35 +179,9 @@
                 </div>
              </div>
         </div>
-        <!-- New Arrivals Area End -->
-      
-        <!-- Banner Area Start -->
-        <!-- <div class="banner-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-xs-12">
-                        <div class="banner-wrapper">
-                            <a href="shop-4-column.html"><img src="{{asset('public/website/assets/images/banner-image/1.jpg')}}" alt="" /></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xs-12">
-                        <div class="banner-wrapper">
-                            <a href="shop-4-column.html"><img src="{{asset('public/website/assets/images/banner-image/2.jpg')}}" alt="" /></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xs-12">
-                        <div class="banner-wrapper">
-                            <a href="shop-4-column.html"><img src="{{asset('public/website/assets/images/banner-image/3.jpg')}}" alt="" /></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
-        
-        <!-- Banner Area Start -->
+
         <div class="banner-area">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     @foreach($banners->where('type' , 'homepagetop') as $banner)
                     <div class="col-md-6 col-xs-12">
@@ -241,277 +202,79 @@
         
         
         
-        
-        
-        
-        
-        
-        
-        
-<!-- Static Area Start -->
-        <div class="static-area mtb-60px">
-            <div class="container">
-                <div class="static-area-wrap">
-                    <div class="row">
-                        <!-- Static Single Item Start -->
-                        <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mb-md-30px mb-lm-30px">
-                            <div class="single-static">
-                                <img src="{{asset('public/website/assets/images/icons/static-icons-1.png')}}" alt="" class="img-responsive" />
-                                <div class="single-static-meta">
-                                    <h4>Free Shipping</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Static Single Item End -->
-                        <!-- Static Single Item Start -->
-                        <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mb-md-30px mb-lm-30px">
-                            <div class="single-static">
-                                <img src="{{asset('public/website/assets/images/icons/static-icons-2.png')}}" alt="" class="img-responsive" />
-                                <div class="single-static-meta">
-                                    <h4>Online Support</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Static Single Item End -->
-                        <!-- Static Single Item Start -->
-                        <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6 mb-sm-30px">
-                            <div class="single-static">
-                                <img src="{{asset('public/website/assets/images/icons/static-icons-4.png')}}" alt="" class="img-responsive" />
-                                <div class="single-static-meta">
-                                    <h4>Money-back Gurantee</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Static Single Item End -->
-                        <!-- Static Single Item Start -->
-                        <div class="col-lg-3 col-xs-12 col-md-6 col-sm-6">
-                            <div class="single-static">
-                                <img src="{{asset('public/website/assets/images/icons/static-icons-3.png')}}" alt="" class="img-responsive" />
-                                <div class="single-static-meta">
-                                    <h4>Members Discount</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Static Single Item End -->
-                    </div>
-                </div>
-            </div>
-        </div>
-<!-- Static Area End -->    
-
-<div class="container">
-    <div class="row">
-        <div class="section-title">
-            <h2 class="section-heading">Users Voice</h2>
-            <p>What our users says about us</p>
-        </div>
-        <div class="col-md-6">
-            <section class="testimonial">
-                <div class="row">
-                    <div class="col-md-4">
-                      <img class="img-responsive w-100" src="{{asset('public/website/assets/images/testimonial-image/photo2.png')}}" alt="description of image" alt="description of image">
-                    </div>
-                    <div class="col-md-8"><p class="pt-3 pe-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p><div class="author">Lesslie John</div></div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-            <section class="testimonial">
-                <div class="row">
-                    <div class="col-md-4">
-                      <img class="img-responsive w-100" src="{{asset('public/website/assets/images/testimonial-image/photo1.png')}}" alt="description of image" alt="description of image">
-                    </div>
-                    <div class="col-md-8"><p class="pt-3 pe-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p><div class="author">Lesslie John</div></div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-            <section class="testimonial">
-                <div class="row">
-                    <div class="col-md-4">
-                      <img class="img-responsive w-100" src="{{asset('public/website/assets/images/testimonial-image/photo22.png')}}" alt="description of image" alt="description of image">
-                    </div>
-                    <div class="col-md-8"><p class="pt-3 pe-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p><div class="author">Lesslie John</div></div>
-                </div>
-            </section>
-        </div>
-        <div class="col-md-6">
-            <section class="testimonial">
-                <div class="row">
-                    <div class="col-md-4">
-                      <img class="img-responsive w-100" src="{{asset('public/website/assets/images/testimonial-image/photo11.png')}}" alt="description of image" alt="description of image">
-                    </div>
-                    <div class="col-md-8"><p class="pt-3 pe-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p><div class="author">Lesslie John</div></div>
-                </div>
-            </section>
-        </div>
-        
-    </div>
-</div>
-<!-- Brand area start -->
-<div class="brand-area mb-60px">
-    <div class="container">
-        <div class="brand-slider slider-nav-style-1 slider-nav-style-2 ">
-            <div class="brand-slider-wrapper swiper-wrapper">
-                <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/1.jpg')}}" alt="" /></a>
-                </div>
-                <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/2.jpg')}}" alt="" /></a>
-                </div>
-                <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/3.jpg')}}" alt="" /></a>
-                </div>
-                <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/4.jpg')}}" alt="" /></a>
-                </div>
-                <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/5.jpg')}}" alt="" /></a>
-                </div>
-                <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/1.jpg')}}" alt="" /></a>
-                </div>
-                <div class="brand-slider-item swiper-slide">
-                    <a href="#"><img src="{{asset('public/website/assets/images/brand-logo/2.jpg')}}" alt="" /></a>
-                </div>
-            </div>
-            <!-- Add Arrows -->
-            <div class="swiper-buttons">
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Brand area end -->
-
-
-
-
-
-
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-        </div>
-        <div class="modal-body">
+<div class="sectionhomepage" style="background-image: url(&quot;https://www.jacketsjunction.com/wp-content/uploads/2022/02/Customize.jpg&quot;);">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-2"></div>
+         <div class="col-md-8">
             <div class="row">
-                <div class="col-md-5 col-sm-12 col-xs-12 mb-lm-100px mb-sm-30px">
-                     <!-- Swiper -->
-                      <div class="swiper-container gallery-top">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/11.jpg')}}" alt="">
-                              </div>
-                              <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/12.jpg')}}" alt="">
-                              </div>
-                              <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/13.jpg')}}" alt="">
-                              </div>
-                              <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/14.jpg')}}" alt="">
-                              </div>
-                            </div>
-                      </div>
-                      <div class="swiper-container gallery-thumbs">
-                        <div class="swiper-wrapper">
-                              <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/11.jpg')}}" alt="">
-                              </div>
-                              <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/12.jpg')}}" alt="">
-                              </div>
-                              <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/13.jpg')}}" alt="">
-                              </div>
-                              <div class="swiper-slide"> 
-                                    <img class="img-responsive m-auto" src="{{asset('public/website/assets/images/product-image/14.jpg')}}" alt="">
-                              </div>
-                            </div>
-                      </div>
-                </div>
-                <div class="col-md-7 col-sm-12 col-xs-12">
-                    <div class="product-details-content quickview-content">
-                        <h2>Originals Kaval Windbr</h2>
-                        <p class="reference">Reference:<span> demo_17</span></p>
-                        <div class="pro-details-rating-wrap">
-                            <div class="rating-product">
-                                <i class="ion-android-star"></i>
-                                <i class="ion-android-star"></i>
-                                <i class="ion-android-star"></i>
-                                <i class="ion-android-star"></i>
-                                <i class="ion-android-star"></i>
-                            </div>
-                            <span class="read-review"><a class="reviews" href="#">Read reviews (1)</a></span>
-                        </div>
-                        <div class="pricing-meta">
-                            <ul>
-                                <li class="old-price not-cut">€18.90</li>
-                            </ul>
-                        </div>
-                        <p class="quickview-para">Lorem ipsum dolor sit amet, consectetur adipisic elit eiusm tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim venialo quis nostrud exercitation ullamco</p>
-                        <div class="pro-details-size-color">
-                            <div class="pro-details-color-wrap">
-                                <span>Color</span>
-                                <div class="pro-details-color-content">
-                                    <ul>
-                                        <li class="blue"></li>
-                                        <li class="maroon active"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pro-details-quality">
-                            <div class="cart-plus-minus">
-                                <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" />
-                            </div>
-                            <div class="pro-details-cart btn-hover">
-                                <a href="#"> + Add To Cart</a>
-                            </div>
-                        </div>
-                        <div class="pro-details-wish-com">
-                            <div class="pro-details-wishlist">
-                                <a href="wishlist.html"><i class="ion-android-favorite-outline"></i>Add to wishlist</a>
-                            </div>
-                            <div class="pro-details-compare">
-                                <a href="compare.html"><i class="ion-ios-shuffle-strong"></i>Add to compare</a>
-                            </div>
-                        </div>
-                        <div class="pro-details-social-info">
-                            <span>Share</span>
-                            <div class="social-info">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="ion-social-facebook"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="ion-social-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="ion-social-google"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="ion-social-instagram"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <div class="col-md-12">
+                  <div class="inner-content homepage-text">
+                     <h5>Heading</h5>
+                     <p>Imagine opening your wardrobe and watching a collection of shiny, sharp, and super-structured leather clothing. Isn’t enough to make your day and bundle up in style? Do you know how much leather is influenced nowadays in the fashion industry and casual routines? The leather story is as old as humans are; they started making leather clothing using animal skin to protect them from harsh weather. Have you ever realized how much leather you carry right now on your body? Today, when it comes to having your hands on the trend or going with it, leather clothing has topped the list, especially in this bone-chilling season. </p>
+                     <p>Imagine opening your wardrobe and watching a collection of shiny, sharp, and super-structured leather clothing. Isn’t enough to make your day and bundle up in style? Do you know how much leather is influenced nowadays in the fashion industry and casual routines? The leather story is as old as humans are; they started making leather clothing using animal skin to protect them from harsh weather. Have you ever realized how much leather you carry right now on your body? Today, when it comes to having your hands on the trend or going with it, leather clothing has topped the list, especially in this bone-chilling season. </p>
+                     <p>Imagine opening your wardrobe and watching a collection of shiny, sharp, and super-structured leather clothing. Isn’t enough to make your day and bundle up in style? Do you know how much leather is influenced nowadays in the fashion industry and casual routines? The leather story is as old as humans are; they started making leather clothing using animal skin to protect them from harsh weather. Have you ever realized how much leather you carry right now on your body? Today, when it comes to having your hands on the trend or going with it, leather clothing has topped the list, especially in this bone-chilling season. </p>
+                     <p>Imagine opening your wardrobe and watching a collection of shiny, sharp, and super-structured leather clothing. Isn’t enough to make your day and bundle up in style? Do you know how much leather is influenced nowadays in the fashion industry and casual routines? The leather story is as old as humans are; they started making leather clothing using animal skin to protect them from harsh weather. Have you ever realized how much leather you carry right now on your body? Today, when it comes to having your hands on the trend or going with it, leather clothing has topped the list, especially in this bone-chilling season. </p>
+                     <p>Imagine opening your wardrobe and watching a collection of shiny, sharp, and super-structured leather clothing. Isn’t enough to make your day and bundle up in style? Do you know how much leather is influenced nowadays in the fashion industry and casual routines? The leather story is as old as humans are; they started making leather clothing using animal skin to protect them from harsh weather. Have you ever realized how much leather you carry right now on your body? Today, when it comes to having your hands on the trend or going with it, leather clothing has topped the list, especially in this bone-chilling season. </p>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+         <div class="col-md-2"></div>
+      </div>
+   </div>
 </div>
-</div>
-<!-- Modal end -->
 
+<div class="sectionhomepage">
+   <div class="container inner-content box_shadow1">
+      <div class="row no-gutters">
+         <div class="col-md-4">
+            <div class="icon_box icon_box_style1">
+               <div class="icon"><i class="flaticon-shipped"></i></div>
+               <div class="icon_box_content">
+                  <h5>Fastest Delivery</h5>
+                  <p>Fastest Delivery on all over India</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="icon_box icon_box_style1">
+               <div class="icon"><i class="flaticon-money-back"></i></div>
+               <div class="icon_box_content">
+                  <h5>30 Day Returns Guarantee</h5>
+                  <p>Simply return it within 30 days for an exchange</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="icon_box icon_box_style1">
+               <div class="icon"><i class="flaticon-support"></i></div>
+               <div class="icon_box_content">
+                  <h5>27/4 Online Support</h5>
+                  <p>Contact us 24 hours a day, 7 days a week</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div style="background-color: #6C4646;padding: 35px;">
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-md-6">
+            <div class="newsletter_text text_white">
+               <h3>Join Our Newsletter Now</h3>
+               <p>Register now to get updates on promotions.</p>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="newsletter_form2 rounded_input newsletter-form">
+               <form method="post" action="https://leatherwearclothing.com/newsletter/subscribe"><input type="hidden" name="_token" value="WSvRNFBdU69hsQTuqJGoJI4aFdzxSByZFXGuputP"> <input name="email" type="email" placeholder="Enter Your Email" class="form-control" data-temp-mail-org="0"> <button type="submit" class="btn btn-dark btn-radius">Subscribe</button></form>
+               <div class="newsletter-message newsletter-success-message" style="display: none;"></div>
+               <div class="newsletter-message newsletter-error-message" style="display: none;"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 @stop
-
-
