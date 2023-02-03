@@ -1,6 +1,6 @@
 @extends('website.layouts.master')
 @section('content')
-<div class="breadcrumb-area" style="background:#ecebeb;">
+<div class="breadcrumb-area ptb-60px" style="background:#ecebeb;">
     <div class="container-fluid">
       <div class="archive-header mb-3">
          <div class="row align-items-center">
