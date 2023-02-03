@@ -1,4 +1,4 @@
-<div class="col-md-2">
+<div class="col-md-3">
     <div class="pro-content">
         <article class="list-product">
             <div class="img-block">

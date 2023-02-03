@@ -127,7 +127,7 @@
                                 <li><a href="{{route('website.categoriesPage')}}">Our Categorys</a></li>
                                 <li><a href="#">Blogs</a></li>
                                 <li><a href="{{route('website.vendors')}}">Vendor</a></li>
-                                <li><a href="{{route('website.designProducts')}}">Contact Us</a></li>
+                                <li><a href="{{route('website.contact')}}">Contact Us</a></li>
                                 <!-- <li><a href="{{route('website.servicePage')}}">Services</a></li>                                    -->
                                 <!-- <li><a href="javascript:void(0)">Login as Vendor</a></li> -->
                             </ul>

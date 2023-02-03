@@ -1,26 +1,20 @@
 @extends('website.layouts.master')
 @section('content')
 <div class="breadcrumb-area" style="background:#ecebeb;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="breadcrumb-content">
-                    <ul class="nav">
-                        <li><a href="{{route('website.index')}}">Home</a></li>
-                        <li><a href="{{route('website.trackorder')}}">Track Your Order</a></li>
-                    </ul>
-                </div>
+    <div class="container-fluid">
+      <div class="archive-header mb-3">
+         <div class="row align-items-center">
+            <div class="col-xl-6">
+               <h1 class="mb-4">Track Your Order</h1>
+               <div class="breadcrumb">
+                  <a href="{{ url(' ') }}" rel="nofollow"><i class="fa fa-home mx-1"></i>Home</a>
+                  <span><i class="fa fa-angle-right mr-5"></i> Track Your Order</span> 
+               </div>
             </div>
-        </div>
+         </div>
+      </div>
     </div>
 </div>
-<section id="track-order" class="text-center ptb-60px" style="background:#edfafc">
-    <div class="container">
-        <div class="row">
-            <h1>Track Your Order</h1>
-        </div>
-    </div>
-</section>
 <section class="track-order">        
 	<div class="container">
 		<p>To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.</p>
@@ -28,11 +22,11 @@
 	    <div class="track-form">
 	        <div class="tracking-id mb-20px">
 	            <label>Order Number/ ID</label>
-	            <input type="text" placeholder="6512">
+	            <input type="text" class="form-control" placeholder="6512">
 	        </div>
 	        <div class="tracking-email mb-20px">
 	            <label>Billing Email</label>
-	            <input type="email" placeholder="abc@gmail.com">
+	            <input type="email" class="form-control" placeholder="abc@gmail.com">
 	        </div>
 	        <div class="continue-btn submit"><a href="#">Track Your Order</a></div>
 	    </div>

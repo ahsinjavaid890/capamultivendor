@@ -8,16 +8,16 @@
 
 <div id="checkout">
 <div class="checkout-top-area">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
                 <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('public/website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
             </div>
             <div class="col-md-6">
                 <div class="helpful-links">
-                    <span><a href="javascript:void(0)">Need help?</a></span>
-                    <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
-                    <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
+                    <span><a href="javascript:void(0)" class="btn btn-primary">Need help?</a></span>
+                    <span><a href="javascript:void(0)" class="btn btn-primary"><i class="fa fa-phone-square mx-2"></i>Call Us</a></span>
+                    <span><a href="javascript:void(0)"  class="btn btn-primary"><i class="fa fa-phone mx-2"></i> Whatsapp Us</a></span>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
     <div class="row">
       <div class="checkout-tab-block order-md-first">
         <!-- Shop Top Area Start -->
-        <div class="checkout-tab-top-bar" style="background:#000">
+        <div class="checkout-tab-top-bar" style="background:#a277b7">
             <!-- Left Side start -->
             <div class="container">
                 <div class="checkout-tab nav">
@@ -122,8 +122,8 @@
                                                     @foreach($cart as $r)
                                                     <?php $total_price += $r['quantity']*$r['price']; ?>
                                                     <li>
-                                                        <img src="{{asset('products/'.$r['image'])}}" >
-                                                        <span class="order-middle-left">{{$r['name']}}</span><span class="order-price">AED {{$r['quantity']*$r['price']}}</span>
+                                                        <img src="{{asset('public/products/'.$r['image'])}}" >
+                                                        <span class="order-middle-left">{{$r['name']}}</span><span class="order-price">INR {{$r['quantity']*$r['price']}}</span>
                                                     </li>
                                                     @endforeach
                                                 </ul>
@@ -143,12 +143,12 @@
                                                     <li>
                                                         <input type="hidden" value="{{$total_price}}" id="subtotal">
                                                         @if($order->delivery == 'free')
-                                                        <div class="small deliveryprice">AED 0</div>
+                                                        <div class="small deliveryprice">INR 0</div>
                                                         @else
-                                                        <div class="small deliveryprice">AED 30</div>
+                                                        <div class="small deliveryprice">INR 30</div>
                                                         @endif
-                                                        <div class="small">AED {{$total_price}}</div>
-                                                        AED <span id="totalprice">@if($order->delivery == 'free') {{$total_price}} @else  {{$total_price+30}} @endif</span></li>
+                                                        <div class="small">INR {{$total_price}}</div>
+                                                        INR <span id="totalprice">@if($order->delivery == 'free') {{$total_price}} @else  {{$total_price+30}} @endif</span></li>
                                                 </ul>
                                             </div>
                                         </div>

@@ -2,7 +2,7 @@
 @section('content')
     <div id="checkout">
         <div class="checkout-top-area">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('public/website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
@@ -21,9 +21,9 @@
             <div class="row">
                 <div class="checkout-tab-block order-md-first">
                     <!-- Shop Top Area Start -->
-                    <div class="checkout-tab-top-bar" style="background:#000">
+                    <div class="checkout-tab-top-bar" style="background:#a277b7">
                         <!-- Left Side start -->
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="checkout-tab nav">
                                 <a  href="javascript:void(0)">
                                     <img src="{{asset('public/website/assets/images/icons/free-delivery.svg')}}">
@@ -45,7 +45,7 @@
                         <div class="tab-content jump">
                             <div id="thank-you" >
                                 <div class="checkout-area mt-60px mb-40px">
-                                    <div class="container order-successfully-placed">
+                                    <div class="container-fluid order-successfully-placed">
                                         <div class="thank-you-title content-box text-center">
                                             <img src="{{asset('public/website/assets/images/icons/check.png')}}" class="check">
                                             <h1>Thank You</h1>
@@ -77,7 +77,7 @@
                                             $google_location = $order->google_location;
                                           }
                                         @endphp
-                                        <div class="container">
+                                        <div class="container-fluid">
                                             <div class="main row first">
 
                                                 <div class="head-text" style="background:#f1f0f0"><h4>
@@ -122,7 +122,7 @@
                                                 </div>
                                             </div>
                                         </div> -->
-                                        <div class="container">
+                                        <div class="container-fluid">
                                             <div class="main row third text-center" style="background:#f1f0f0">
                                                 <h4>What Happens Next?</h4>
                                                 <div class="inner-content-box d-flex">

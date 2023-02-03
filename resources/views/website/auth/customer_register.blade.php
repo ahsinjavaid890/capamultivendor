@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <label>First Name<span>*</span></label>
-                <input name="fname" class="customer_register @error('fname') is-invalid @enderror" type="text" value="{{ old('fname') }}" required autocomplete="fname" autofocus>
+                <input name="fname" class="form-control customer_register @error('fname') is-invalid @enderror" type="text" value="{{ old('fname') }}" required autocomplete="fname" autofocus>
                 @error('fname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -45,7 +45,7 @@
             </div>
             <div class="col-lg-6">
                 <label>Last Name<span>*</span></label>
-                <input name="lname" class=" customer_register @error('lname') is-invalid @enderror" type="text" value="{{ old('lname') }}" required autocomplete="lname" autofocus>
+                <input name="lname" class="form-control customer_register @error('lname') is-invalid @enderror" type="text" value="{{ old('lname') }}" required autocomplete="lname" autofocus>
                 @error('lname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -54,7 +54,7 @@
             </div>
             <div class="col-lg-12">
                 <label>Email Address<span>*</span></label>
-                <input name="email" type="email" class="customer_register @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                <input name="email" type="email" class="form-control customer_register @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus>
                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -63,7 +63,7 @@
             </div>
             <div class="col-lg-12">
                 <label>Mobile No<span>*</span></label>
-                <input name="mobile" class=" customer_register @error('mobile') is-invalid @enderror" type="text" value="{{ old('mobile') }}" required autocomplete="mobile" autofocus>
+                <input name="mobile" class="form-control customer_register @error('mobile') is-invalid @enderror" type="text" value="{{ old('mobile') }}" required autocomplete="mobile" autofocus>
                 @error('mobile')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -72,7 +72,7 @@
             </div>
             <div class="col-lg-12">
                 <label>Password<span>*</span></label>
-                <input id="password" type="password" class="customer_register  @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                <input id="password" type="password" class="form-control customer_register  @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">

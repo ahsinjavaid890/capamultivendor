@@ -105,7 +105,7 @@
     right: 0;
 }    
 .register-as .tabs a {
-    background: #009fbd;
+    background: #6c4646;
     color: #fff;
     padding: 15px;
     text-align: center;
