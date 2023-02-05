@@ -7264,7 +7264,7 @@ li.total-price {color: #009fbd;}
 .contact-tab a.active span {background: #009fbd;color: #fff;}
 #contact-tabs .accordion-button {
     background: #6c4646;
-    color: #000;
+    color: white;
     box-shadow: none;
     margin-top: 10px;
     font-size: 18px;
