@@ -13,6 +13,12 @@ Route::name('admin.')->namespace('App\Http\Controllers\Admin')->prefix('admin')-
     Route::get('/home','AdminController@dashboard')->name('home');
     Route::get('/vendor-list','AdminController@sellers')->name('sellers');
     Route::get('/customer-list','AdminController@customers')->name('customers');
+    Route::get('/addblogs','AdminController@addblogs')->name('addblogs');
+    Route::post('/addblog','AdminController@addblog')->name('addblog');
+    Route::get('/allblogs','AdminController@allblogs')->name('allblogs');
+    Route::get('/editblogs/{id}','AdminController@editblogs')->name('editblogs');
+    Route::post('/editblog','AdminController@editblog')->name('editblog');
+    Route::get('/deleteblog/{id}','AdminController@deleteblog')->name('deleteblog');
     
 
 

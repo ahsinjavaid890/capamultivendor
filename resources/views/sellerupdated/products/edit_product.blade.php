@@ -142,12 +142,12 @@
                                   <div class="featured-image d-flex">
                                      <p>Main Image<span class="link-danger">*</span></p>
                                      <input class="form-control" type="file" id="featured_img" onchange="previewFile()" name="featured_img">
-                                     <label for="featured_img"><img src="{{asset('seller/assets/img/upload.svg')}}"/>Upload</label> 
+                                     <label for="featured_img"><img src="{{asset('public/seller/assets/img/upload.svg')}}"/>Upload</label> 
                                   </div>
                                   <div class="uploaded-img">
-                                     <img style="width:120px;height: 120px;" src="{{asset('products/'.$product->featured_img)}}" class="featured_prev_img img-thumbnail" />
+                                     <img style="width:120px;height: 120px;" src="{{asset('public/products/'.$product->featured_img)}}" class="featured_prev_img img-thumbnail" />
                                      <div class="edit-trash d-flex">
-                                        <img class="white featured_img_delete" onclick="removeFeatured()" src="{{asset('seller/assets/img/white-trash.svg')}}" style="display:none"/>
+                                        <img class="white featured_img_delete" onclick="removeFeatured()" src="{{asset('spublic/eller/assets/img/white-trash.svg')}}" style="display:none"/>
                                      </div>
                                   </div>
                                </div>
@@ -168,7 +168,7 @@
                                        @foreach(DB::table('productgallerimages')->where('product_id' , $product->id)->get() as $g)
                                        <div class="col-md-3"> 
                                           <div class="uploaded-img"> 
-                                             <img style="width:120px;height:120px;" class="img-thumbnail" src="{{ url('images') }}/{{ $g->image }}"/> 
+                                             <img style="width:120px;height:120px;" class="img-thumbnail" src="{{ url('public/images') }}/{{ $g->image }}"/> 
                                              <div class="edit-trash d-flex"> 
                                                 <i onclick="deletegalleryimages({{ $g->id }})" class="fa fa-times-circle white remove_prod_mul_img"></i>
                                              </div>
@@ -526,7 +526,7 @@ $(function() {
                 var reader = new FileReader();
 
                 reader.onload = function(event) {
-                    $("div.previe_multiple_image").append('<div class="col-md-3 prev_mul_img"> <div class="uploaded-img"> <img style="width:120px;height:120px;" class="img-thumbnail" src="'+event.target.result+'"/> <div class="edit-trash d-flex"> <img class="white remove_prod_mul_img" src="{{asset("seller/assets/img/white-trash.svg")}}"/> </div></div></div>').show();
+                    $("div.previe_multiple_image").append('<div class="col-md-3 prev_mul_img"> <div class="uploaded-img"> <img style="width:120px;height:120px;" class="img-thumbnail" src="'+event.target.result+'"/> <div class="edit-trash d-flex"> <img class="white remove_prod_mul_img" src="{{asset("public/seller/assets/img/white-trash.svg")}}"/> </div></div></div>').show();
                    
                 }
 

@@ -125,7 +125,7 @@
 						<table>
 							<tr>
 								<td class="title">
-									<img src="https://phplaravel-842878-2903965.cloudwaysapps.com/website/assets/images/logo1.svg" alt="Company logo" style="width: 100%; max-width: 300px" />
+									<img src="{{asset('public/seller/assets/img/oben-01__logo.png')}}" alt="Company logo" style="width: 100%; max-width: 300px" />
 								</td>
 
 								<td>

@@ -2,7 +2,7 @@
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
         <!--begin::Logo-->
         <a href="{{route('seller.home')}}">
-            <img alt="Logo" src="{{asset('seller/assets/img/oben-01__logo.png')}}" />
+            <img alt="Logo" src="{{asset('public/seller/assets/img/oben-01__logo.png')}}" />
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->

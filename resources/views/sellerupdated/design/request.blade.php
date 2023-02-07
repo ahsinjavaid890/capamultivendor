@@ -38,7 +38,7 @@
                                     @if(DB::table('designdeleterequests')->where('request_id' , $requests->id)->where('user_id' , Auth::guard('seller')->user()->id)->count() == 0)
                                     <tr >                                        
                                         <td>
-                                            <div style="height:100px;width: 100px;"><img style="width:100%;height:100%;" class="img-fluid img-thumbnail" src="{{asset('uploads/'.$requests->product_img)}}"/>
+                                            <div style="height:100px;width: 100px;"><img style="width:100%;height:100%;" class="img-fluid img-thumbnail" src="{{asset('public/uploads/'.$requests->product_img)}}"/>
                                             </div>
                                         </td>
                                         <td>

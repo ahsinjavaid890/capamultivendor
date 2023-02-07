@@ -34,7 +34,7 @@
                                 <td>{{$service->service_name}}</td>
                                 <td>{{$service->catname}}</td>
                                 <td>{{$service->subcat_name}}</td>
-                                <td><img src="{{asset('uploads/'.$service->image)}}" style="width:100px" /></td>
+                                <td><img src="{{asset('public/uploads/'.$service->image)}}" style="width:100px" /></td>
                                 <td>{{$service->contact_details}}</td>
                                 <td>
                                    <a href="{{route('seller.servicesDelete',[encrypt($service->id)])}}"> <button class="btn btn-danger"><i class="fa fa-trash"></i></button></a>

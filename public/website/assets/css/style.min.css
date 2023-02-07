@@ -8244,13 +8244,32 @@ body.contact-page .static-area {margin: 0;}
     position: relative;
     z-index: 4;
 }
+
+.newsletter .newsletter-inner .newsletter-content .form-subcriber {
+    background-color: #fff;
+    max-width: 450px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 4;
+}
 .newsletter .newsletter-inner .newsletter-content form input {
     border: 0;
     border-radius: 50px 0 0 50px;
     padding-left: 58px;
     background: url(https://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-plane.png) no-repeat 25px center;
 }
+.newsletter .newsletter-inner .newsletter-content .form-subcriber input {
+    border: 0;
+    border-radius: 50px 0 0 50px;
+    padding-left: 58px;
+    background: url(https://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-plane.png) no-repeat 25px center;
+}
 .newsletter .newsletter-inner .newsletter-content form button {
+    border: 0;
+    border-radius: 50px;
+    font-weight: 700;
+}
+.newsletter .newsletter-inner .newsletter-content .form-subcriber button {
     border: 0;
     border-radius: 50px;
     font-weight: 700;

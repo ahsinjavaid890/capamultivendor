@@ -37,6 +37,7 @@ use App\Models\GuestUser;
 use App\Models\GuestOrder;
 use App\Models\Banner;
 use App\Models\Service;
+use App\Models\blogs;
 use App\Models\productgallerimages;
 use App\Models\allbrands;
 use PDF;
@@ -1889,11 +1890,56 @@ public function deactivateService(Request $request){
 
 }
 
-
+public function addblogs()
+{
+    return view('adminupdated.blogs.addblogs');
+}
 
     
-
-
-
+public function addblog(Request $request)
+{
+        $blog = new blogs;        
+        $blog->blog_name=$request->blog_name;
+        $blog->blog_content=$request->blog_content;
+        if($request->blog_img)
+        {
+            $blog->blog_img = Cmf::sendimagetodirectory($request->blog_img);    
+        }
+        $blog->save();
+    return back()->with("success",'Blog Add successfull');
+}
+public function allblogs()
+{
+    $blogs = blogs::all();
+    return view('adminupdated.blogs.allblogs')->with(array('blogs' => $blogs)); 
+}
+public function editblogs($id)
+{
+    $data = blogs::find($id);
+    return view('adminupdated.blogs.editblogs')->with(array('data' => $data)); 
+}
+public function editblog(Request $request)
+{   
+    $blogid = $request->id;
+    $update_blog = blogs::where('id','=',$blogid)->update([
+        'blog_name'=>$request->blog_name,
+        'blog_content'=>$request->blog_content,
+        'blog_img' => Cmf::sendimagetodirectory($request->blog_img),  
+    ]);
+    if($update_blog==true){
+        return back()->with('success','Blog Updated successfull');
+    }else{
+        return back()->with('error','something went wrong');
+    }
+}
+public function deleteblog(Request $request)
+{
+     $blog_delete = blogs::where('id','=',$request->id)->delete();
+        if($blog_delete==true){
+            return back()->with('success','Blog Delete successfull');
+        }else{
+        return back()->with('error','something went wrong');
+        }
+}
 
 }

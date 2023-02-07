@@ -298,11 +298,11 @@ class WebsiteController extends Controller
         return view('website.thankyou');
     }
     public function index(){
-        $getcatlist = $this->listcat()->skip(0)->take(6);
-        $vendors = $this->listVendors()->skip(0)->take(5);
-        $Deals = $this->DOD()->skip(0)->take(5);
-        $topPics = $this->topPicsProduct()->skip(0)->take(5);
-        $arrivals = $this->arrovalsProduct()->skip(0)->take(5);
+        $getcatlist = $this->listcat();
+        $vendors = $this->listVendors();
+        $Deals = $this->DOD();
+        $topPics = $this->topPicsProduct();
+        $arrivals = $this->arrovalsProduct();
         $banners = Banner::orderBy('id','desc')->get();
         return view('website.index',compact('getcatlist','vendors','Deals','topPics','arrivals','banners'));
     }
@@ -380,7 +380,7 @@ class WebsiteController extends Controller
                      foreach ($cart as $r) {
                   
                     echo '<li>
-                        <a href="'.url("product").'/'.$r['url'].'" class="image"><img src="'.asset('public/products').'/'.$r['image'].'" alt="Cart product Image"></a>
+                        <a href="'.url("product").'/'.$r['url'].'" class="image"><img src="'.asset('products').'/'.$r['image'].'" alt="Cart product Image"></a>
                         <div class="content">
                             <a href="'.url("product").'/'.$r['url'].'" class="title">Outdoor Fairy Light</a>
                             <span class="quantity-price">'.$r['quantity'].' x <span class="amount">'.$r['price'].' '.Cmf::current_currency().'</span></span>
@@ -449,7 +449,7 @@ class WebsiteController extends Controller
                        ->select('products.*','categories.id as cat_id','sub_categories.id as subcat_id','categories.category_name as cat_name','sub_categories.category_name as subparent_id','subcat_name')
                        ->where('products.status','=','2')
                        ->orderBy('products.id','desc')
-                       ->paginate(12); 
+                       ->get(); 
          return $listallproduct;
     }
 
@@ -574,7 +574,7 @@ class WebsiteController extends Controller
     // public function category details
 
     public function catDetails($id){
-        $categories_detail = Category::where('url','=', $id)->first();
+
         $category_id = Category::where('url' , $id)->get()->first()->id;
         $products=Product::leftJoin('categories','categories.id','=','products.category')
         ->leftJoin('sub_categories','sub_categories.id','=','products.subcategory') 
@@ -586,26 +586,9 @@ class WebsiteController extends Controller
         ->paginate(9); 
         $vendors = $this->listVendors();
         $getcatlist = $this->listcat();
-        return view('website.category-details',compact('products','vendors','getcatlist','category_id','categories_detail'));
+        return view('website.category-details',compact('products','vendors','getcatlist','category_id'));
     }
 
-    public function subcatDetails($id , $subcat){
-        $categories_detail = SubCategory::where('url','=', $subcat)->first();
-        $category_id = Category::where('url' , $id)->get()->first()->id;
-        $products=Product::leftJoin('categories','categories.id','=','products.category')
-        ->leftJoin('sub_categories','sub_categories.id','=','products.subcategory') 
-        ->leftJoin('reviews','reviews.prod_id','=','products.id')
-        ->select('products.*','categories.id as cat_id','sub_categories.id as subcat_id','categories.category_name as cat_name','sub_categories.category_name as subparent_id','subcat_name','rating','message')
-        ->where('products.category','=',$category_id)
-        ->where('products.subcategory','=',$categories_detail->id)
-        ->where('products.status','=','2')
-        ->orderBy('products.id','desc')
-        ->paginate(9); 
-        $vendors = $this->listVendors();
-        $getcatlist = $this->listcat();
-        return view('website.subcategory-details',compact('products','vendors','getcatlist','category_id','categories_detail'));
-    }
-    
 
     // cart process
 
@@ -1624,6 +1607,9 @@ public function filterpricebyVendor(Request $request){
 }
     
 
+
+
+    
 
     
 

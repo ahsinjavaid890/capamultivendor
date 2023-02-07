@@ -176,7 +176,7 @@
                                         <div class="info-input mb-20px">
                                             <label>Address <span style="color:red">*</span></label>
                                             <input type="text" placeholder="" value="{{Auth::guard('seller')->user()->contact_address}}" id="venaddress">
-                                            <div class="map-pin icon"><img src="assets/img/location-pin.svg"></div>
+                                            <div class="map-pin icon"><img src="{{ url('public/assets/img/location-pin.svg')}}"></div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -264,7 +264,7 @@
                                         </div>
                                         <div class="col-md-4 cmp_logo">
                                         <div class="info-input upload">
-                                            <img src="{{asset('uploads/'.$getdata->company_logo)}}" style="width:50px;"/>
+                                            <img src="{{asset('public/uploads/'.$getdata->company_logo)}}" style="width:50px;"/>
                                           <label class="control-label mb-2"> Company Logo <span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle" placeholder="IMG-1.png" value="{{$getdata->company_logo}}"> 
                                          <button class="btn">View</button>
@@ -272,7 +272,7 @@
                                        </div>
                                         <div class="col-md-4 cmp_trade">
                                         <div class="info-input upload">
-                                        <img src="{{asset('uploads/'.$getdata->trade_license_img)}}" style="width:50px;"/>
+                                        <img src="{{asset('public/uploads/'.$getdata->trade_license_img)}}" style="width:50px;"/>
                                           <label class="control-label mb-2">Trade license <span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle" placeholder="IMG-1.png" value="{{$getdata->trade_license_img}}"> 
                                          <button class="btn">View</button>
@@ -280,7 +280,7 @@
                                         </div>
                                        <div class="col-md-4 cmp_passport">
                                         <div class="info-input upload">
-                                        <img src="{{asset('uploads/'.$getdata->passport_img)}}" style="width:50px;"/>
+                                        <img src="{{asset('public/uploads/'.$getdata->passport_img)}}" style="width:50px;"/>
                                           <label class="control-label mb-2">Passport <span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle" placeholder="IMG-1.png" value="{{$getdata->passport_img}}"> 
                                          <button class="btn">View</button>
@@ -288,7 +288,7 @@
                                         </div>
                                         <div class="col-md-4 cmp_emirates">
                                         <div class="info-input upload">
-                                        <img src="{{asset('uploads/'.$getdata->emirates_id_img)}}" style="width:50px;"/>
+                                        <img src="{{asset('public/uploads/'.$getdata->emirates_id_img)}}" style="width:50px;"/>
                                           <label class="control-label mb-2">Emirates Front image<span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle" placeholder="IMG-1.png" value="{{$getdata->emirates_id_img}}"> 
                                          <button class="btn">View</button>
@@ -296,7 +296,7 @@
                                         </div>
                                         <div class="col-md-4 cmp_emirates">
                                         <div class="info-input upload">
-                                        <img src="{{asset('uploads/'.$getdata->emirates_back_img)}}" style="width:50px;"/>
+                                        <img src="{{asset('public/uploads/'.$getdata->emirates_back_img)}}" style="width:50px;"/>
                                           <label class="control-label mb-2">Emirates back image<span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle" placeholder="IMG-1.png" value="{{$getdata->emirates_back_img}}"> 
                                          <button class="btn">View</button>
@@ -305,7 +305,7 @@
                                         @elseif(Auth::guard('seller')->user()->registered_as=="Freelancer")
                                         <div class="col-md-4 ">
                                         <div class="info-input upload">
-                                        <img src="{{asset('uploads/'.$getdata->passport_img)}}" style="width:100px;"/>
+                                        <img src="{{asset('public/uploads/'.$getdata->passport_img)}}" style="width:100px;"/>
                                           <label class="control-label mb-2">Passport <span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle" placeholder="IMG-1.png" value="{{$getdata->passport_img}}"> 
                                          <button class="btn">View</button>
@@ -313,7 +313,7 @@
                                         </div>
                                         <div class="col-md-4 ">
                                         <div class="info-input upload">
-                                        <img src="{{asset('uploads/'.$getdata->emirates_id_img)}}" style="width:100px;"/>
+                                        <img src="{{asset('public/uploads/'.$getdata->emirates_id_img)}}" style="width:100px;"/>
                                           <label class="control-label mb-2">Emirates Id <span class="link-danger">*</span></label>
                                          <input type="text" class="filestyle" placeholder="IMG-1.png" value="{{$getdata->emirates_id_img}}"> 
                                          <button class="btn">View</button>
