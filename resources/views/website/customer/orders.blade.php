@@ -62,7 +62,7 @@
                                         <div class="us-empty-text mt-5">
                                     <h5 class="">You have no orders to show</h5>
                                         <p class="">You will see a history of your purchases when you place new orders</p>
-                                            <img src="{{asset('products/order-box.svg')}}" alt="" class="" >      
+                                            <img src="{{asset('public/products/order-box.svg')}}" alt="" class="" >      
                                 </div>
 
                                         @endif 

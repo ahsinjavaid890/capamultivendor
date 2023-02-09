@@ -169,14 +169,14 @@
                         </div>
                         <div class="card-body">
                             @if($store->shop_logo)
-                            <img style="width:100px;height:100px;" src="{{ url('images') }}/{{ $store->shop_logo }}">
+                            <img style="width:100px;height:100px;" src="{{ url('public/images') }}/{{ $store->shop_logo }}">
                             @else
                             <img style="width:100px;height:100px;"  src="https://peacemakersnetwork.org/wp-content/uploads/2019/09/placeholder.jpg">
                             @endif
                             <br>
                             <br>
                             @if($store->shop_banner)
-                            <img style="width:100%;height:300px;" src="{{ url('images') }}/{{ $store->shop_banner }}">
+                            <img style="width:100%;height:300px;" src="{{ url('public/images') }}/{{ $store->shop_banner }}">
                             @else
                             <img style="width:100%;height:300px;"  src="https://peacemakersnetwork.org/wp-content/uploads/2019/09/placeholder.jpg">
                             @endif

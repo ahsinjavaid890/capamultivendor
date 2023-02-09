@@ -1,7 +1,4 @@
-     
-        <!-- Footer Area Start -->
-        <div class="footer">
-           <section class="newsletter mb-5 mt-4">
+      <section class="newsletter mb-5 mt-4">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
@@ -12,10 +9,10 @@
                                     needs from our shop
                                 </h2>
                                 <p class="mb-45">Start You'r Daily Shopping with <span class="text-brand">Nest Mart</span></p>
-                                <form class="form-subcriber d-flex">
-                                    <input type="email" placeholder="Your emaill address" >
-                                    <button class="btn" type="submit">Subscribe</button>
-                                </form>
+                                <div class="form-subcriber d-flex">
+                                        <input type="email" placeholder="Your emaill address" >
+                                        <button class="btn" type="submit">Subscribe</button>
+                                </div>
                             </div>
                             <img src="{{ url('public/website/assets/images/cake.png')}}" alt="newsletter">
                         </div>
@@ -23,6 +20,11 @@
                 </div>
             </div>
         </section>
+        <!-- Footer Area Start -->
+        <div class="footer">
+           <!--  <div class="footer-logo">
+                <div class="container"><a href="index.html"><img class="img-responsive" src="{{asset('website/assets/images/oben-01__logo.png')}}" alt="logo.jpg" /></a></div>
+            </div> -->
             
             <div class="footer-area">
                 <div class="footer-top pt-5">

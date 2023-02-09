@@ -37,7 +37,7 @@
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="false">
                     <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
                         <span class="svg-icon svg-icon-xl svg-icon-primary">
-                            <img src="{{asset('sellernew/media/custom/notification-bell.svg')}}">
+                            <img src="{{asset('public/sellernew/media/custom/notification-bell.svg')}}">
                         </span>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                                     <!--begin::Symbol-->
                                     <div class="symbol symbol-40 symbol-light-secondary mr-5">
                                         <span class="symbol-label">
-                                            <img src="{{asset('sellernew/media/custom/account-drop.svg')}}">
+                                            <img src="{{asset('public/sellernew/media/custom/account-drop.svg')}}">
                                         </span>
                                     </div>
                                     <!--end::Symbol-->
@@ -82,7 +82,7 @@
                                     <!--begin::Symbol-->
                                     <div class="symbol symbol-40 symbol-light-secondary mr-5">
                                         <span class="symbol-label">
-                                            <img src="{{asset('sellernew/media/custom/billing-drop.svg')}}">
+                                            <img src="{{asset('public/sellernew/media/custom/billing-drop.svg')}}">
                                         </span>
                                     </div>
                                     <!--end::Symbol-->
@@ -99,7 +99,7 @@
                                     <!--begin::Symbol-->
                                     <div class="symbol symbol-40 symbol-light-secondary mr-5">
                                         <span class="symbol-label">
-                                            <img src="{{asset('sellernew/media/custom/integration-drop.svg')}}">
+                                            <img src="{{asset('public/sellernew/media/custom/integration-drop.svg')}}">
                                         </span>
                                     </div>
                                     <!--end::Symbol-->
@@ -116,7 +116,7 @@
                                     <!--begin::Symbol-->
                                     <div class="symbol symbol-40 symbol-light-secondary mr-5">
                                         <span class="symbol-label">
-                                            <img src="{{asset('sellernew/media/custom/message-drop.svg')}}">
+                                            <img src="{{asset('public/sellernew/media/custom/message-drop.svg')}}">
                                         </span>
                                     </div>
                                     <!--end::Symbol-->
@@ -133,7 +133,7 @@
                                     <!--begin::Symbol-->
                                     <div class="symbol symbol-40 symbol-light-secondary mr-5">
                                         <span class="symbol-label">
-                                            <img src="{{asset('sellernew/media/custom/project-drop.svg')}}">
+                                            <img src="{{asset('public/sellernew/media/custom/project-drop.svg')}}">
                                         </span>
                                     </div>
                                     <!--end::Symbol-->
@@ -199,7 +199,7 @@
                     <div class="d-flex align-items-center p-8 rounded-top">
                         <!--begin::Symbol-->
                         <div class="symbol symbol-md bg-light-primary mr-3 flex-shrink-0">
-                            <img src="{{asset('sellernew/media/users/300_21.jpg')}}" alt="" />
+                            <img src="{{asset('public/sellernew/media/users/300_21.jpg')}}" alt="" />
                         </div>
                         <!--end::Symbol-->
                         <!--begin::Text-->
@@ -217,7 +217,7 @@
                         <a href="{{url('seller/seller-profile')}}" class="navi-item px-8">
                             <div class="navi-link">
                                 <div class="navi-icon mr-2">
-                                    <img src="{{asset('sellernew/media/custom/account-drop.svg')}}">
+                                    <img src="{{asset('public/sellernew/media/custom/account-drop.svg')}}">
                                 </div>
                                 <div class="navi-text">
                                     <div class="font-weight-bold">

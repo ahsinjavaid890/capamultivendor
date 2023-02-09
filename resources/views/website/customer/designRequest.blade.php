@@ -29,7 +29,7 @@
                                 @foreach($designReq as $req)
                                 <tr style="vertical-align:baseline;">
                                     <td class="text-center">
-                                        <div style="height:100px;width: 100px;"><img style="width:100%;height:100%;" class="img-fluid img-thumbnail" src="{{asset('uploads/'.$req->product_img)}}"/>
+                                        <div style="height:100px;width: 100px;"><img style="width:100%;height:100%;" class="img-fluid img-thumbnail" src="{{asset('public/uploads/'.$req->product_img)}}"/>
                                         </div>
                                     </td>
                                     <td>{{$req->product_name}}</td>

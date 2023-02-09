@@ -2,7 +2,7 @@
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <!-- Navbar Brand-->
-                    <a class="navbar-brand ps-3" href="{{route('website.index')}}"><img src="{{asset('seller/assets/img/oben-01__logo.png')}}"></a>
+                    <a class="navbar-brand ps-3" href="{{route('website.index')}}"><img src="{{asset('public/seller/assets/img/oben-01__logo.png')}}"></a>
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <a class="nav-link" href="{{route('website.customerDashboard')}}">

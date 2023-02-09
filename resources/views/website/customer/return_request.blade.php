@@ -30,7 +30,7 @@
                                @foreach($requestList as $requests)
                                <tr>
                                    <td>
-                                       <img src="{{asset('products/'.$requests->productImg)}}" style="width:100px"/>{{$requests->prodTitle}}
+                                       <img src="{{asset('public/products/'.$requests->productImg)}}" style="width:100px"/>{{$requests->prodTitle}}
                                    </td>
                                    <td>{{$requests->reason}}</td>
                                    <td>{{$requests->message}}</td>

@@ -193,102 +193,25 @@
             </div>
         </div>
         <div class="row">
+            @foreach(DB::table('blogs')->get() as $r)
             <div class="col-md-3 mb-3">
                 <div class="card blog-card">
                     <div class="card-body p-0">
                         <div class="blog-image">
                             <a href="#">
-                                <img src="{{ url('public/website/assets/images/blog-1.png') }}" style="width: 100%;border-radius: 15px;">
+                                <img src="{{asset('public/images/'.$r->blog_img)}}" style="width: 100%;border-radius: 15px;">
                             </a>
                         </div>
                         <div class="blog-content">
                             <h6 class="mb-10 font-sm"><a class="entry-meta text-muted" href="#">Salad</a></h6>
                             <div class="blog-title">
-                                <h4><a href="#">The Intermediate Guide to Healthy Food</a> </h4>
-                            </div>
-                            <div class="entry-meta font-xs color-grey mt-3 pb-3">
-                                <div class="d-flex" style="justify-content: space-between;">
-                                    <p class="post-on mr-10">25 April 2022</p>
-                                    <p class="hit-count has-dot mr-10">126k Views</p>
-                                    <p class="hit-count has-dot">4 mins read</p>
-                                </div>
+                                <h4><a href="#">{{ $r->blog_name }}</a> </h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-3">
-                <div class="card blog-card">
-                    <div class="card-body p-0">
-                        <div class="blog-image">
-                            <a href="#">
-                                <img src="{{ url('public/website/assets/images/blog-1.png') }}" style="width: 100%;border-radius: 15px;">
-                            </a>
-                        </div>
-                        <div class="blog-content">
-                            <h6 class="mb-10 font-sm"><a class="entry-meta text-muted" href="#">Salad</a></h6>
-                            <div class="blog-title">
-                                <h4><a href="#">The Intermediate Guide to Healthy Food</a> </h4>
-                            </div>
-                            <div class="entry-meta font-xs color-grey mt-3 pb-3">
-                                <div class="d-flex" style="justify-content: space-between;">
-                                    <p class="post-on mr-10">25 April 2022</p>
-                                    <p class="hit-count has-dot mr-10">126k Views</p>
-                                    <p class="hit-count has-dot">4 mins read</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <div class="card blog-card">
-                    <div class="card-body p-0">
-                        <div class="blog-image">
-                            <a href="#">
-                                <img src="{{ url('public/website/assets/images/blog-1.png') }}" style="width: 100%;border-radius: 15px;">
-                            </a>
-                        </div>
-                        <div class="blog-content">
-                            <h6 class="mb-10 font-sm"><a class="entry-meta text-muted" href="#">Salad</a></h6>
-                            <div class="blog-title">
-                                <h4><a href="#">The Intermediate Guide to Healthy Food</a> </h4>
-                            </div>
-                            <div class="entry-meta font-xs color-grey mt-3 pb-3">
-                                <div class="d-flex" style="justify-content: space-between;">
-                                    <p class="post-on mr-10">25 April 2022</p>
-                                    <p class="hit-count has-dot mr-10">126k Views</p>
-                                    <p class="hit-count has-dot">4 mins read</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <div class="card blog-card">
-                    <div class="card-body p-0">
-                        <div class="blog-image">
-                            <a href="#">
-                                <img src="{{ url('public/website/assets/images/blog-1.png') }}" style="width: 100%;border-radius: 15px;">
-                            </a>
-                        </div>
-                        <div class="blog-content">
-                            <h6 class="mb-10 font-sm"><a class="entry-meta text-muted" href="#">Salad</a></h6>
-                            <div class="blog-title">
-                                <h4><a href="#">The Intermediate Guide to Healthy Food</a> </h4>
-                            </div>
-                            <div class="entry-meta font-xs color-grey mt-3 pb-3">
-                                <div class="d-flex" style="justify-content: space-between;">
-                                    <p class="post-on mr-10">25 April 2022</p>
-                                    <p class="hit-count has-dot mr-10">126k Views</p>
-                                    <p class="hit-count has-dot">4 mins read</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

@@ -8,25 +8,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
   <!-- Dashboard -->
-  <link href="{{ asset('sellernew/css/my-custom-style.css') }}" rel="stylesheet" />
-  <link href="{{ asset('sellernew/plugins/global/plugins.bundle.css?v=7.0.6') }}" rel="stylesheet" />
-  <link href="{{ asset('sellernew/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.6') }}" rel="stylesheet" />
-   <link href="{{asset('sellernew/css/styles.css')}}" rel="stylesheet" />
-    <link href="{{asset('sellernew/css/responsive.css')}}" rel="stylesheet" />
-  <link href="{{ asset('sellernew/css/style.bundle.css?v=7.0.6') }}" rel="stylesheet" />
+  <link href="{{ asset('public/sellernew/css/my-custom-style.css') }}" rel="stylesheet" />
+  <link href="{{ asset('public/sellernew/plugins/global/plugins.bundle.css?v=7.0.6') }}" rel="stylesheet" />
+  <link href="{{ asset('public/sellernew/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.6') }}" rel="stylesheet" />
+   <link href="{{asset('public/sellernew/css/styles.css')}}" rel="stylesheet" />
+    <link href="{{asset('public/sellernew/css/responsive.css')}}" rel="stylesheet" />
+  <link href="{{ asset('public/sellernew/css/style.bundle.css?v=7.0.6') }}" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.theme.default.min.css">
-  <link href="{{ asset('sellernew/css/themes/layout/header/base/light.css?v=7.0.6') }}" rel="stylesheet" />
-  <link href="{{ asset('sellernew/css/themes/layout/header/menu/light.css?v=7.0.6') }}" rel="stylesheet" />
-  <link href="{{ asset('sellernew/css/themes/layout/brand/dark.css?v=7.0.6') }}" rel="stylesheet" />
-  <link href="{{ asset('sellernew/css/themes/layout/aside/dark.css?v=7.0.6') }}" rel="stylesheet" />
-  <link href="{{ asset('sellernew/css/my-custom-style.css') }}" rel="stylesheet" />
+  <link href="{{ asset('public/sellernew/css/themes/layout/header/base/light.css?v=7.0.6') }}" rel="stylesheet" />
+  <link href="{{ asset('public/sellernew/css/themes/layout/header/menu/light.css?v=7.0.6') }}" rel="stylesheet" />
+  <link href="{{ asset('public/sellernew/css/themes/layout/brand/dark.css?v=7.0.6') }}" rel="stylesheet" />
+  <link href="{{ asset('public/sellernew/css/themes/layout/aside/dark.css?v=7.0.6') }}" rel="stylesheet" />
+  <link href="{{ asset('public/sellernew/css/my-custom-style.css') }}" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-  <link href="{{ asset('sellernew/plugins/custom/datatables/datatables.bundle.css?v=7.0.6') }}" rel="stylesheet" />
+  <link href="{{ asset('public/sellernew/plugins/custom/datatables/datatables.bundle.css?v=7.0.6') }}" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
   <input type="hidden" value="{{ url('') }}" id="app_url">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <link href="{{ asset('sellernew/media/logos/favicon.ico') }}" rel="shortcut icon" />
+  <link href="{{ asset('public/sellernew/media/logos/favicon.ico') }}" rel="shortcut icon" />
 </head>
 <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">    
     @include('sellerupdated.includes.navbar')
@@ -125,22 +125,22 @@
         <!--end::Global Config-->
 
         <!--begin::Global Theme Bundle(used by all pages)-->
-        <script src="{{asset('sellernew/plugins/global/plugins.bundle.js?v=7.0.6')}}"></script>
+        <script src="{{asset('public/sellernew/plugins/global/plugins.bundle.js?v=7.0.6')}}"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
-        <script src="{{asset('sellernew/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.6')}}"></script>
-        <script src="{{asset('sellernew/js/scripts.bundle.js?v=7.0.6')}}"></script>
+        <script src="{{asset('public/sellernew/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.6')}}"></script>
+        <script src="{{asset('public/sellernew/js/scripts.bundle.js?v=7.0.6')}}"></script>
         <!--end::Global Theme Bundle-->
 
         <!--begin::Page Vendors(used by this page)-->
-        <script src="{{asset('sellernew/plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.6')}}"></script>
+        <script src="{{asset('public/sellernew/plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.6')}}"></script>
         <!--end::Page Vendors-->
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
         <!--begin::Page Scripts(used by this page)-->
-        <script src="{{asset('sellernew/js/pages/widgets.js?v=7.0.6')}}"></script>
+        <script src="{{asset('public/sellernew/js/pages/widgets.js?v=7.0.6')}}"></script>
         <script src="{{ asset('public/carrier/js/pages/crud/forms/widgets/select2.js?v=7.0.6') }}" type="text/javascript"></script>
-        <script src="{{asset('sellernew/js/pages/crud/ktdatatable/base/data-local.js?v=7.0.6')}}"></script>
-        <script src="{{ asset('sellernew/js/custom.js') }}"></script>
+        <script src="{{asset('public/sellernew/js/pages/crud/ktdatatable/base/data-local.js?v=7.0.6')}}"></script>
+        <script src="{{ asset('public/sellernew/js/custom.js') }}"></script>
         <!--end::Page Scripts-->
 
         <script type="text/javascript">

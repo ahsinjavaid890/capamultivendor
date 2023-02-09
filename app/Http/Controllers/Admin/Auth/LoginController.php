@@ -17,7 +17,6 @@ class LoginController extends Controller
 
     public function login_process(Request $request)
     {
-        echo "string";exit;
         //Validation...
         
         //Login the admin...
@@ -25,7 +24,7 @@ class LoginController extends Controller
         //Redirect the admin...
         // $request->only('email','password')
         $data = $request->all();
-           print_r($data);exit;
+           
         $this->validator($request);
     
         if(Auth::guard('admin')->attempt(['email'=>$data['email'],'password'=>$data['password']],$request->filled('remember'))){

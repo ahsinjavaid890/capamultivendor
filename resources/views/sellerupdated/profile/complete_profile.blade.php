@@ -193,7 +193,7 @@
                                 <div class="info-input mb-20px">
                                     <label>Address <span style="color:red">*</span></label>
                                     <input type="text" placeholder="" class="contact_info" id="contact_add" value="{{Auth::guard('seller')->user()->contact_address}}"/>
-                                    <div class="map-pin icon"><img src="{{asset('seller/assets/img/location-pin.svg')}}"/></div>
+                                    <div class="map-pin icon"><img src="{{asset('public/seller/assets/img/location-pin.svg')}}"/></div>
                                 </div>
                             </div>
                             <div class="col-md-12">

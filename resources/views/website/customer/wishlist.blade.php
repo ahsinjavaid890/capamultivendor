@@ -30,7 +30,7 @@
                             @foreach($wishlists as $wishlist)
                             <tr>
                                 <td>
-                                    <a href="{{route('website.productDetails',[encrypt($wishlist->id)])}}" style="text-decoration:none;"><img src="{{asset('products/'.$wishlist->featured_img)}}" style="width:100px"/></a>
+                                    <a href="{{route('website.productDetails',[encrypt($wishlist->id)])}}" style="text-decoration:none;"><img src="{{asset('public/products/'.$wishlist->featured_img)}}" style="width:100px"/></a>
                                 </td>
                                 <td><a href="{{route('website.productDetails',[encrypt($wishlist->id)])}}" style="text-decoration:none;"><h5 class="whishlist_heading">{{$wishlist->product_title}}</h5></a></td>
                                 <td>{{$wishlist->sale_price}}</td>
