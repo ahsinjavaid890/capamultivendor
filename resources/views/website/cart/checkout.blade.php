@@ -1,22 +1,6 @@
 @extends('website.layouts.master')
 @section('content')
 <div id="checkout">
-   <div class="checkout-top-area">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-6">
-               <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('public/website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
-            </div>
-            <div class="col-md-6">
-                <div class="helpful-links">
-                    <span><a href="javascript:void(0)" class="btn btn-primary">Need help?</a></span>
-                    <span><a href="javascript:void(0)" class="btn btn-primary"><i class="fa fa-phone-square mx-2"></i>Call Us</a></span>
-                    <span><a href="javascript:void(0)"  class="btn btn-primary"><i class="fa fa-phone mx-2"></i> Whatsapp Us</a></span>
-                </div>
-            </div>
-         </div>
-      </div>
-   </div>
    <div id="checkout-tabs" style="background-color: #F2F2F2 !important;">
       <div class="row">
          <div class="checkout-tab-block order-md-first">

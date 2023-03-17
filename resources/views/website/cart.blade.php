@@ -42,63 +42,59 @@
                      <form action="#" class="cart-main-area text-center">
                         <div class="table-content table-responsive cart-table-content">
                            <table class="table table-striped table-bordered">
-                              <thead>
-                                 <tr>
-                                    <th class="product-title">Products</th>
-                                    <th class="product-title">Wishlist</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    {{--                                                    
-                                    <th></th>
-                                    --}}
-                                 </tr>
-                              </thead>
-                              <tbody>
-                                 @php
-                                 $subtotal = 0;
-                                 $shippingcost = 0;
-                                 @endphp
-                                 @foreach($cart as $r)
-                                  <tr>
-                                      <td class="product-name">
-                                          <a class="product-thumb-title " href="{{url('product')}}/{{ $r['url'] }}">
-                                          <img class="img-responsive" src="{{ asset('products') }}/{{ $r['image'] }}" alt="" />
-                                          <span>{{$r['name']}}</span>
-                                          </a>
-                                      </td>
-                                      <td>
-                                          <div class="wishlist-name">
-                                              <div class="wishlish-or-remove">
-                                              <a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/like.svg')}}"/>Move to Wishlist</a>
-                                              <a href="javascript:void(0)" onclick="removecartpage({{$r['id']}})"><img src="{{asset('public/website/assets/images/icons/trash.svg')}}"/>Remove</a>
-                                              </div>
-                                          </div>
-                                      </td>
-                                      <td class="product-price-cart">INR    <span class="amount" > {{$r['price']}}</span></td>
-                                      <td class="product-quantity">
-                                          <div class="prodqty d-flex justify-content-center">
-                                              <div class="cart-plus-minus">
-                                                  <div class="dec qtybutton" onclick="pluscartquantity({{$r['id']}})">-</div>
-                                                  <input class="cart-plus-minus-box" type="text" value="1" name="qty"  maxlength="12" value="{{ $r['quantity'] }}" onChange="qtyamt()">
-                                                  <div class="inc qtybutton" onclick="minuscartquantity({{$r['id']}})">+</div>
-                                              </div>
-                                              {{--<span class="plus button" onclick="pluscartquantity({{$r['id']}})">--}}
-                                              {{--                                                    +--}}
-                                              {{--                                                    </span>--}}
-                                              {{--                                                    <input class="prod_input_qty " type="text" name="qty"  maxlength="12" value="{{ $r['quantity'] }}" onChange="qtyamt()"/>--}}
-                                              {{--                                                    <span class="min button" onclick="minuscartquantity({{$r['id']}})">--}}
-                                              {{--                                                    ---}}
-                                              {{--                                                    </span>--}}
-                                          </div>
-                                      </td>
-                                      {{--<td><a href="javascript:void(0)" class="removeprod"  onclick="removecartpage({{$r['id']}})"><img src="{{asset('public/website/assets/images/icons/trash.svg')}}"/>Remove</a></td>
-                                      --}}
-                                  </tr>
-                                 @php
-                                 $subtotal += $r['price']*$r['quantity'];
-                                 @endphp
-                                 @endforeach
-                              </tbody>
+                              <tr>
+                                 <th class="product-title">Products</th>
+                                 <th class="product-title">Wishlist</th>
+                                 <th>Price</th>
+                                 <th>Quantity</th>
+                                 {{--                                                    
+                                 <th></th>
+                                 --}}
+                              </tr>
+                              @php
+                              $subtotal = 0;
+                              $shippingcost = 0;
+                              @endphp
+                              @foreach($cart as $r)
+                               <tr>
+                                   <td class="product-name">
+                                       <a class="product-thumb-title " href="{{url('product')}}/{{ $r['url'] }}">
+                                       <img class="img-responsive" src="{{ asset('products') }}/{{ $r['image'] }}" alt="" />
+                                       <span>{{$r['name']}}</span>
+                                       </a>
+                                   </td>
+                                   <td>
+                                       <div class="wishlist-name">
+                                           <div class="wishlish-or-remove">
+                                           <a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/like.svg')}}"/>Move to Wishlist</a>
+                                           <a href="javascript:void(0)" onclick="removecartpage({{$r['id']}})"><img src="{{asset('public/website/assets/images/icons/trash.svg')}}"/>Remove</a>
+                                           </div>
+                                       </div>
+                                   </td>
+                                   <td class="product-price-cart">INR    <span class="amount" > {{$r['price']}}</span></td>
+                                   <td class="product-quantity">
+                                       <div class="prodqty d-flex justify-content-center">
+                                           <div class="cart-plus-minus">
+                                               <div class="dec qtybutton" onclick="pluscartquantity({{$r['id']}})">-</div>
+                                               <input class="cart-plus-minus-box" type="text" value="1" name="qty"  maxlength="12" value="{{ $r['quantity'] }}" onChange="qtyamt()">
+                                               <div class="inc qtybutton" onclick="minuscartquantity({{$r['id']}})">+</div>
+                                           </div>
+                                           {{--<span class="plus button" onclick="pluscartquantity({{$r['id']}})">--}}
+                                           {{--                                                    +--}}
+                                           {{--                                                    </span>--}}
+                                           {{--                                                    <input class="prod_input_qty " type="text" name="qty"  maxlength="12" value="{{ $r['quantity'] }}" onChange="qtyamt()"/>--}}
+                                           {{--                                                    <span class="min button" onclick="minuscartquantity({{$r['id']}})">--}}
+                                           {{--                                                    ---}}
+                                           {{--                                                    </span>--}}
+                                       </div>
+                                   </td>
+                                   {{--<td><a href="javascript:void(0)" class="removeprod"  onclick="removecartpage({{$r['id']}})"><img src="{{asset('public/website/assets/images/icons/trash.svg')}}"/>Remove</a></td>
+                                   --}}
+                               </tr>
+                              @php
+                              $subtotal += $r['price']*$r['quantity'];
+                              @endphp
+                              @endforeach
                            </table>
                         </div>
                      </form>

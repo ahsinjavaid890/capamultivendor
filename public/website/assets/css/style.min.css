@@ -4973,7 +4973,7 @@ offcanvas-menu>ul>li .menu-expand {
 	font-weight: 600
 }
 .cart-main-area .table-content table {
-	border: 1px solid #ebebeb;
+	border: 1px solid #ebebeb !important;
 	width: 100%
 }
 .cart-main-area .table-content table thead>tr {
@@ -5001,10 +5001,10 @@ offcanvas-menu>ul>li .menu-expand {
 	text-align: center
 }
 .cart-main-area .table-content table tbody>tr td.product-thumbnail {
-	width: 150px
+/*	width: 150px*/
 }
 .cart-main-area .table-content table tbody>tr td.product-name {
-	width: 435px
+/*	width: 435px*/
 }
 .cart-main-area .table-content table tbody>tr td.product-name a {
 	color: #666;
@@ -5012,10 +5012,10 @@ offcanvas-menu>ul>li .menu-expand {
 	font-weight: 500
 }
 .cart-main-area .table-content table tbody>tr td.product-price-cart {
-	width: 435px
+/*	width: 435px*/
 }
 .cart-main-area .table-content table tbody>tr td.product-quantity {
-	width: 435px
+/*	width: 435px*/
 }
 .cart-main-area .table-content table tbody>tr td.product-quantity .cart-plus-minus {
 	display: inline-block;
@@ -5395,7 +5395,7 @@ offcanvas-menu>ul>li .menu-expand {
 .your-order-area .your-order-wrap {
 	padding: 30px 35px;
     background: #ffffff;
-    border: 1px solid #707070;
+    border: 1px solid #dddddd;
 }
 .your-order-area .your-order-wrap .your-order-product-info .your-order-top ul {
 	display: -webkit-box;
@@ -7069,7 +7069,7 @@ li.edit-order a:hover {color: #009fbd;}
 .cart-page .checkout-top-area .back-to-cart {display: none;}
 td.product-name .product-thumb-title {display: flex; text-align: left;}
 td.product-name .product-thumb-title img {width: 100px;     margin-right: 15px;}
-.cart-main-area .table-content table tbody>tr td.product-name {width: 1000px;}
+/*.cart-main-area .table-content table tbody>tr td.product-name {width: 1000px;}*/
 .cart-main-area .table-content table {border: 0;}
 
 .cart-main-area .accordion-button::after {
@@ -7084,7 +7084,7 @@ td.product-name .product-thumb-title img {width: 100px;     margin-right: 15px;}
 }
 .wishlish-or-remove img {width: 18px; margin-right: 5px;}
 .wishlish-or-remove a:last-child img {width: 13px; margin-left: 10px;}
-.wishlish-or-remove {text-align: right;}
+/*.wishlish-or-remove {text-align: right;}*/
 .cart-main-area .table-content table tbody>tr td.product-name a {color: #000;font-size: 16px;font-weight: 600;line-height: 20px;}
 .cart-main-area .table-content table tbody>tr td {color: #64317c;font-weight: 700;}
 .cart-main-area .table-content table tbody>tr td {color: #64317c;font-weight: 700; vertical-align: top;}

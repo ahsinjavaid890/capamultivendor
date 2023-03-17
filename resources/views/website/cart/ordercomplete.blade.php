@@ -1,22 +1,6 @@
 @extends('website.layouts.master')
 @section('content')
     <div id="checkout">
-        <div class="checkout-top-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="back-to-cart"><a href="{{route('website.cartpage')}}"><img src="{{asset('public/website/assets/images/icons/left-arrow.svg')}}"/>Back</a></div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="helpful-links">
-                            <span><a href="javascript:void(0)">Need help?</a></span>
-                            <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
-                            <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="checkout-tabs">
             <div class="row">
                 <div class="checkout-tab-block order-md-first">
@@ -49,7 +33,7 @@
                                         <div class="thank-you-title content-box text-center">
                                             <img src="{{asset('public/website/assets/images/icons/check.png')}}" class="check">
                                             <h1>Thank You</h1>
-                                            <h3>For shopping At Oben!</h3>
+                                            <h3>For shopping At Capa!</h3>
                                         </div>
                                         @php
                                           if($order->customer_id){
