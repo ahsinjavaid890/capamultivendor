@@ -24,7 +24,7 @@
             <div class="container-fluid">
                 <div class="row">
                     @foreach($banners->where('type' , 'homepagetop') as $banner)
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="banner_image">
                             <a  href="{{route('website.productpage')}}">
                                 <img src="{{asset('public/uploads/'.$banner->banner)}}">
@@ -50,15 +50,15 @@
                         </div>
                         <div class="row">
                             @foreach($newcat as $r)
-                            <div class="col-md-3 mt-3">
+                            <div class="col-md-2 mt-3">
                                 <div class="card ">
                                     <div class="card-body p-0">
                                        <a href="{{ url('category') }}/{{ $r->url }}">
                                         @if($r->icon==null)
-                                            <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%;" />
-                                            @else
-                                            <img src="{{asset('public/products/'.$r->icon)}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%;height: 230px;" />
-                                        @endif
+                                                    <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%;" />
+                                                    @else
+                                                    <img src="{{asset('public/products/'.$r->icon)}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%;" />
+                                                @endif
                                         </a> 
                                         <div class="cat-heading mt-2 mb-3">
                                             <a href="{{ url('category') }}/{{ $r->url }}"><p>{{$r->category_name}}</p></a>
@@ -110,8 +110,8 @@
         </div>
         <div id="new-arrivals" class="deal-area pt-60px pb-30px" style="background-color: #F2F2F2 !important; ">
             <div class="container-fluid">
-                <div class="card" style="background-image: url('{{ url('public/website/assets/images/73655.webp') }}');background-size: cover; background-position: 2px -428px; padding-top: 125px; padding-bottom: 125px; background-repeat: no-repeat;">
-                    <div class="card-body">
+                <div class="card p-3">
+                    <div class="card-body" style="background-image: url('{{ url('public/website/assets/images/73655.webp') }}');background-size: cover; background-position: 2px -428px; padding-top: 125px; padding-bottom: 125px; background-repeat: no-repeat;">
                         <div class="col-md-12">
                             <div class="capa_logo">
                                 <a href="https://capacollege.in/"><img src="{{ url('public/website/assets/images/capa.png') }}"></a>
@@ -148,14 +148,18 @@
         </div>
         <div class="banner-area pt-5" style="background-color: #F2F2F2;">
             <div class="container-fluid">
-                <div class="row">
-                    @foreach($banners->where('type' , 'homepagetop') as $banner)
-                    <div class="col-md-4 col-xs-12">
-                        <div class="banner-wrapper">
-                            <a href="{{route('website.productpage')}}"><img src="{{asset('public/uploads/'.$banner->banner)}}" alt="" /></a>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            @foreach($banners->where('type' , 'homepagetop') as $banner)
+                            <div class="col-md-3 col-xs-12">
+                                <div class="banner-wrapper">
+                                    <a href="{{route('website.productpage')}}"><img src="{{asset('public/uploads/'.$banner->banner)}}" alt="" /></a>
+                                </div>
+                            </div>
+                            @endforeach
                         </div>
                     </div>
-                    @endforeach
                 </div>
             </div>
         </div>
@@ -185,37 +189,12 @@
              </div>
         </div>
         <!-- New Arrivals Area End -->
-      
         <!-- Banner Area Start -->
-        <!-- <div class="banner-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-xs-12">
-                        <div class="banner-wrapper">
-                            <a href="shop-4-column.html"><img src="{{asset('public/website/assets/images/banner-image/1.jpg')}}" alt="" /></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xs-12">
-                        <div class="banner-wrapper">
-                            <a href="shop-4-column.html"><img src="{{asset('public/website/assets/images/banner-image/2.jpg')}}" alt="" /></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xs-12">
-                        <div class="banner-wrapper">
-                            <a href="shop-4-column.html"><img src="{{asset('public/website/assets/images/banner-image/3.jpg')}}" alt="" /></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
-        
-        <!-- Banner Area Start -->
-        <div class="banner-area pt-5">
+        <div class="banner-area pt-5" style="background-color: #F2F2F2;">
             <div class="container-fluid">
                 <div class="row">
                     @foreach($banners->where('type' , 'homepagetop') as $banner)
-                    <div class="col-md-4 col-xs-12">
+                    <div class="col-md-6 col-xs-12">
                         <div class="banner-wrapper">
                             <a href="{{route('website.productpage')}}"><img src="{{asset('public/uploads/'.$banner->banner)}}" alt="" /></a>
                         </div>
