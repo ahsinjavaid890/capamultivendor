@@ -6842,7 +6842,7 @@ offcanvas-menu>ul>li .menu-expand {
 }
 /****** Sign up page start *******/
 
-#sign-up-tabs {padding-bottom: 50px;}
+#sign-up-tabs {padding-bottom: 50px;padding-top: 150px;}
 .register-as {
     background: white;
     border-radius: 15px;
