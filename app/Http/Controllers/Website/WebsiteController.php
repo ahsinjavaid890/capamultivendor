@@ -559,6 +559,7 @@ class WebsiteController extends Controller
                                 ->orderBy('product_attrs.id')
                                 ->get();
                              
+
         $deliveriesbyy = Seller::where('id','=',$products['added_by_seller'])->first();
 
         $catproducts=Product::leftJoin('categories','categories.id','=','products.category')
@@ -568,6 +569,7 @@ class WebsiteController extends Controller
         ->select('products.*','categories.id as cat_id','sub_categories.id as subcat_id','categories.category_name as cat_name','sub_categories.category_name as subparent_id','subcat_name','rating','message')
         ->where('products.category','=',$products['cat_id'])
         ->where('products.status','=','2')
+        ->whereNotIn('products.id', [$product_id])
         ->orderBy('products.id','desc')
         ->limit(3)
         ->get(); 
