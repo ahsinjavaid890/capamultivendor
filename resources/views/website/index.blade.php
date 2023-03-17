@@ -192,18 +192,14 @@
         <!-- Banner Area Start -->
         <div class="banner-area pt-5" style="background-color: #F2F2F2;">
             <div class="container-fluid">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            @foreach($banners->where('type' , 'homepagetop') as $banner)
-                            <div class="col-md-6 col-xs-12">
-                                <div class="banner-wrapper">
-                                    <a href="{{route('website.productpage')}}"><img src="{{asset('public/uploads/'.$banner->banner)}}" alt="" /></a>
-                                </div>
-                            </div>
-                            @endforeach
+                <div class="row">
+                    @foreach($banners->where('type' , 'homepagetop') as $banner)
+                    <div class="col-md-6 col-xs-12">
+                        <div class="banner-wrapper">
+                            <a href="{{route('website.productpage')}}"><img src="{{asset('public/uploads/'.$banner->banner)}}" alt="" /></a>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>  
