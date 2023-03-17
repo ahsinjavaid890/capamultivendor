@@ -5,17 +5,7 @@
                 <a href="{{ url('product') }}/{{ $r->url }}" class="thumbnail">
                     <img class="first-img rounded" src="{{asset('public/products/'.$r->featured_img)}}" alt="" />
                 </a>
-                <!-- <div class="quick-view">
-                    <a onclick="quickproductview({{$r->id}})" class="quick_view" href="javascript:void(0)"  title="{{ $r->product_title }}" >
-                        <i class="icon-magnifier icons"></i>
-                    </a>
-                </div> -->
             </div>
-            <?php 
-                $offer_ar = $r->prod_price-$r->sale_price;
-                $off_ar = round(($offer_ar/$r->prod_price)*100);
-            ?> 
-            <ul class="product-flag"><li class="new">{{$off_ar}} %</li></ul>
             @if(Auth::guard('cust')->check())
 
 
@@ -47,8 +37,7 @@
                 <a class="inner-link" href="{{ url('product') }}/{{ $r->url }}"><span>{{$r->product_title}}</span></a>
                 <div class="pricing-meta">
                     <ul>
-                        <li class="old-price cut"><del>{{$r->prod_price}} {{ Cmf::current_currency() }}</del></li>
-                        <li class="new-price not-cut">{{$r->sale_price}} {{ Cmf::current_currency() }}</li>
+                        <li class="new-price not-cut">{{$r->prod_price}} {{ Cmf::current_currency() }}</li>
                     </ul>
                 </div>
                 <div class="add-cart-btn">

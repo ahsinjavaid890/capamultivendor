@@ -25,7 +25,7 @@
 <section class="product-details-area mtb-60px">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-5 col-lg-5 col-md-12">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
                         <div class="product-details-img product-details-tab">
                             <div style="height:400px;" class="zoompro-wrap zoompro-2">
                                 <div style="height:400px;" class="zoompro-border zoompro-span">
@@ -46,7 +46,7 @@
                             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-12 offset-md-1">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
                         <div class="product-details-content">
                             <h2>{{$products->product_title}}</h2>
                             
