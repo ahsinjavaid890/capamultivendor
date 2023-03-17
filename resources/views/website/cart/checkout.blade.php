@@ -127,9 +127,9 @@
                                                 </ul>
                                              </div>
                                           </div>
-                                       </div>
-                                       <div class="payment-method mt-25">
-                                          <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
+                                          <div class="payment-method mt-25">
+                                             <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
+                                          </div>
                                        </div>
                                     </div>
                                  </div>

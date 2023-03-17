@@ -10,7 +10,7 @@
                   <!-- Tab One Start -->
                   <div id="shipping-address" class="tab-pane active">
                      <div class="checkout-area mt-60px mb-40px">
-                        <div class="container">
+                        <div class="container-fluid">
                            <div class="row">
                               <div class="col-lg-7">
                                  <div class="card">

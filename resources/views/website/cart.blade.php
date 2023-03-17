@@ -16,22 +16,6 @@
    border: 1px solid #ebebeb;
    }
 </style>
-<div class="offcanvas-overlay"></div>
-<div class="breadcrumb-area" style="background:#ecebeb;">
-   <div class="container-fluid">
-      <div class="archive-header mb-3">
-         <div class="row align-items-center">
-            <div class="col-xl-6">
-               <h1 class="mb-4">My Cart</h1>
-               <div class="breadcrumb">
-                  <a href="{{ url(' ') }}" rel="nofollow"><i class="fa fa-home mx-1"></i>Home</a>
-                  <span><i class="fa fa-angle-right mr-5"></i> My Cart</span> 
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
 <div class="cart-main-area ptb-60px">
    <div class="container-fluid">
       <div class="row">
@@ -40,13 +24,12 @@
                <div class="card-body">
                   <div class="form-detail">
                      <form action="#" class="cart-main-area text-center">
-                        <div class="table-content table-responsive cart-table-content">
-                           <table class="table table-striped table-bordered">
+                        <div class="table-content">
+                           <table class="table table-striped" style="background-color: white;">
                               <tr>
                                  <th class="product-title">Products</th>
                                  <th class="product-title">Wishlist</th>
                                  <th>Price</th>
-                                 <th>Quantity</th>
                                  {{--                                                    
                                  <th></th>
                                  --}}
@@ -72,22 +55,6 @@
                                        </div>
                                    </td>
                                    <td class="product-price-cart">INR    <span class="amount" > {{$r['price']}}</span></td>
-                                   <td class="product-quantity">
-                                       <div class="prodqty d-flex justify-content-center">
-                                           <div class="cart-plus-minus">
-                                               <div class="dec qtybutton" onclick="pluscartquantity({{$r['id']}})">-</div>
-                                               <input class="cart-plus-minus-box" type="text" value="1" name="qty"  maxlength="12" value="{{ $r['quantity'] }}" onChange="qtyamt()">
-                                               <div class="inc qtybutton" onclick="minuscartquantity({{$r['id']}})">+</div>
-                                           </div>
-                                           {{--<span class="plus button" onclick="pluscartquantity({{$r['id']}})">--}}
-                                           {{--                                                    +--}}
-                                           {{--                                                    </span>--}}
-                                           {{--                                                    <input class="prod_input_qty " type="text" name="qty"  maxlength="12" value="{{ $r['quantity'] }}" onChange="qtyamt()"/>--}}
-                                           {{--                                                    <span class="min button" onclick="minuscartquantity({{$r['id']}})">--}}
-                                           {{--                                                    ---}}
-                                           {{--                                                    </span>--}}
-                                       </div>
-                                   </td>
                                    {{--<td><a href="javascript:void(0)" class="removeprod"  onclick="removecartpage({{$r['id']}})"><img src="{{asset('public/website/assets/images/icons/trash.svg')}}"/>Remove</a></td>
                                    --}}
                                </tr>
@@ -109,16 +76,15 @@
                      <div class="cart-total">
                         <ul class="d-flex">
                            <li class="sub-total">
-                              <div class="small">Subtotal</div>
                               Total
                            </li>
                            <li class="total-price">{{$subtotal}} INR  </li>
                         </ul>
                      </div>
                      <div class="secure-checkout"><a href="{{route('website.checkoutpage')}}">Secure Checkout</a></div>
-                  </div>
-                  <div class="payment-method mt-25">
-                     <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
+                     <div class="payment-method mt-25">
+                        <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
+                     </div>
                   </div>
                </div>
             </div>
