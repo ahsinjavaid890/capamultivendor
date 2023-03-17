@@ -2,16 +2,8 @@
 @section('content')
 
 
-    <div class="offcanvas-overlay"></div>
+<div class="offcanvas-overlay"></div>
 
-        <!-- Slider Start -->
-        <div class="slider-area slider-height-1">
-            <!-- Single Slider  -->
-            <div class="swiper-slide bg-img d-flex" style="background-image: url({{asset('website/assets/images/slider-image/sample-2.jpg')}});">
-            </div>
-        </div>
-        <!-- Slider End -->
-    
         
         
 <section id="sign-up-tabs">
