@@ -61,66 +61,7 @@
                     </table>
                 </div>
             </div>
-            <div class="card card-custom mt-5">
-                <div class="card-header flex-wrap py-5">
-                    <div class="card-title">
-                        <h3 class="card-label">
-                            All Attributes
-                            <div class="text-muted pt-2 font-size-sm">Manage All Attributes</div>
-                        </h3>
-                    </div>
-                    <div class="card-btn text-end">
-                      <button class="btn btn-outline-success " data-toggle="modal" data-target="#addattribute" title="add Size"><i class="fa fa-plus"></i></button>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>Varient name</th> 
-                                                <th>Attribute name</th>                                
-                                                <th>Status</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        
-                                        <tbody id="catlist">
-
-                                          @foreach($attribute as $sizes)
-                                            <tr>
-                                                <td>{{$sizes->varientName}}</td>
-                                                <td>{{$sizes->attribute_name}}</td>
-                                              
-                                                <td>
-                                                @if($sizes->status==1)
-                                                <span class="badge badge-warning" style="font-size:12px;">Pending</span>
-                                                @elseif($sizes->status==2)
-                                                <span class="badge badge-success" style="font-size:12px;">Approved</span>
-                                                @endif
-                                                </td>
-                                                <td>
-                                                @if($sizes->status==1)
-                                                                                                   
-                                                   <a href="{{route('admin.AttributeActive',[encrypt($sizes->id)])}}"><button class="btn btn-outline-warning sizeactivate" title="Block" data="{{$sizes->id}}" ><i class="fa fa-ban"></i></button></a>
-                                               
-                                                @elseif($sizes->status==2)
-                                                
-                                                   
-                                                <a href="{{route('admin.Attributedeactive',[encrypt($sizes->id)])}}"> <button class="btn btn-outline-success sizedeactivate" title="approved" data="{{$sizes->id}}"  ><i class="fa fa-check"></i></button></a>
-                                               
-                                                @endif                                               
-                                                
-                                                <a href="{{route('admin.AttributeDelete',[encrypt($sizes->id)])}}"> <button class="btn btn-outline-danger sizedelete" title="Delete" data="{{$sizes->id}}" ><i class="fa fa-trash"></i></button></a>
-                                               
-                                                </td>
-                                            </tr>
-
-                                            @endforeach
-                                                                     
-                                        </tbody>
-                                    </table>
-                </div>
-            </div>
+            
             <!--end::Card-->
         </div>
         <!--end::Container-->

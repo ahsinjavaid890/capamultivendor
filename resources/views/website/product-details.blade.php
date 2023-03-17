@@ -64,18 +64,9 @@
                                       <option value="0">Choose an option</option>
                                    
                                     </select>
-                                
-                            </div>
-                            @endforeach
-                            <div class="pro-details-quality mt-0px">
-                                <label>Quantity</label>
-                                <div class="cart-plus-minus"><div class="dec qtybutton">-</div>
-                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1">
-                                    <div class="inc qtybutton">+</div>
                                 </div>
-                                
-                            </div>
-                                </form>
+                                @endforeach
+                            </form>
                             </div>
                             <div class="">
                                 @if($products->refund_return==1)
@@ -144,7 +135,6 @@
                             </div>
                             
                         </div>
-                    </form>
                 </div>
                 </div>
             </div>
