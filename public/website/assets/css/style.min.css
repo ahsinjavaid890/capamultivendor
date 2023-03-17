@@ -8617,7 +8617,7 @@ a:hover{
 	text-align: center;
 }
 .checkout-area .card{
-	border: 0;
+	border: 1px solid #ddd;
     box-shadow: 0 2px 2px rgb(0 0 0 / 20%);
 }
 .place-order button{

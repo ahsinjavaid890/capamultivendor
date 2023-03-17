@@ -44,7 +44,7 @@
                             <!-- Checkout Tabs Top Area End -->
 
                             <!-- Checkout Tabs Bottom Area Start -->
-                            <div class="tab-bottom-area mt-35">
+                            <div class="tab-bottom-area mt-35" style="background-color: #f2f2f2;">
                                 <!-- Checkout Tabs Content Start -->
                                 <div class="tab-content jump">
                                     <!-- Tab One Start -->
@@ -53,192 +53,150 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-lg-7">
-                                                    <div class="billing-info-wrap">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="billing-info-wrap">
                                                             <div class="row" id="custaddress" > 
                                                                
-                                                            <div class="col-lg-6 col-md-6">
-                                                                <div class="billing-info mb-20px">
-                                                                    <label>First Name *</label>
-                                                                    <input type="text" name="fname" id="fname" placeholder="e.g.John" class="form-control" />
+                                                                <div class="col-lg-6 col-md-6">
+                                                                    <div class="billing-info mb-20px">
+                                                                        <label>First Name *</label>
+                                                                        <input type="text" name="fname" id="fname" placeholder="e.g.John" class="form-control" />
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-md-6">
-                                                                <div class="billing-info mb-20px">
-                                                                    <label>Last Name *</label>
-                                                                    <input type="text" name="lname" id="lname" placeholder="e.g.Smith" class="form-control" />
+                                                                <div class="col-lg-6 col-md-6">
+                                                                    <div class="billing-info mb-20px">
+                                                                        <label>Last Name *</label>
+                                                                        <input type="text" name="lname" id="lname" placeholder="e.g.Smith" class="form-control" />
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="billing-info mb-20px">
-                                                                    <label>Email Address *</label>
-                                                                    <input type="text" name="gemail" id="gemail" placeholder="e.g.mail@example.com" class="form-control" />
+                                                                <div class="col-lg-12">
+                                                                    <div class="billing-info mb-20px">
+                                                                        <label>Email Address *</label>
+                                                                        <input type="text" name="gemail" id="gemail" placeholder="e.g.mail@example.com" class="form-control" />
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            
-                                                            <div class="col-lg-12">
-                                                                <div class="billing-info mb-20px">
-                                                                    <label>Phone Number *</label>
-                                                                    <input type="tel" name="gmobile" id="gmobile" placeholder="e.g.501234567" class="form-control" />
+                                                                
+                                                                <div class="col-lg-12">
+                                                                    <div class="billing-info mb-20px">
+                                                                        <label>Phone Number *</label>
+                                                                        <input type="tel" name="gmobile" id="gmobile" placeholder="e.g.501234567" class="form-control" />
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="billing-select mb-20px">
-                                                                    <label>Emirates *</label>
-                                                                    <select name="emirates" id="emirates" class="shippingadd form-control">
-                                                                        <option value="0">-select emirates-</option>
-                                                                        <option>Dubai</option>
-                                                                        <option>Abu Dhabi</option>
-                                                                        <option>Sharjah</option>
-                                                                        <option>Ajman</option>
-                                                                        <option>Tarif</option>
-                                                                        <option>Dhayd</option>
-                                                                    </select>
+                                                                <div class="col-lg-12">
+                                                                    <div class="billing-select mb-20px">
+                                                                        <label>Emirates *</label>
+                                                                        <select name="emirates" id="emirates" class="shippingadd form-control">
+                                                                            <option value="0">-select emirates-</option>
+                                                                            <option>Dubai</option>
+                                                                            <option>Abu Dhabi</option>
+                                                                            <option>Sharjah</option>
+                                                                            <option>Ajman</option>
+                                                                            <option>Tarif</option>
+                                                                            <option>Dhayd</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="billing-select mb-20px">
-                                                                    <label>Area *</label>
-                                                                    <select name="area" class="shippingadd form-control" id="shiparea">
-                                                                        <option value="0">-select area-</option>
-                                                                        <option>Dubai</option>
-                                                                        <option>Abu Dhabi</option>
-                                                                        <option>Sharjah</option>
-                                                                    </select>
+                                                                <div class="col-lg-12">
+                                                                    <div class="billing-select mb-20px">
+                                                                        <label>Area *</label>
+                                                                        <select name="area" class="shippingadd form-control" id="shiparea">
+                                                                            <option value="0">-select area-</option>
+                                                                            <option>Dubai</option>
+                                                                            <option>Abu Dhabi</option>
+                                                                            <option>Sharjah</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            
-                                                            <div class="col-lg-12">
-                                                                <div class="billing-select mb-20px">
-                                                                    <label>Delivery Address*</label>
-                                                                    <textarea name="address" rows="3" name="delivery_Add" id="delivery_Add" class="shippingadd form-control" placeholder="Building name/street"></textarea>
+                                                                
+                                                                <div class="col-lg-12">
+                                                                    <div class="billing-select mb-20px">
+                                                                        <label>Delivery Address*</label>
+                                                                        <textarea name="address" rows="3" name="delivery_Add" id="delivery_Add" class="shippingadd form-control" placeholder="Building name/street"></textarea>
+                                                                           
                                                                        
-                                                                   
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="billing-info google-map mb-20px">
-                                                                    <h5>OR</h5>
-                                                                    <label>Pick Your Location Through Google Map</label>
-                                                                    <input type="text" id="personal_companyadd" class="form-control" />
-                                                                    <img src="{{asset('public/website/assets/images/icons/location-pin.svg')}}"/>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-12 billing-select">
-                                                                <label>Payment Option*</label>
-                                                                <div class="savedaddreess">
-                                                                <h4>Payment Mode</h4><br>
-                                                                <div class="col-lg-12">
-                                                                <div class="custom_billing-info mb-20px">
-                                                                        <input type="checkbox" name="payment_mode" class="payment_mode" value="1">
-                                                                        <label>Online Payment (Stripe)</label>
                                                                     </div>
                                                                 </div>
+                                                                <div class="col-lg-12">
+                                                                    <div class="billing-info google-map mb-20px">
+                                                                        <h5>OR</h5>
+                                                                        <label>Pick Your Location Through Google Map</label>
+                                                                        <input type="text" id="personal_companyadd" class="form-control" />
+                                                                        <img src="{{asset('public/website/assets/images/icons/location-pin.svg')}}"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-12 billing-select">
+                                                                    <label>Payment Option*</label>
+                                                                    <div class="savedaddreess">
+                                                                    <h4>Payment Mode</h4><br>
+                                                                    <div class="col-lg-12">
+                                                                    <div class="custom_billing-info mb-20px">
+                                                                            <input type="checkbox" name="payment_mode" class="payment_mode" value="1">
+                                                                            <label>Online Payment (Stripe)</label>
+                                                                        </div>
+                                                                    </div>
 
-                                                                <div class="col-lg-12">
-                                                                <div class="custom_billing-info mb-20px">
-                                                                        <input type="checkbox" name="payment_mode" class="payment_mode" value="2">
-                                                                        <label>Cash on Delivery </label>
+                                                                    <div class="col-lg-12">
+                                                                    <div class="custom_billing-info mb-20px">
+                                                                            <input type="checkbox" name="payment_mode" class="payment_mode" value="2">
+                                                                            <label>Cash on Delivery </label>
+                                                                        </div>
+                                                                    </div>
                                                                     </div>
                                                                 </div>
-                                                                </div>
+                                                                <input type="hidden" name="cust_address_id" id="cust_address_id"/>
+                                                                <div class="btn btn-block continue-btn">
+                                                                <a href="javascript:void(0)" class="saveadd">Place order</a>
+                                                               
                                                             </div>
-                                                            <input type="hidden" name="cust_address_id" id="cust_address_id"/>
-                                                            <div class="btn btn-block continue-btn">
-                                                            <a href="javascript:void(0)" class="saveadd">Place order</a>
-                                                           
+
+                                                            </div>
                                                         </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-5 mt-md-30px mt-lm-30px ">
-                                                    <div class="your-order-area">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="your-order-area">
 
-                                                        <div class="your-order-wrap gray-bg-4">
-                                                            <div class="your-order-product-info">
-                                                                <div class="your-order-top">
-                                                                    <ul>
-                                                                        <li>Order Summary</li>
-                                                                        <li class="edit-order"><a href="{{route('website.cartpage')}}">Edit</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="your-order-middle">
-                                                                    <ul>
-                                                                        <?php $total_price = 0; ?>
-                                                                        @foreach($cartproduct as $cartprod)
-                                                                        <?php $total_price += $qty*$cartprod->sale_price; ?>
-                                                                        <li><img src="{{asset('public/products/'.$cartprod->featured_img)}}"/>
-                                                                            <span class="order-middle-left">{{$cartprod->product_title}}</span><span class="order-price">AED {{$qty*$cartprod->sale_price}}</span>
-                                                                        </li>
-                                                                        <input type="hidden" name="cart_id" class="cartid" value="{{$cartprod->crtid}}" />
-                                                                        <input type="hidden" name="prod_id" class="prod_id" value="{{$cartprod->id}}" />
-                                                                        <input type="hidden" name="qty" class="qty" value="{{$qty}}" />
-                                                                        <input  type="hidden" name="seller" class="seller_id" value="{{$cartprod->added_by_seller}}" />
-                                                                        @endforeach
-                                                                       
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="your-order-total">
-                                                                    <input type="hidden" name="amount" id="totalamount" value="{{$total_price}}" />
-                                                                    <ul>
-                                                                        <li class="order-total"><div class="small">Subtotal</div>Total</li>
-                                                                        <li><div class="small">AED {{$total_price}}</div>AED {{$total_price}}</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                        <!--
-                                                            <div class="payment-method">
-                                                                <div class="payment-accordion element-mrg">
-                                                                    <div class="panel-group" id="accordion">
-                                                                        <div class="panel payment-accordion">
-                                                                            <div class="panel-heading" id="method-one">
-                                                                                <h4 class="panel-title">
-                                                                                    <a data-bs-toggle="collapse" data-parent="#accordion" href="#method1">
-                                                                                        Direct bank transfer
-                                                                                    </a>
-                                                                                </h4>
-                                                                            </div>
-                                                                            <div id="method1" class="panel-collapse collapse show">
-                                                                                <div class="panel-body">
-                                                                                    <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                                                                                </div>
-                                                                            </div>
+                                                                <div class="your-order-wrap gray-bg-4">
+                                                                    <div class="your-order-product-info">
+                                                                        <div class="your-order-top">
+                                                                            <ul>
+                                                                                <li>Order Summary</li>
+                                                                                <li class="edit-order"><a href="{{route('website.cartpage')}}">Edit</a></li>
+                                                                            </ul>
                                                                         </div>
-                                                                        <div class="panel payment-accordion">
-                                                                            <div class="panel-heading" id="method-two">
-                                                                                <h4 class="panel-title">
-                                                                                    <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion" href="#method2">
-                                                                                        Check payments
-                                                                                    </a>
-                                                                                </h4>
-                                                                            </div>
-                                                                            <div id="method2" class="panel-collapse collapse">
-                                                                                <div class="panel-body">
-                                                                                    <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                                                                                </div>
-                                                                            </div>
+                                                                        <div class="your-order-middle">
+                                                                            <ul>
+                                                                                <?php $total_price = 0; ?>
+                                                                                @foreach($cartproduct as $cartprod)
+                                                                                <?php $total_price += $qty*$cartprod->sale_price; ?>
+                                                                                <li><img src="{{asset('public/products/'.$cartprod->featured_img)}}"/>
+                                                                                    <span class="order-middle-left">{{$cartprod->product_title}}</span><span class="order-price">AED {{$qty*$cartprod->sale_price}}</span>
+                                                                                </li>
+                                                                                <input type="hidden" name="cart_id" class="cartid" value="{{$cartprod->crtid}}" />
+                                                                                <input type="hidden" name="prod_id" class="prod_id" value="{{$cartprod->id}}" />
+                                                                                <input type="hidden" name="qty" class="qty" value="{{$qty}}" />
+                                                                                <input  type="hidden" name="seller" class="seller_id" value="{{$cartprod->added_by_seller}}" />
+                                                                                @endforeach
+                                                                               
+                                                                            </ul>
                                                                         </div>
-                                                                        <div class="panel payment-accordion">
-                                                                            <div class="panel-heading" id="method-three">
-                                                                                <h4 class="panel-title">
-                                                                                    <a class="collapsed" data-bs-toggle="collapse" data-parent="#accordion" href="#method3">
-                                                                                        Cash on delivery
-                                                                                    </a>
-                                                                                </h4>
-                                                                            </div>
-                                                                            <div id="method3" class="panel-collapse collapse">
-                                                                                <div class="panel-body">
-                                                                                    <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                                                                                </div>
-                                                                            </div>
+                                                                        <div class="your-order-total">
+                                                                            <input type="hidden" name="amount" id="totalamount" value="{{$total_price}}" />
+                                                                            <ul>
+                                                                                <li class="order-total"><div class="small">Subtotal</div>Total</li>
+                                                                                <li><div class="small">AED {{$total_price}}</div>AED {{$total_price}}</li>
+                                                                            </ul>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                                <div class="payment-method mt-25">
+                                                                    <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
+                                                                </div>
                                                             </div>
-                        -->
-                                                        </div>
-                                                        <div class="payment-method mt-25">
-                                                            <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
                                                         </div>
                                                     </div>
                                                 </div>
