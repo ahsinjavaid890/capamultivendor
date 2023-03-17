@@ -1789,6 +1789,7 @@ color:#009FBD
 	font-size: 18px
 }
 .list-product .product-decs .pricing-meta {
+	margin-bottom: 10px;
 	line-height: 20px;
 	-webkit-transition: all .3s linear;
 	transition: all .3s linear
