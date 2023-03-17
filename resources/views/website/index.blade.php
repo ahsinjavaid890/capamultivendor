@@ -51,13 +51,13 @@
                         <div class="row">
                             @foreach($newcat as $r)
                             <div class="col-md-2 mt-3">
-                                <div class="card ">
+                                <div class="card cat-card">
                                     <div class="card-body p-0">
                                        <a href="{{ url('category') }}/{{ $r->url }}">
                                         @if($r->icon==null)
-                                                    <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%;" />
+                                                    <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%; height: 210px;" />
                                                     @else
-                                                    <img src="{{asset('public/products/'.$r->icon)}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%;" />
+                                                    <img src="{{asset('public/products/'.$r->icon)}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%; height: 210px;" />
                                                 @endif
                                         </a> 
                                         <div class="cat-heading mt-2 mb-3">
