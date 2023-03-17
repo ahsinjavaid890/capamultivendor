@@ -31,7 +31,7 @@
                                 <tr>
                                 	<th>Icon</th>
                                     <th>Category Name</th>                                          
-                                    
+                                    <th>Homepage Show</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -41,9 +41,20 @@
 
                               @foreach($cat as $category)
                                 <tr>
-                                	<td><img src="{{asset('public/products/'.$category->icon)}}" width="120" /></td>
+                                	<td class="text-center"><img class="img-thumbnail" src="{{asset('public/products/'.$category->icon)}}" style="width:100px;height: 100px;" /></td>
                                     <td>{{$category->category_name}}</td>
-                                    
+                                    <td>
+                                        @if($category->show_on_homepage == 1)
+
+                                        Yes
+
+                                        @else 
+
+                                        No
+
+                                        @endif
+
+                                    </td>
                                     <td>
                                     @if($category->status==1)
                                     <span class="badge badge-warning" style="font-size:12px;">Pending</span>
@@ -84,10 +95,17 @@
 								        <div class="form-group">
 											<input type="file" name="caticon" class="form-control caticon" placeholder="upload category icons"/>	
 										</div>
+                                        <div class="form-group">
+                                            <select required class="form-control" name="show_on_homepage">
+                                                <option value="">Show On Homepage</option>
+                                                <option value="1" @if($category->show_on_homepage == 1) selected @endif>Yes</option>
+                                                <option value="0" @if($category->show_on_homepage == 0) selected @endif>No</option>
+                                            </select>    
+                                        </div>
 								      </div>
 								      <div class="modal-footer">
 								        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								       	<button type="submit" class="btn btn-success">Add Category</button>
+								       	<button type="submit" class="btn btn-success">Save Category</button>
 								      </div>
 								      </form>
 								    </div>
@@ -125,11 +143,18 @@
       	@csrf
       <div class="modal-body">
         <div class="form-group">
-        	<input type="text" name="catname" class="form-control catname" placeholder="Enter Category name"/>
+        	<input required type="text" name="catname" class="form-control catname" placeholder="Enter Category name"/>
         </div>
         <div class="form-group">
-			<input type="file" name="caticon" class="form-control caticon" placeholder="upload category icons"/>	
+			<input required type="file" name="caticon" class="form-control caticon" placeholder="upload category icons"/>	
 		</div>
+        <div class="form-group">
+            <select required class="form-control" name="show_on_homepage">
+                <option value="">Show On Homepage</option>
+                <option value="1">Yes</option>
+                <option value="0">Mo</option>
+            </select>    
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

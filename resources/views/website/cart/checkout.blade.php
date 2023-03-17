@@ -17,7 +17,7 @@
          </div>
       </div>
    </div>
-   <div id="checkout-tabs">
+   <div id="checkout-tabs" style="background-color: #F2F2F2 !important;">
       <div class="row">
          <div class="checkout-tab-block order-md-first">
             <!-- Shop Top Area Start -->
@@ -48,92 +48,106 @@
                      <div class="container-fluid">
                         <div class="row">
                            <div class="col-lg-7">
-                              <form method="POST" action="{{ url('continuetopayement') }}">
-                                 @csrf
-                                 <div class="billing-info-wrap">
-                                    @if(!Auth::guard('cust')->check())
-                                    <div id="loginerroralert" style="display:none;" class="alert alert-danger">Please Enter Correct Credentials</div>
-                                    <div class="checkout-account mb-30px">
-                                       <input class="checkout-toggle2 form-control" type="checkbox" id="an-account"/>
-                                       <label for="an-account">Have an account? <span>Log In</span></label>
-                                       <div class="dont-account"><strong>Don't have an account? </strong>Don't worry.Create an account & <a href="{{ url('customer-register') }}">Sign Up</a></div>
-                                    </div>
-                                    <div class="checkout-account-toggle open-toggle2 mb-30">
-                                       <input id="loginemail" class="form-control" placeholder="Email address" type="email" />
-                                       <input id="passwordlogin" class="form-control" placeholder="Password" type="password" />
-                                       <span onclick="loginajax()" class="btn-hover checkout-btn" type="submit">Login Here</span>
-                                    </div>
-                                    @endif
-                                    @if(Auth::guard('cust')->check())
-                                    @if(count($address)>0)
-                                    <div class="schedule-delivery checkout-radio">
-                                       <h4 class="mb-25">Where You Want Us To Deliver?</h4>
-                                       @foreach($address as $cust_Address)
-                                       <div class="radio-button">
-                                          <div class="input-label">
-                                             <input required class="form-control" type="radio" name="cus_address" value="{{$cust_Address->id}}" id="{{ $cust_Address->id }}"/>
-                                             <label for="{{ $cust_Address->id }}">{{$cust_Address->emirates}},{{$cust_Address->area}},{{$cust_Address->address}}</label>
+                              <div class="card">
+                                 <div class="card-body">
+                                    <form method="POST" action="{{ url('continuetopayement') }}">
+                                       @csrf
+                                       <div class="billing-info-wrap">
+                                          @if(!Auth::guard('cust')->check())
+                                          <div id="loginerroralert" style="display:none;" class="alert alert-danger">Please Enter Correct Credentials</div>
+                                          <div class="checkout-account mb-30px">
+                                             <input class="checkout-toggle2 form-control" type="checkbox" id="an-account"/>
+                                             <label for="an-account">Have an account? <span>Log In</span></label>
+                                             <div class="dont-account"><strong>Don't have an account? </strong>Don't worry.Create an account & <a href="{{ url('customer-register') }}">Sign Up</a></div>
                                           </div>
-                                          <div class="text-right"><span>Edit</span></div>
+                                          <div class="checkout-account-toggle open-toggle2 mb-30">
+                                             <input id="loginemail" class="form-control" placeholder="Email address" type="email" />
+                                             <input id="passwordlogin" class="form-control" placeholder="Password" type="password" />
+                                             <span onclick="loginajax()" class="btn-hover checkout-btn" type="submit">Login Here</span>
+                                          </div>
+                                          @endif
+                                          @if(Auth::guard('cust')->check())
+                                          @if(count($address)>0)
+                                          <div class="schedule-delivery checkout-radio">
+                                             <h4 class="mb-25">Where You Want Us To Deliver?</h4>
+                                             @foreach($address as $cust_Address)
+                                             <div class="radio-button">
+                                                <div class="input-label">
+                                                   <input required class="form-control" type="radio" name="cus_address" value="{{$cust_Address->id}}" id="{{ $cust_Address->id }}"/>
+                                                   <label for="{{ $cust_Address->id }}">{{$cust_Address->emirates}},{{$cust_Address->area}},{{$cust_Address->address}}</label>
+                                                </div>
+                                                <div class="text-right"><span>Edit</span></div>
+                                             </div>
+                                             @endforeach
+                                          </div>
+                                          @include('website.cart.customerform')
+                                          @else
+                                          <div class="row">
+                                             <div class="col-md-12">
+                                                <label class="text-danger">Before Checkout You need to Add Address</label>
+                                                <a href="{{ route('website.saveaddress') }}" class="btn btn-primary form-control"><i class="fa fa-plus"></i> Add Address</a>
+                                             </div>
+                                          </div>
+                                          @endif
+                                          @else
+                                          @include('website.cart.guestcheckoutform')
+                                          @endif
                                        </div>
-                                       @endforeach
-                                    </div>
-                                    @include('website.cart.customerform')
-                                    @else
-                                    <div class="row">
-                                       <div class="col-md-12">
-                                          <label class="text-danger">Before Checkout You need to Add Address</label>
-                                          <a href="{{ route('website.saveaddress') }}" class="btn btn-primary form-control"><i class="fa fa-plus"></i> Add Address</a>
-                                       </div>
-                                    </div>
-                                    @endif
-                                    @else
-                                    @include('website.cart.guestcheckoutform')
-                                    @endif
+                                    </form>
                                  </div>
-                              </form>
+                              </div>
                            </div>
                            <div class="col-lg-5 mt-md-30px mt-lm-30px ">
-                              <div class="your-order-area">
-                                 <div class="your-order-wrap gray-bg-4">
-                                    <div class="your-order-product-info">
-                                       <div class="your-order-top">
-                                          <ul>
-                                             <li>Order Summary</li>
-                                             <li class="edit-order"><a href="{{ url('cart') }}">Edit</a></li>
-                                          </ul>
+                              <div class="card">
+                                 <div class="card-body">
+                                    <div class="your-order-area">
+                                       <div class="your-order-wrap gray-bg-4">
+                                          <div class="your-order-product-info">
+                                             <div class="your-order-top">
+                                                <ul>
+                                                   <li>Order Summary</li>
+                                                   <li class="edit-order"><a href="{{ url('cart') }}">Edit</a></li>
+                                                </ul>
+                                             </div>
+                                             <?php $total_price = 0; ?>
+                                             <div class="your-order-middle">
+                                                <table class="table table-striped table-bordered">
+                                                   <tr>
+                                                      <th>Product Image</th>
+                                                      <th>Product name</th>
+                                                      <th>Product Price</th>
+                                                   </tr>
+                                                   @foreach($cart as $r)
+                                                   <?php $total_price += $r['quantity']*$r['price']; ?>
+                                                   <tr>
+                                                      <td><img class="img-thumbnail" src="{{asset('public/products/'.$r['image'])}}" ></td>
+                                                      <td><b>{{$r['name']}}</b></td>
+                                                      <td><b>INR{{$r['quantity']*$r['price']}}</b></td>
+                                                   </tr>
+                                                   @endforeach
+                                                </table>
+                                             </div>
+                                             <div class="your-order-total">
+                                                <ul>
+                                                   <li class="order-total">
+                                                      <div class="small deleiveryname">Free Delivery</div>
+                                                      <div class="small">Subtotal</div>
+                                                      Total
+                                                   </li>
+                                                   <li>
+                                                      <input type="hidden" value="{{$total_price}}" id="subtotal">
+                                                      <div class="small deliveryprice form-control">INR 0</div>
+                                                      <div class="small">INR {{$total_price}}</div>
+                                                      INR <span id="totalprice"> {{$total_price}} </span>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </div>
                                        </div>
-                                       <?php $total_price = 0; ?>
-                                       <div class="your-order-middle">
-                                          <ul>
-                                             @foreach($cart as $r)
-                                             <?php $total_price += $r['quantity']*$r['price']; ?>
-                                             <li>
-                                                <img class="img-thumbnail" src="{{asset('public/products/'.$r['image'])}}" >
-                                                <span class="order-middle-left">{{$r['name']}}</span><span class="order-price">INR {{$r['quantity']*$r['price']}}</span>
-                                             </li>
-                                             @endforeach
-                                          </ul>
-                                       </div>
-                                       <div class="your-order-total">
-                                          <ul>
-                                             <li class="order-total">
-                                                <div class="small deleiveryname">Free Delivery</div>
-                                                <div class="small">Subtotal</div>
-                                                Total
-                                             </li>
-                                             <li>
-                                                <input type="hidden" value="{{$total_price}}" id="subtotal">
-                                                <div class="small deliveryprice form-control">INR 0</div>
-                                                <div class="small">INR {{$total_price}}</div>
-                                                INR <span id="totalprice"> {{$total_price}} </span>
-                                             </li>
-                                          </ul>
+                                       <div class="payment-method mt-25">
+                                          <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
                                        </div>
                                     </div>
-                                 </div>
-                                 <div class="payment-method mt-25">
-                                    <img src="{{asset('public/website/assets/images/icons/LO.svg')}}"/>
                                  </div>
                               </div>
                            </div>
@@ -251,7 +265,7 @@
                                                          </div>
                                                       </div>
                                                       <hr>
-                                                      <div class="continue-btn order-place"><a href="#">Place order</a></div>
+                                                      <div class=" mt-3 continue-btn order-place"><a href="#">Place order</a></div>
                                                    </div>
                                                 </div>
                                              </div>

@@ -38,7 +38,7 @@
                                 @endforeach  
                             </div>
                             <div class="view-more text-center">
-                               {!! $products->links('website.pagination') !!}
+                               
                             </div>
                             @else
                             <div class="col-md-12">

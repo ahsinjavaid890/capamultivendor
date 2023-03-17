@@ -42,7 +42,7 @@
                         @if(DB::table('designdeleterequests')->where('request_id' , $requests->id)->where('user_id' , Auth::guard('admin')->user()->id)->count() == 0)
                         <tr >                                        
                             <td>
-                                <img class="img-thumbnail" src="{{asset('public/public/uploads/'.$requests->product_img)}}" style="width: 100px;height: 100px;" />
+                                <img class="img-thumbnail" src="{{asset('public/uploads/'.$requests->product_img)}}" style="width: 100px;height: 100px;" />
                             </td>
                             <td>{{$requests->product_name}}</td>
                             <td>{{$requests->catname}}</td>

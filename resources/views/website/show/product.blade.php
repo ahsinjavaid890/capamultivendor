@@ -1,9 +1,9 @@
-<div class="col-md-2">
+<div class="col-md-3">
     <div class="pro-content">
-        <article class="list-product">
+        <article class="list-product pt-3 pb-1 px-3 border">
             <div class="img-block">
                 <a href="{{ url('product') }}/{{ $r->url }}" class="thumbnail">
-                    <img class="first-img" src="{{asset('public/products/'.$r->featured_img)}}" alt="" />
+                    <img class="first-img rounded" src="{{asset('public/products/'.$r->featured_img)}}" alt="" />
                 </a>
                 <!-- <div class="quick-view">
                     <a onclick="quickproductview({{$r->id}})" class="quick_view" href="javascript:void(0)"  title="{{ $r->product_title }}" >
@@ -50,30 +50,6 @@
                         <li class="old-price cut"><del>{{$r->prod_price}} {{ Cmf::current_currency() }}</del></li>
                         <li class="new-price not-cut">{{$r->sale_price}} {{ Cmf::current_currency() }}</li>
                     </ul>
-                </div>
-                <div class="rating-product">
-                @if($r->rating==1.00)
-                <i class="ion-android-star"></i>
-                @elseif($r->rating==2.00)
-                <i class="ion-android-star"></i>
-                <i class="ion-android-star"></i>
-                @elseif($r->rating==3.00)
-                <i class="ion-android-star"></i>
-                <i class="ion-android-star"></i>
-                <i class="ion-android-star"></i>
-                @elseif($r->rating==4.00)
-                <i class="ion-android-star"></i>
-                <i class="ion-android-star"></i>
-                <i class="ion-android-star"></i>
-                <i class="ion-android-star"></i>
-                @elseif($r->rating==5.00)
-                <i class="ion-android-star"></i>
-                <i class="ion-android-star"></i>
-                <i class="ion-android-star"></i>
-                <i class="ion-android-star"></i>
-                <i class="ion-android-star"></i>
-                @endif
-                <span class="rating-point">{{$r->rating}}</span>
                 </div>
                 <div class="add-cart-btn">
                     <a href="javascript:void(0)" class="add-to-cart addtocartbutton{{ $r->id }} btn" onclick="addtocart({{$r->id}})">Add to cart</a>

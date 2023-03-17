@@ -6,7 +6,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index.html"><img class="img-responsive" src="{{asset('public/website/assets/images/logo/logo.svg')}}" alt="logo.jpg" /></a>
+                        <a href="index.html"><img class="img-responsive" src="{{asset('public/website/assets/images/logo.png')}}" alt="logo.jpg" /></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -17,7 +17,7 @@
                         <div class="cart-info d-flex align-self-center">
                             <a href="compare.html" class="shuffle d-xs-none"  data-number="3"><i class="icon-shuffle"></i></a>
                             <a href="#offcanvas-wishlist" class="heart offcanvas-toggle d-xs-none"  data-number="3"><i class="icon-heart"></i></a>
-                            <a href="#offcanvas-cart" class="bag offcanvas-toggle"data-number="3"><i class="icon-bag"></i><span>26.99 AED</span></a>
+                            <a href="#offcanvas-cart" class="bag offcanvas-toggle"data-number="{{ count((array) session('cart')) }}"><i class="icon-bag"></i><span></span></a>
                         </div>
                         <div class="mobile-menu-toggle">
                             <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
@@ -42,33 +42,40 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <!--=======  category menu  =======-->
                     <div class="hero-side-category">
-                        <!-- Category Toggle Wrap -->
-                        <div class="category-toggle-wrap">
-                            <!-- Category Toggle -->
-                            <button class="category-toggle"><i class="fa fa-bars"></i> All Categories</button>
+                        <div class="search-element media-body">
+                        <form class="d-flex" action="{{route('website.searchFRM')}}" method="GET">
+                            <input type="text" placeholder="Enter your search key ... " id="searchItem"
+                                name="searchq" data-url="{{ route('website.search') }}" />
+                            <a href="javascript:void(0)" id="searchbtn"> <button><i
+                                        class="icon-magnifier"></i></button></a>
+                        </form>
+                        <div id="search-dropdown" class="search-dropdown position-absolute w-100 bg-white mt-1 rounded-3 border d-none">
+                            <div class="d-flex flex-wrap gap-2 p-1" id="categories-container">
+                                {{-- <a href="#" class="badge bg-light text-dark text-decoration-none fw-light">Light</a> --}}
+                            </div>
+                            <div class="d-flex flex-column" id="search-container">
+                                {{-- <div class="border d-flex align-items-center gap-2 p-2">
+                                    <div>
+                                        <a href="#">
+                                            <img src="http://toysforjoy.local/website/img/logo-t4j.png" alt="img-thumbnail rounded" width="70">
+                                        </a>
+                                    </div>
+                                    <div class="flex-fill">
+                                        <p class="mb-0 lead">
+                                            <a href="#" class="text-decoration-none text-reset">
+                                                Hello Kitty Drift Nissan Skyline GTR
+                                            </a>
+                                        </p>
+                                        <small class="fst-italic"><a href="#" class="text-decoration-none text-reset">Outdoor</a> > <a href="#" class="text-decoration-none text-reset">Pools and Simms</a></small>
+                                        <p class="mb-0 fw-bold">QAR 529</p>
+                                    </div>
+                                </div> --}}
+                            </div>
                         </div>
-
-                        <!-- Category Menu -->
-                        <nav class="category-menu">
-                            <ul>
-                                <li><a href="#">Chairs</a></li>
-                                <li><a href="#">Speakers</a></li>
-                                <li><a href="#">Lights</a></li>
-                                <li><a href="#">Tents</a></li>
-                                <li><a href="#">Fans</a></li>
-                                <li><a href="#">Generators</a></li>
-<!--
-                                <li>
-                                    <a href="#" id="more-btn"><i class="ion-ios-plus-empty" aria-hidden="true"></i> More Categories</a>
-                                </li>
--->
-                            </ul>
-                        </nav>
+                    </div>
                     </div>
 
-                    <!--=======  End of category menu =======-->
                 </div>
             </div>
         </div>

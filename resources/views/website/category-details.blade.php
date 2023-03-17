@@ -7,10 +7,6 @@
 .deal-area .list-product{
     border: 0 !important;
 }
-.pro-content{
-    border: 1px solid #64317c;
-    padding: 0 !important;
-}
 </style>
 <div class="offcanvas-overlay"></div>
 
@@ -36,11 +32,23 @@
                 </div>
             </div>
         </div>
-        <div id="new-arrivals" class="deal-area pt-60px pb-30px">
-            <div class="row">
-                @foreach($products as $r)
-                    @include('website.show.product')
-                @endforeach
+        <div id="new-arrivals" class="deal-area pt-60px pb-30px" style="background-color: #F2F2F2 !important;">
+            <div class="card">
+                <div class="card-body">
+                    @if(count($products)!=0)
+                    <div class="row">
+                        @foreach($products as $r)
+                            @include('website.show.product')
+                        @endforeach
+                    </div>
+                    @else
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 style="padding-top: 60px;border: 1px solid #64317c; text-align: center; padding-bottom: 60px; background: #64317c;color: #fff;"> {{ $categories_detail->category_name }} Not found !!</h2>
+                        </div>
+                    </div>
+                    @endif
+                </div>
             </div>
         </div>
     </div>

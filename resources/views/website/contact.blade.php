@@ -349,7 +349,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="mb-30px">Send us a message</h2>
-                             <div class="billing-info-wrap">
+                        <form method="POST" action="">
+                            <div class="billing-info-wrap">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="billing-info mb-20px">
@@ -418,6 +419,7 @@
                                 </div>
                                 <div class="continue-btn submit"><a href="#">Send Now</a></div>
                             </div>
+                        </form>
                     </div>
                 </div>
             </div>

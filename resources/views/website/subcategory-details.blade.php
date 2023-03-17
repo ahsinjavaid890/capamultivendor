@@ -18,20 +18,26 @@
     <div class="container-fluid">
         <div class="archive-header mb-3">
             <div class="row align-items-center">
-                <div class="col-xl-3">
-                    <h1 class="mb-4">{{ $categories_detail->subcat_name }}</h1>
+                <div class="col-xl-6">
+                    <h1 class="mb-4">{{ $subcategories_detail->subcat_name }}</h1>
                     <div class="breadcrumb">
-                        <a href="{{ url('') }}" rel="nofollow"><i class="fa fa-home mx-1"></i>Home</a><span><i class="fa fa-angle-right mr-5"></i></span><a href="{{ url('category') }}/{{ DB::table('categories')->where('id' , $category_id)->first()->url }}" rel="nofollow">{{  DB::table('categories')->where('id' , $category_id)->first()->category_name }}</a>
-                        <span><i class="fa fa-angle-right mr-5"></i></span> {{ $categories_detail->subcat_name }}
+                        <a href="{{ url('') }}" rel="nofollow"><i class="fa fa-home mx-1"></i>Home</a><span><i class="fa fa-angle-right mr-5"></i></span><a href="{{ url('category') }}/{{ DB::table('categories')->where('id' , $subcategories_detail->category_name)->first()->url }}" rel="nofollow">{{  DB::table('categories')->where('id' , $subcategories_detail->category_name)->first()->category_name }}</a>
+                        <span><i class="fa fa-angle-right mr-5"></i></span> {{ $subcategories_detail->subcat_name }}
                     </div>
                 </div>
             </div>
         </div>
         <div id="new-arrivals" class="deal-area pt-60px pb-30px">
             <div class="row">
+                @if(count($products)!=0)
                 @foreach($products as $r)
                     @include('website.show.product')
                 @endforeach
+                @else
+                <div class="col-md-12">
+                    <h2 style="padding-top: 60px;border: 1px solid #64317c; text-align: center; padding-bottom: 60px; background: #64317c;color: #fff;"> {{ $subcategories_detail->subcat_name }} Not found !!</h2>
+                </div>
+                @endif
             </div>
         </div>
     </div>

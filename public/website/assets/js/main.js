@@ -704,7 +704,7 @@ function addtocart(id)
             $('.cartnumber').attr('data-number', resp);
             $('.bag').click();
             showcart();
-        }
+        } 
     });
 }
 

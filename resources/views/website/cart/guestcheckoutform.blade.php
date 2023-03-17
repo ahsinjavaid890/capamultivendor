@@ -28,12 +28,10 @@
             <label>Emirates *</label>
             <select required name="emirates" id="emirates" class="shippingadd form-control">
                 <option value="">Select Emirates</option>
-                <option>Dubai</option>
-                <option>Abu Dhabi</option>
-                <option>Sharjah</option>
-                <option>Ajman</option>
-                <option>Tarif</option>
-                <option>Dhayd</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Kolkata</option>
+                <option>Behar</option>
             </select>
         </div>
     </div>
@@ -42,13 +40,22 @@
             <label>Area *</label>
             <select required name="area" class="shippingadd form-control" id="shiparea">
                 <option>Select Area</option>
-                <option>Dubai</option>
-                <option>Abu Dhabi</option>
-                <option>Sharjah</option>
+                <option>India</option>
             </select>
         </div>
     </div>
-
+    <div class="col-lg-6">
+        <div class="billing-select mb-20px">
+            <label>Delivery Date *</label>
+            <input required type="date" name="delivery_date" id="delivery_date" class="form-control" placeholder="00/00/0000">
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="billing-select mb-20px">
+            <label>Delivery Time *</label>
+            <input required type="time" name="delivery_time" id="delivery_time" class="form-control" placeholder="00/00/0000">
+        </div>
+    </div>
     <div class="col-lg-12">
         <div class="billing-select mb-20px">
             <label>Delivery Address*</label>
@@ -74,7 +81,7 @@
         </div>
     </div>
 
-        <div class="schedule-delivery checkout-radio">
+       <!--  <div class="schedule-delivery checkout-radio">
             <h4 class="mb-25">Schedule Delivery</h4>
             <div class="radio-button">
                 <div class="input-label">
@@ -90,7 +97,7 @@
                 </div>
                 <div class="text-right"><span>AED 30</span></div>
             </div>
-        </div>
+        </div> -->
 
         <div class="col-lg-12 billing-select checkout-radio">
             <h4 class="mb-25">Payment Option*</h4>
@@ -98,7 +105,7 @@
                 <div class="radio-button border-0" style="border-bottom: 1px solid #707070 !important;">
                     <div class="input-label">
                         <input checked required type="radio" name="payment_method" class="payment_mode form-control" id="payment_mode" value="1"/>
-                        <label class="mb-0" for="payment_mode">Online Payment (Stripe)</label>
+                        <label class="mb-0" for="payment_mode">Online Payment</label>
                     </div>
                 </div>
 

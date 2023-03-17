@@ -20,7 +20,7 @@ class Cmf
 
     public static function current_currency()
     {
-        return 'AED';
+        return 'INR';
     }
     public static function updatevalue($columname , $value)
     {
@@ -39,7 +39,7 @@ class Cmf
     public static function currency($value)
     {
        $data =  number_format((float)$value, 2, '.', '');
-       return "AED ".$data;
+       return "INR ".$data;
     }
 
     public static function send_user_notifcation($userId , $notification)

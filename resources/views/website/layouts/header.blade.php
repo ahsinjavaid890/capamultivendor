@@ -54,23 +54,6 @@
                                     </div>
                                     @endif
                                 </li>
-
-                        <!--                            <li class="pr-0 language">
-                            <div class="dropdown">
-                                <button type="button" id="dropdownMenuButton-3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="assets/images/flag/1.jpg" alt="" /> English <i class="ion-ios-arrow-down"></i>
-                                </button>
-
-                                <ul class="dropdown-menu animation slideDownIn" aria-labelledby="dropdownMenuButton-3">
-                                    <li>
-                                        <a href="#"><img src="assets/images/flag/1.jpg" alt="" /> English</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="assets/images/flag/2.jpg" alt="" /> Français</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>-->
                     </ul>
                 </div>
             </div>
@@ -124,8 +107,8 @@
                         <div class="header-horizontal-menu">
                             <ul class="menu-content">
                                 <li class=""><a href="{{route('website.index')}}">Home</a></li>
-                                <li><a href="{{route('website.categoriesPage')}}">Our Categorys</a></li>
-                                <li><a href="#">Blogs</a></li>
+                                <li><a href="{{route('website.categoriesPage')}}">Our Categories</a></li>
+                                <li><a href="{{ route('website.blogs') }}">Blogs</a></li>
                                 <li><a href="{{route('website.vendors')}}">Vendor</a></li>
                                 <li><a href="{{route('website.contact')}}">Contact Us</a></li>
                                 <!-- <li><a href="{{route('website.servicePage')}}">Services</a></li>                                    -->

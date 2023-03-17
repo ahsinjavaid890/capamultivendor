@@ -4,34 +4,27 @@
 
     <div class="offcanvas-overlay"></div>
 
-        <!-- Slider Start -->
-        <div class="slider-area slider-height-1">
-            <!-- Single Slider  -->
-            <div class="swiper-slide bg-img d-flex" style="background-image: url({{asset('public/website/assets/images/slider-image/sample-2.jpg')}});">
-            </div>
-        </div>
-        <!-- Slider End -->
-    
+
         
         
-<section id="sign-up-tabs">
+<section id="sign-up-tabs" style="background-color: #f2f2f2;">
     <div class="container">
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 register-as">
         <div class="d-flex tabs">
-                <a href="/customer-login" class="customersign">Sign in as Customer</a>
-                <a href="/seller-login" class="sellersignin">Sign in as Seller</a>
+                <a href="{{ url('customer-login') }}" class="customersign">Sign in as Customer</a>
+                <a href="{{ url('seller-login') }}" class="sellersignin">Sign in as Seller</a>
             </div>
 		<div class="customer form">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-6 text-center">
                      <a href="{{ url('auth/google') }}" class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/google.png')}}"/>Google Login</a>
                 </div>
                 <div class="col-lg-6 text-center">
                     <a class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/facebook.png')}}"/>Facebook Login</a>
                 </div>
-            </div>
+            </div> -->
             @include('website.layouts.flash')
             <div class="title mb-30">
                 <h2 class="text-center">Sign In</h2>
@@ -106,7 +99,7 @@
 }    
 .register-as .tabs a {
     background: #6c4646;
-    color: #fff;
+    color: #fff !important;
     padding: 15px;
     text-align: center;
     width: 200px;
@@ -115,8 +108,8 @@
     border-radius: 5px 5px 0 0;
 }  
 .register-as .tabs a:focus, .register-as .tabs a:active {
-    background: #d8d8d8;
-    color: #009fbd;
+     background: #64317c;
+    color: white;
 } 
 .active{
     background: #d8d8d8 !important;

@@ -34,7 +34,7 @@
         <link rel="stylesheet" href="{{asset('public/website/assets/css/style.min.css')}}">
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" rel="stylesheet" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.css" rel="stylesheet" />  
         <!-- Main Style CSS -->
         <!-- <link rel="stylesheet" href="assets/css/style.css" />     -->
         <input type="hidden" id="app_url" value="{{ url('') }}" name="">

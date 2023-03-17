@@ -289,6 +289,7 @@ class AdminController extends Controller
                 $category->category_name=$request->catname;
                 $category->url=Cmf::shorten_url($request->catname);
                 $category->icon=$caticon;
+                $category->show_on_homepage=$request->show_on_homepage;
                 $category->status='1';
                 $category->save();
                 if($category==true){
@@ -349,12 +350,14 @@ class AdminController extends Controller
             $active = Category::where('id','=',$request->catid)
                   ->update([
                       'category_name'=>$request->catname,
-                      'icon'=>$caticon
+                      'icon'=>$caticon,
+                      'show_on_homepage'=>$request->show_on_homepage
                   ]);
         }else{
             $active = Category::where('id','=',$request->catid)
                   ->update([
-                      'category_name'=>$request->catname
+                      'category_name'=>$request->catname,
+                      'show_on_homepage'=>$request->show_on_homepage
                   ]);
         } 
 
@@ -1807,9 +1810,49 @@ public function banners(){
         $category->url=$request->url;
         $category->status='1';
         $category->save();
-        return back()->with('success','Banner deleted successFull!');
+        return back()->with('success','Banner Added successFull!');
     }
 
+    // update Banner
+     public function updateBanner(Request $request){
+        if($request->hasFile('caticon')){
+            $caticon = time().'.'.$request->caticon->extension();   
+            $request->caticon->move(public_path('uploads'), $caticon);
+        }else{
+            $caticon='';
+        } 
+        $active = Banner::where('id','=',$request->id)
+              ->update([
+                'banner'=>$caticon,
+                'type'=>$request->type,
+                'url'=>$request->url,
+                'status'=>'1',
+              ]);
+
+    
+      if($active==true){
+        return back()->with('success','Category Updated Successfully');
+          return response()->json('2');
+      }else{
+
+        return back()->with('error','Something Went Wrong');
+      }        
+
+
+                $update_banner = Banner::where('id','=',$bannerid)->update([
+                    'banner'=>$caticon,
+                    'type'=>$request->type,
+                    'url'=>$request->url,
+                    'status'=>'1',
+                ]);
+                if($update_blog==true){
+                    return back()->with('success','Banner Updated successfull');
+                }else{
+                    return back()->with('error','something went wrong');
+                }
+           
+           
+        }
     // banner delete
 
     public function deleteBanner(Request $request){

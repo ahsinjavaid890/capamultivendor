@@ -49,39 +49,7 @@
                     <div class="col-xl-6 col-lg-6 col-md-12 offset-md-1">
                         <div class="product-details-content">
                             <h2>{{$products->product_title}}</h2>
-                            <div class="pro-details-rating-wrap">
-                                <div class="rating-product">
-                                    @if($products->rating==1.00)
-                                    <i class="ion-android-star"></i>
-                                    @elseif($products->rating==2.00)
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    @elseif($products->rating==3.00)
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    @elseif($products->rating==4.00)
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    @elseif($products->rating==5.00)
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    @endif
-                                    <span class="rating-point">{{$products->rating}}</span>
-                                </div>
-                                <!-- <p><strong>SKU:</strong> {{$products->product_code}}</p> -->
-                            </div>
-                            <div class="d-flex">
-                                <p class="reference"><span><a class="btn btn-primary" href="{{ url('category') }}/{{ $products->cat_url }}">{{$products->cat_name}}</a></p>
-                                @if($products->added_by_seller)
-                                <p class="reference" style="margin-left:10px;"><span><a class="btn btn-primary" href="{{ url('vendor') }}/{{ DB::table('sellers')->where('id' , $products->added_by_seller)->first()->shop_url }}">{{ DB::table('sellers')->where('id' , $products->added_by_seller)->first()->company_name }}</a></p>
-                                @endif
-                            </div>
+                            
                             <div class="pricing-meta">
                             @php
                                 $offer_ar = $products->prod_price-$products->sale_price;
@@ -205,8 +173,7 @@
             <div class="container-fluid">
                 <div class="description-review-wrapper">
                     <div class="description-review-topbar nav">
-                        <a data-bs-toggle="tab" href="#des-details1" class="active">OVERVIEW</a>
-                        <a data-bs-toggle="tab" href="#des-details3">RATINGS & REVIEWS</a>
+                        <a data-bs-toggle="tab" href="#des-details1" class="active">Long Description</a>
                     </div>
                     <div class="tab-content description-review-bottom">
                         <div id="des-details2" class="tab-pane active show">

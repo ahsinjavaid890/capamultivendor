@@ -18,10 +18,10 @@
 <div class="container-fluid category-list p-3" style="background-color: #f5eff7;">
     <div class="row">
         @foreach($categories as $getcat)
-        <div class="col-md-2">
-            <div class="card card-2">
-                <div class="card-body">
-                    <div class="card-figure">
+        <div class="col-md-3 mt-3">
+            <div class="card categories_card">
+                <div class="card-body p-0">
+                    <div class="category_images">
                         <a href="{{ url('category') }}/{{ $getcat->url }}">
                         @if($getcat->icon==null)
                             <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$getcat->category_name}}" />
@@ -30,8 +30,8 @@
                         @endif
                         </a>
                     </div>
-                    <div class="card-heading">
-                        <a href="{{ url('category') }}/{{ $getcat->url }}"><span>{{$getcat->category_name}}</span></a>
+                    <div class="category_heading">
+                        <a href="{{ url('category') }}/{{ $getcat->url }}"><p>{{$getcat->category_name}}</p></a>
                     </div>
                 </div>
             </div>

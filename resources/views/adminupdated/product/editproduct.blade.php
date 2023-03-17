@@ -101,13 +101,13 @@
                                      </div>
                                      <div class="col-md-4">
                                         <div class="info-input mb-20px">
-                                           <label>Product Price <span class="link-danger">*</span></label>
+                                           <label>Basic Price <span class="link-danger">*</span></label>
                                            <input value="{{ $product->prod_price }}" type="text" class="Addproduct" placeholder="Write Product Price here" id="prod_price" name="prod_price"/>
                                         </div>
                                      </div>
                                      <div class="col-md-4">
                                         <div class="info-input mb-20px">
-                                           <label>Sale Price <span class="link-danger">*</span></label>
+                                           <label>Premium Price <span class="link-danger">*</span></label>
                                            <input value="{{ $product->sale_price }}"  type="text" class="" placeholder="Write Sale Price here" id="sale_price" name="sale_price"/>
                                         </div>
                                      </div>

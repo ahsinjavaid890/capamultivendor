@@ -1,4 +1,4 @@
-<div class="schedule-delivery checkout-radio">
+<!-- <div class="schedule-delivery checkout-radio">
     <h4 class="mb-25">Schedule Delivery</h4>
     <div class="radio-button">
         <div class="input-label"> 
@@ -14,7 +14,7 @@
         </div>
         <div class="text-right"><span>AED 30</span></div>
     </div>
-</div>
+</div> -->
 <div class="schedule-delivery checkout-radio">
     <h4 class="mb-25">Payment Mode</h4>
     <div class="radio-button">
@@ -33,5 +33,5 @@
     </div>
 </div>
 <div class="continue-btn" style="text-align:right;">
-    <button class="btn btn-primary" type="submit">Place Order</button>
+    <button class="mt-3 btn btn-primary" type="submit">Place Order</button>
 </div>

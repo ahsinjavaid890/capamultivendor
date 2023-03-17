@@ -6,7 +6,7 @@
         <div class="d-flex align-items-stretch mr-2">
             <!--begin::Page Title-->
             <h3 class="d-none text-dark d-lg-flex align-items-center mr-10 mb-0">
-               Oben Admin Dashboard
+               CapaMultivendor Admin Dashboard
             </h3>
             <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                 <li class="breadcrumb-item">
@@ -230,10 +230,10 @@
                         <div class="navi-separator mt-3"></div>
                         <div class="navi-footer  px-8 py-5">
                             <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();" role="button"  class="btn btn-light-primary font-weight-bold">Sign Out</a>
-                                                     <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                               document.getElementById('logout-form').submit();" role="button"  class="btn btn-light-primary font-weight-bold">Sign Out</a>
+                            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
+                             @csrf
+                            </form>
                         </div>
                         <!--end::Footer-->
                     </div>

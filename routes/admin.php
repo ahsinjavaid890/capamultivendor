@@ -306,6 +306,7 @@ Route::name('admin.')->namespace('App\Http\Controllers\Admin')->prefix('admin')-
     Route::get('/Banner','AdminController@Banner')->name('Banner');
     Route::get('/banners','AdminController@banners')->name('banners');
     Route::post('/add-banner-process','AdminController@addBanner')->name('addBanner');
+    Route::post('/updateBanner','AdminController@updateBanner')->name('updateBanner');
     Route::get('/delete-banner/{id}','AdminController@deleteBanner')->name('deleteBanner');
 
     // service list

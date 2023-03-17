@@ -3,30 +3,22 @@
 
 <div class="offcanvas-overlay"></div>
 
-<!-- Slider Start -->
-<div class="slider-area slider-height-1">
-    <!-- Single Slider  -->
-    <div class="swiper-slide bg-img d-flex" style="background-image: url({{asset('public/website/assets/images/slider-image/sample-2.jpg')}});">
-    </div>
-</div>
-<!-- Slider End -->
 
 
-
-<section id="sign-up-tabs">
+<section id="sign-up-tabs"  style="background-color: #f2f2f2;">
 <div class="container">
 <div class="row">
 <div class="register-as">
 <div class="customer form">
     @include('website.layouts.flash')
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-lg-6 text-center">
              <a href="{{ url('auth/google') }}" class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/google.png')}}"/>Sign Up with Google</a>
         </div>
         <div class="col-lg-6 text-center">
             <a class="submit btn sign-up-with" type="submit"><img src="{{asset('public/website/assets/images/icons/facebook.png')}}"/>Sign Up with Facebook</a>
         </div>
-    </div>
+    </div> -->
     <div class="title mb-30">
         <h2 class="text-center">Registration Form</h2>
     </div>

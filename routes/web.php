@@ -58,6 +58,9 @@ Route::name('website.')->namespace('App\Http\Controllers\Website')->group(functi
     
     Route::get('/product','WebsiteController@productpage')->name('productpage');
     Route::get('/product/{id}','WebsiteController@productDetails')->name('productDetails');
+    Route::get('/dealoftheday','WebsiteController@dealoftheday')->name('dealoftheday');
+    Route::get('/toppickup','WebsiteController@toppickup')->name('toppickup');
+    Route::get('/newarrival','WebsiteController@newarrival')->name('newarrival');
     
     // category details page
 
@@ -98,11 +101,13 @@ Route::name('website.')->namespace('App\Http\Controllers\Website')->group(functi
     Route::post('/design-products-subcategory','WebsiteController@subcategory_design')->name('subcategory_design');
     Route::post('/design-request-process','WebsiteController@desginRequestProcess')->name('desginRequestProcess');
 
-
+ 
     Route::get('/contact','WebsiteController@contact')->name('contact');
     Route::get('/track-order','WebsiteController@trackorder')->name('trackorder');
     Route::get('/play-event','WebsiteController@playevent')->name('playevent');
     Route::post('/submitplanevent','WebsiteController@submitplanevent');
+    Route::get('/blogs','WebsiteController@blogs')->name('blogs');
+    Route::get('/blogsdetail/{id}','WebsiteController@blogsdetail')->name('blogsdetail');
 
 
     Route::get('/coming-soon','WebsiteController@comingsoon')->name('comingsoon');

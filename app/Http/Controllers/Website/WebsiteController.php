@@ -16,6 +16,7 @@ use App\Models\Product_attr;
 use App\Models\Seller;
 use App\Models\SellerDoc;
 use App\Models\Cart;
+use App\Models\Blogs;
 use App\Models\CustomerAddress;
 use App\Models\orders; 
 use App\Models\orderdetails;
@@ -91,6 +92,8 @@ class WebsiteController extends Controller
             $order->phonenumber = $request->phonenumber;
             $order->emirates   = $request->emirates;
             $order->area = $request->area;
+            $order->delivery_date   = $request->delivery_date;
+            $order->delivery_time = $request->delivery_time;
             $order->address = $request->address;
             $order->google_location = $request->google_location;
         }
@@ -298,13 +301,14 @@ class WebsiteController extends Controller
         return view('website.thankyou');
     }
     public function index(){
-        $getcatlist = $this->listcat();
+        $getcatlist = Category::limit(2)->get();
         $vendors = $this->listVendors();
         $Deals = $this->DOD();
         $topPics = $this->topPicsProduct();
         $arrivals = $this->arrovalsProduct();
+        $newcat = Category::orderBy('id','desc')->where('show_on_homepage' , 1)->limit(4)->get();
         $banners = Banner::orderBy('id','desc')->get();
-        return view('website.index',compact('getcatlist','vendors','Deals','topPics','arrivals','banners'));
+        return view('website.index',compact('getcatlist','vendors','Deals','topPics','arrivals','banners', 'newcat'));
     }
 
     public function search(Request $request) {
@@ -380,7 +384,7 @@ class WebsiteController extends Controller
                      foreach ($cart as $r) {
                   
                     echo '<li>
-                        <a href="'.url("product").'/'.$r['url'].'" class="image"><img src="'.asset('products').'/'.$r['image'].'" alt="Cart product Image"></a>
+                        <a href="'.url("product").'/'.$r['url'].'" class="image"><img class="img-thumbnail" src="'.asset('public/products').'/'.$r['image'].'" alt="Cart product Image"></a>
                         <div class="content">
                             <a href="'.url("product").'/'.$r['url'].'" class="title">Outdoor Fairy Light</a>
                             <span class="quantity-price">'.$r['quantity'].' x <span class="amount">'.$r['price'].' '.Cmf::current_currency().'</span></span>
@@ -586,10 +590,26 @@ class WebsiteController extends Controller
         ->paginate(9); 
         $vendors = $this->listVendors();
         $getcatlist = $this->listcat();
-        return view('website.category-details',compact('products','vendors','getcatlist','category_id'));
+        $categories_detail = Category::where('id' , $category_id)->get()->first();
+        return view('website.category-details',compact('products','categories_detail','vendors','getcatlist','category_id'));
     }
 
+public function subcatDetails($id,$subcat){
 
+        $subcategory_id = SubCategory::where('url' , $subcat)->get()->first()->id;
+        $products=Product::leftJoin('categories','categories.id','=','products.category')
+        ->leftJoin('sub_categories','sub_categories.id','=','products.subcategory') 
+        ->leftJoin('reviews','reviews.prod_id','=','products.id')
+        ->select('products.*','categories.id as cat_id','sub_categories.id as subcat_id','categories.category_name as cat_name','sub_categories.category_name as subparent_id','subcat_name','rating','message')
+        ->where('products.subcategory','=',$subcategory_id)
+        ->where('products.status','=','2')
+        ->orderBy('products.id','desc')
+        ->paginate(9); 
+        $vendors = $this->listVendors();
+        $getcatlist = $this->listcat();
+        $subcategories_detail = SubCategory::where('id' , $subcategory_id)->get()->first();
+        return view('website.subcategory-details',compact('products','subcategories_detail','vendors','getcatlist','subcategory_id'));
+    }
     // cart process
 
 
@@ -1033,11 +1053,20 @@ class WebsiteController extends Controller
     public function trackorder(){
         return view('website.track-order');
     }
+    public function blogs()
+    {
+
+        return view('website.blogs');
+    }
+    public function blogsdetail($id)
+    {
+        $blogs = Blogs::where('id' , $id)->get()->first();
+        return view('website.blogsdetail',compact('blogs'));
+    }
     // Contact
     public function contact(){
         return view('website.contact');
-    }
-
+    } 
     // categories page
 
     public function categoriesPage(){
@@ -1498,8 +1527,25 @@ public function allcategories(){
         exit();
     }
 }
+public function dealoftheday()
+{
+    $products = $this->listAllproducts();
+    $Deals = $this->DOD();
+    return view('website.dealoftheday',compact('products' , 'Deals'));
+}
+public function toppickup()
+{
+    $products = $this->listAllproducts();
+    $topPics = $this->topPicsProduct();
+    return view('website.toppickup',compact('products' , 'topPics'));
+}
 
-
+public function newarrival()
+{
+    $products = $this->listAllproducts();
+    $arrivals = $this->arrovalsProduct();
+    return view('website.newarrival',compact('products' , 'arrivals'));
+}
 // search form
 
 public function searchFRM(Request $request){

@@ -3,18 +3,9 @@
 
 
     <div class="offcanvas-overlay"></div>
-
-        <!-- Slider Start -->
-        <div class="slider-area slider-height-1">
-            <!-- Single Slider  -->
-            <div class="swiper-slide bg-img d-flex" style="background-image: url({{asset('website/assets/images/slider-image/sample-2.jpg')}});">
-            </div>
-        </div>
-        <!-- Slider End -->
-    
         
         
-<section id="sign-up-tabs">
+<section id="sign-up-tabs" style="background-color: #f2f2f2;">
     <div class="container">
     <div class="row">
         <div class="register-as">
@@ -67,19 +58,15 @@
                         <label>City<span>*</span></label>
                         <select name="city" type="text" required class="seller_register">
                             <option value="0">select city</option>
-                            <option value="1">Abu Dhabi</option>
-                            <option value="2">Sharjah</option>
-                            <option value="3">Dubai</option>
-                            <option value="4">Ras Al Khamiah</option>
-                            <option value="5">Ajman</option>
-                            <option value="6">Fujairah</option>
-                            <option value="7">Al Ain</option>
-                            <option value="8">Ummal Queen</option>
+                            <option value="1">Mumbai</option>
+                            <option value="2">Delhi</option>
+                            <option value="3">Kokata</option>
+                            <option value="4">Utar Pardesh</option>
                         </select>
                     </div>
                     <div class="col-lg-12 checkbox-input">
                         <input type="checkbox" id="html" name="terms_and_condition" class="seller_register_checkbox"  style="width:60px">
-                        <label for="html">By proceeding, I agree to Oben's <a href="javascript:void(0)">Terms</a> of use & acknowledge that I have read the privacy policy, I also agree that Oben or its representatives may contact me by email, SMS on the email or mobile no I provide, including for the maketing</label>
+                        <label for="html">By proceeding, I agree to Capa's <a href="javascript:void(0)">Terms</a> of use & acknowledge that I have read the privacy policy, I also agree that Capa or its representatives may contact me by email, SMS on the email or mobile no I provide, including for the maketing</label>
                     </div>
                     <span class="invalid-feedback terms_and_condition" role="alert">
                         <strong>Please Check the Terms and Condtion for Proceding Next</strong>

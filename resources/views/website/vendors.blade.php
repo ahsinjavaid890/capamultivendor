@@ -20,7 +20,7 @@
             <div class="row">
                 @foreach($vendors as $seller)
                 @if($seller->shop_url)
-                <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-12 col-sm-6">
                     <div class="vendor-wrap style-2 mb-40 d-flex">
                         <div class="product-badges product-badges-position product-badges-mrg">
                             <span class="hot">Mall</span>
@@ -38,15 +38,10 @@
                         <div class="vendor-content-wrap">
                             <div class="mb-30">
                                 <h4 class="mb-5 mx-3"><a href="{{url('vendor')}}/{{ $seller->shop_url }}">{{$seller->shop_name}}</a></h4>
-                                <div class="product-rate-cover">
-                                    <div class="product-rate d-inline-block">
-                                        <div class="product-rating" style="width: 90%"></div>
-                                    </div>
-                                </div>
                                 <div class="vendor-info d-flex justify-content-between align-items-end mt-30">
                                     <ul class="contact-infor text-muted">
-                                        <li class="mt-3"><img class="mx-3" src="{{ asset('public/website/assets/images/icons/map-pin.png') }}" alt=""><strong>Address: </strong> <span>{{$seller->shop_address}}</span></li><br>
-                                        <li class="mt-3"><img class="mx-3" src="{{ asset('public/website/assets/images/icons/phone.png') }}" alt=""><strong>Call Us:</strong><span>{{$seller->shop_phone}}</span></li>
+                                        <li class=""><img class="" src="{{ asset('public/website/assets/images/icons/map-pin.png') }}" alt=""><strong>Address: </strong> <span>{{$seller->shop_address}}</span></li><br>
+                                        <li class="mt-3"><img class="" src="{{ asset('public/website/assets/images/icons/phone.png') }}" alt=""><strong>Call Us:</strong><span>{{$seller->shop_phone}}</span></li>
                                     </ul>
                                     <a href="{{url('vendor')}}/{{ $seller->shop_url }}" class="btn btn-primary">Visit Store <i class="fi-rs-arrow-small-right"></i></a>
                                 </div>

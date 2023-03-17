@@ -3,25 +3,16 @@
 
 
     <div class="offcanvas-overlay"></div>
-
-        <!-- Slider Start -->
-        <div class="slider-area slider-height-1">
-            <!-- Single Slider  -->
-            <div class="swiper-slide bg-img d-flex" style="background-image: url({{asset('website/assets/images/slider-image/sample-2.jpg')}});">
-            </div>
-        </div>
-        <!-- Slider End -->
     
         
-        
-<section id="sign-up-tabs">
+<section id="sign-up-tabs"  style="background-color: #f2f2f2;">
     <div class="container">
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 register-as">
         <div class="d-flex tabs">
-                <a href="/customer-login" class="customersign">Sign in as Customer</a>
-                <a href="/seller-login" class="sellersignin">Sign in as Seller</a>
+                <a href="{{ url('customer-login') }}" class="customersign">Sign in as Customer</a>
+                <a href="{{ url('seller-login') }}" class="sellersignin">Sign in as Seller</a>
             </div>
 		<div class="customer form">
             @include('website.layouts.flash')
@@ -75,7 +66,7 @@
 <style>
 .register-as {
     position: relative;
-    margin-top: -45%;
+    margin-top: 15%;
 } 
 .register-as .tabs {
     justify-content: center;
@@ -87,7 +78,7 @@
 }    
 .register-as .tabs a {
     background: #6c4646;
-    color: #fff;
+    color: #fff !important;
     padding: 15px;
     text-align: center;
     width: 200px;
@@ -96,8 +87,8 @@
     border-radius: 5px 5px 0 0;
 }  
 .register-as .tabs a:focus, .register-as .tabs a:active {
-    background: #d8d8d8;
-    color: #009fbd;
+    background: #64317c;
+    color: white;
 } 
 .active{
     background: #d8d8d8 !important;
