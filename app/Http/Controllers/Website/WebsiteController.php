@@ -336,14 +336,14 @@ class WebsiteController extends Controller
         ]);
     }
 
-    public function addtocartgetmethod($id)
+    public function addtocartgetmethod($id , $pricetype)
     {
         $product = Product::find($id);
-        if(!empty($product->sale_price))
+        if(!empty($pricetype == 'basicprice'))
         {
-            $price = $product->sale_price;
-        }else{
             $price = $product->prod_price;
+        }else{
+            $price = $product->sale_price;
         }
         if(!$product) {
             abort(404);
@@ -358,6 +358,7 @@ class WebsiteController extends Controller
                 "url" => $product->url,
                 "quantity" => 1,
                 "price" => $price,
+                "pricetype" => $pricetype,
                 "image" => $product->featured_img
             ];
         }

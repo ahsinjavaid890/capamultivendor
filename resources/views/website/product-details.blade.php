@@ -37,14 +37,9 @@
                             <h2>{{$products->product_title}}</h2>
                             
                             <div class="pricing-meta">
-                            @php
-                                $offer_ar = $products->prod_price-$products->sale_price;
-                                $off_ar = round(($offer_ar/$products->prod_price)*100);
-                            @endphp
                                 <ul>
                                     <li>Price : </li>
-                                    <li class="amount"> <ins class="sale-price">INR {{$products->sale_price}}</ins><del>INR {{$products->prod_price}}</del></li>
-                                    <li class="tax"><span class="discount">{{$off_ar}}% Off</span>Tax Included</li>
+                                    <li class="amount"> <ins class="sale-price">INR {{$products->prod_price}}</ins></li>
                                 </ul>
                             </div>
                             <div class="pro-details-list">
@@ -66,6 +61,13 @@
                                     </select>
                                 </div>
                                 @endforeach
+
+                                <div class="buttonprices d-flex">
+                                    <span onclick="selectprice('basicprice' , {{$products->prod_price}})" id="basicprice" class="btn btn-price btn-price-selected">Basic (INR {{$products->prod_price}})</span>
+                                    <span onclick="selectprice('premiumprice' , {{$products->sale_price}})" id="premiumprice" style="margin-left:10px;" class="btn btn-price">Premium (INR {{$products->sale_price}})</span>
+
+                                    <input type="hidden" id="pricetype" value="basicprice" name="">
+                                </div>
                             </form>
                             </div>
                             <div class="">
@@ -137,6 +139,24 @@
                         </div>
                 </div>
                 </div>
+
+                <div class="row mt-5" style="margin: 0 auto 10px;">
+                   <div class="col-md-2" style="padding:0 7px 0">
+                      <img class=" responsive-img " src="https://assets.winni.in/groot/2022/06/27/productdetailpage/desktop/customerstaisfaction.jpg" style="box-shadow: 0px 0px 4px #00000029;width:100%;height:100%">
+                   </div>
+                   <div class="col-md-2" style="padding:0 7px 0">
+                      <img class="responsive-img " src="https://assets.winni.in/groot/2022/06/27/productdetailpage/desktop/customer.jpg" style="box-shadow: 0px 0px 4px #00000029;width:100%;height:100%" "="">
+                   </div>
+                   <div class="col-md-2" style="padding:0 7px 0">
+                      <img class="   responsive-img " src="https://assets.winni.in/groot/2022/06/27/productdetailpage/desktop/pincodes.jpg" style="box-shadow: 0px 0px 4px #00000029;width:100%;height:100%" "="">
+                   </div>
+                   <div class="col-md-3" style="padding:0 7px 0">
+                      <img class="   responsive-img " src="https://assets.winni.in/groot/2022/06/27/productdetailpage/desktop/purchaseprotection.jpg" style="box-shadow: 0px 0px 4px #00000029;width:100%;height:100%" "="">
+                   </div>
+                   <div class="col-md-3" style="padding:0 7px 0">
+                      <img class="   responsive-img " src="https://assets.winni.in/groot/2022/06/27/productdetailpage/desktop/hygenic.jpg" style="box-shadow: 0px 0px 4px #00000029;width:100%;height:100%" "="">
+                   </div>
+                </div>
             </div>
         </div>
         <div class="col-md-3">
@@ -177,5 +197,17 @@
 
         })
     })
+
+
+
+    function selectprice(type , price) {
+
+        $('.btn-price').removeClass('btn-price-selected');
+
+        $('#'+type).addClass('btn-price-selected');
+
+        $('#pricetype').val(type)
+        $('.sale-price').html('INR '+price);
+    }
 </script>
 @endpush
