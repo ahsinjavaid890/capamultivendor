@@ -1,29 +1,9 @@
 @extends('website.layouts.master')
 @section('content')
-<div class="offcanvas-overlay"></div>
-<style>
-    .arrival-products .pro-content {
-    width: 100% !important;
-}
-</style>
-<div class="breadcrumb-area">
-    <div class="container-fluid">
-        <div class="archive-header mb-3">
-            <div class="row align-items-center">
-                <div class="col-xl-6">
-                    <h1 class="mb-4">{{$products->product_title}}</h1>
-                    <div class="breadcrumb">
-                        <a href="{{ url(' ') }}" rel="nofollow"><i class="fa fa-home mx-1"></i>Home</a>
-                        <span><i class="fa fa-angle-right mr-5"></i> {{$products->cat_name}}</span> 
-                        <span><i class="fa fa-angle-right mr-5"></i> {{$products->product_title}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<section class="product-details-area mtb-60px">
-            <div class="container-fluid">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="product-details-area">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-12">
                         <div class="product-details-img product-details-tab">
@@ -35,6 +15,11 @@
                             </div>
                             <div id="gallery" class="product-dec-slider-2 swiper-container swiper-initialized swiper-horizontal swiper-pointer-events">
                                 <div class="swiper-wrapper" id="swiper-wrapper-3ba1210621ed60bac" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);">
+                                    <div class="swiper-slide swiper-slide-active" role="group">
+                                        <a class="active" data-image="{{asset('public/products/'.$products->featured_img)}}" data-zoom-image="{{asset('public/products/'.$products->featured_img)}}">
+                                            <img class="img-responsive" src="{{asset('public/products/'.$products->featured_img)}}" alt="">
+                                        </a>
+                                    </div>
                                    @foreach(DB::table('productgallerimages')->where('product_id' , $products->id)->get() as $gimg)
                                     <div class="swiper-slide swiper-slide-active" role="group">
                                         <a class="active" data-image="{{asset('public/images/'.$gimg->image)}}" data-zoom-image="{{asset('public/images/'.$gimg->image)}}">
@@ -46,6 +31,7 @@
                             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                         </div>
                     </div>
+
                     <div class="col-xl-6 col-lg-6 col-md-12">
                         <div class="product-details-content">
                             <h2>{{$products->product_title}}</h2>
@@ -134,9 +120,6 @@
                               
                                
                             </div>
-                            <div class="pro-details-policy">
-                                <a href="#"> See Our Return Policy</a>
-                            </div>
                             <div class="pro-details-category">
                                 <label>Categories: </label>
                                 <ul>
@@ -153,10 +136,7 @@
                                         <li>
                                             <a title="Twitter" href="https://twitter.com/share?url={{URL::current()}}&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank"><i class="ion-social-twitter"></i></a>
                                         </li>
-                                        <li>
-                                            <a title="Google+" href="https://plus.google.com/share?url={{URL::current()}}" target="_blank"><i class="ion-social-google"></i></a>
-                                        </li>
-                                        <li>
+                                         <li>
                                             <a title="Instagram" href="https://www.instagram.com/?url={{URL::current()}}" target="_blank"><i class="ion-social-instagram"></i></a>
                                         </li>
                                     </ul>
@@ -164,159 +144,24 @@
                             </div>
                             
                         </div>
-                    </div>
+                    </form>
                 </div>
-            </div>
-        </section>
-
-        <div class="description-review-area mb-60px">
-            <div class="container-fluid">
-                <div class="description-review-wrapper">
-                    <div class="description-review-topbar nav">
-                        <a data-bs-toggle="tab" href="#des-details1" class="active">Long Description</a>
-                    </div>
-                    <div class="tab-content description-review-bottom">
-                        <div id="des-details2" class="tab-pane active show">
-                            {!! $products->long_desc !!}
-                        </div>
-                        
-                        <div id="des-details3" class="tab-pane">
-                            <div class="row">
-                               <!--  <div class="col-lg-7">
-                                    <div class="review-wrapper">
-                                        @foreach(DB::table('reviews')->where('prod_id' , $products->id)->get() as $r)
-                                        @if($r->message)
-                                        <div class="single-review">
-                                            <div class="review-content">
-                                                <div class="review-top-wrap">
-                                                    <div class="review-left">
-                                                        <div class="review-name">
-                                                            <h4>{{ DB::table('customers')->where('id'  ,$r->cust_id)->first()->fname }}</h4>
-                                                        </div>
-                                                        <div class="rating-product">
-                                                            @if($r->rating == 1)
-                                                            <i class="ion-android-star"></i>
-                                                            @endif
-                                                            @if($r->rating == 2)
-                                                            <i class="ion-android-star"></i>
-                                                            <i class="ion-android-star"></i>
-                                                            @endif
-                                                            @if($r->rating == 3)
-                                                            <i class="ion-android-star"></i>
-                                                            <i class="ion-android-star"></i>
-                                                            <i class="ion-android-star"></i>
-                                                            @endif
-                                                            @if($r->rating == 4)
-                                                            <i class="ion-android-star"></i>
-                                                            <i class="ion-android-star"></i>
-                                                            <i class="ion-android-star"></i>
-                                                            <i class="ion-android-star"></i>
-                                                            @endif
-                                                            @if($r->rating == 5)
-                                                            <i class="ion-android-star"></i>
-                                                            <i class="ion-android-star"></i>
-                                                            <i class="ion-android-star"></i>
-                                                            <i class="ion-android-star"></i>
-                                                            <i class="ion-android-star"></i>
-                                                            @endif
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="review-bottom">
-                                                    <p>
-                                                        {{ $r->message }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @endif
-                                        @endforeach
-                                    </div>
-                                </div> -->
-                                <div class="col-lg-5">
-                                    <div class="ratting-form-wrapper pl-50">
-                                        <h3>Add a Review</h3>
-                                        @if(Auth::guard('cust')->check())
-                                        <div class="ratting-form">
-                                            <form action="{{route('website.addreviews')}}" method="POST">
-                                                @csrf
-                                                <div class="star-box">
-
-                                                    <!-- <span>Your rating:</span>
-                                                    <div class="rating-product">
-                                                        <i class="ion-android-star"></i>
-                                                        <i class="ion-android-star"></i>
-                                                        <i class="ion-android-star"></i>
-                                                        <i class="ion-android-star"></i>
-                                                        <i class="ion-android-star"></i>
-                                                    </div> -->
-                                                </div>
-                                                <input type="hidden" name="cust_id" value="{{Auth::guard('cust')->user()->id}}" />
-                                                <input type="hidden" name="prod_id" value="{{$products->id}}" />
-                                                <div class="row">
-                                                    <div class="col-md-12" style="margin-bottom:20px">
-                                                        <select required class="form-control review" name="rating">
-                                                            <option value="">select rating</option>
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4">4</option>
-                                                            <option value="5">5</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="rating-form-style mb-10">
-                                                            <input placeholder="Name" type="text" class="review" value="{{Auth::guard('cust')->user()->fname}}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="rating-form-style form-submit">
-                                                            <textarea  placeholder="Message" name="msg"></textarea>
-                                                            <input type="submit" value="Submit">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        @else
-                                        <button class="btn btn-primary">Login</button>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <div id="new-arrivals" class="deal-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title text-start">
-                            <h2 class="section-heading">CUSTOMERS ALSO VIEWED</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                    <div class="arrival-products d-flex" id="filterproducts"></div>
-                    <div class="arrival-products d-flex" id="oldData">
-                        @foreach($catproducts as $r)
-                            @include('website.show.product')
-                        @endforeach  
-                    </div>
-                 </div>
+        <div class="col-md-3">
+            <div class="row">
+                @foreach($catproducts as $r)
+                    @include('website.show.ourbestproducts')
+                @endforeach
             </div>
-             </div>
         </div>
+    </div>
+</div>
+
+
 @stop
-<style type="text/css">
-    .event-plan .breadcrumb-area .breadcrumb-content .nav{
-        justify-content: flex-start !important;
-        font-size: 13px !important;
-    }
-</style>
+
 @push('otherscript')
 <script>
     $(function(){
