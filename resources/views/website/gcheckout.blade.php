@@ -9,9 +9,9 @@
                     </div>
                     <div class="col-md-6">
                         <div class="helpful-links">
-                            <span><a href="javascript:void(0)">Need help?</a></span>
-                            <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
-                            <span><a href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
+                            <span><a class="btn btn-block" href="javascript:void(0)">Need help?</a></span>
+                            <span><a class="btn btn-block" href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/CALL.svg')}}"/>Call Us</a></span>
+                            <span><a class="btn btn-block" href="javascript:void(0)"><img src="{{asset('public/website/assets/images/icons/whatsapp.svg')}}"/>Whatsapp Us</a></span>
                         </div>
                     </div>
                 </div>
@@ -53,40 +53,38 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-lg-7">
-                                                    <div class="billing-info-wrap">                                                        
-                                                      
-                                                                                                                 
+                                                    <div class="billing-info-wrap">
                                                             <div class="row" id="custaddress" > 
                                                                
                                                             <div class="col-lg-6 col-md-6">
                                                                 <div class="billing-info mb-20px">
                                                                     <label>First Name *</label>
-                                                                    <input type="text" name="fname" id="fname" placeholder="e.g.John"/>
+                                                                    <input type="text" name="fname" id="fname" placeholder="e.g.John" class="form-control" />
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6 col-md-6">
                                                                 <div class="billing-info mb-20px">
                                                                     <label>Last Name *</label>
-                                                                    <input type="text" name="lname" id="lname" placeholder="e.g.Smith"/>
+                                                                    <input type="text" name="lname" id="lname" placeholder="e.g.Smith" class="form-control" />
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-12">
                                                                 <div class="billing-info mb-20px">
                                                                     <label>Email Address *</label>
-                                                                    <input type="text" name="gemail" id="gemail" placeholder="e.g.mail@example.com"/>
+                                                                    <input type="text" name="gemail" id="gemail" placeholder="e.g.mail@example.com" class="form-control" />
                                                                 </div>
                                                             </div>
                                                             
                                                             <div class="col-lg-12">
                                                                 <div class="billing-info mb-20px">
                                                                     <label>Phone Number *</label>
-                                                                    <input type="tel" name="gmobile" id="gmobile" placeholder="e.g.501234567"/>
+                                                                    <input type="tel" name="gmobile" id="gmobile" placeholder="e.g.501234567" class="form-control" />
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-12">
                                                                 <div class="billing-select mb-20px">
                                                                     <label>Emirates *</label>
-                                                                    <select name="emirates" id="emirates" class="shippingadd">
+                                                                    <select name="emirates" id="emirates" class="shippingadd form-control">
                                                                         <option value="0">-select emirates-</option>
                                                                         <option>Dubai</option>
                                                                         <option>Abu Dhabi</option>
@@ -100,7 +98,7 @@
                                                             <div class="col-lg-12">
                                                                 <div class="billing-select mb-20px">
                                                                     <label>Area *</label>
-                                                                    <select name="area" class="shippingadd" id="shiparea">
+                                                                    <select name="area" class="shippingadd form-control" id="shiparea">
                                                                         <option value="0">-select area-</option>
                                                                         <option>Dubai</option>
                                                                         <option>Abu Dhabi</option>
@@ -112,7 +110,7 @@
                                                             <div class="col-lg-12">
                                                                 <div class="billing-select mb-20px">
                                                                     <label>Delivery Address*</label>
-                                                                    <textarea name="address" rows="3" name="delivery_Add" id="delivery_Add" class="shippingadd" placeholder="Building name/street"></textarea>
+                                                                    <textarea name="address" rows="3" name="delivery_Add" id="delivery_Add" class="shippingadd form-control" placeholder="Building name/street"></textarea>
                                                                        
                                                                    
                                                                 </div>
@@ -121,7 +119,7 @@
                                                                 <div class="billing-info google-map mb-20px">
                                                                     <h5>OR</h5>
                                                                     <label>Pick Your Location Through Google Map</label>
-                                                                    <input type="text" id="personal_companyadd" />
+                                                                    <input type="text" id="personal_companyadd" class="form-control" />
                                                                     <img src="{{asset('public/website/assets/images/icons/location-pin.svg')}}"/>
                                                                 </div>
                                                             </div>
@@ -145,7 +143,7 @@
                                                                 </div>
                                                             </div>
                                                             <input type="hidden" name="cust_address_id" id="cust_address_id"/>
-                                                            <div class="continue-btn">
+                                                            <div class="btn btn-block continue-btn">
                                                             <a href="javascript:void(0)" class="saveadd">Place order</a>
                                                            
                                                         </div>
@@ -169,7 +167,7 @@
                                                                         <?php $total_price = 0; ?>
                                                                         @foreach($cartproduct as $cartprod)
                                                                         <?php $total_price += $qty*$cartprod->sale_price; ?>
-                                                                        <li><img src="{{asset('products/'.$cartprod->featured_img)}}"/>
+                                                                        <li><img src="{{asset('public/products/'.$cartprod->featured_img)}}"/>
                                                                             <span class="order-middle-left">{{$cartprod->product_title}}</span><span class="order-price">AED {{$qty*$cartprod->sale_price}}</span>
                                                                         </li>
                                                                         <input type="hidden" name="cart_id" class="cartid" value="{{$cartprod->crtid}}" />
