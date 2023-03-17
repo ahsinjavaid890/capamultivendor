@@ -41,7 +41,7 @@
                     </ul>
                 </div>
                 <div class="add-cart-btn">
-                    <a href="javascript:void(0)" class="add-to-cart addtocartbutton{{ $r->id }} btn" onclick="addtocart({{$r->id}})">Add to cart</a>
+                    <a href="{{ url('product') }}/{{ $r->url }}" class="add-to-cart addtocartbutton{{ $r->id }} btn">Add to cart</a>
                 </div>
             </div>
         </article>

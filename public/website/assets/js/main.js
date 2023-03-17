@@ -696,9 +696,10 @@ function app_url()
 function addtocart(id)
 {
     $('.addtocartbutton'+id).html('<i class="fa fa-spinner fa-spin"></i>');
+    var pricetype = $('#pricetype').val();
     $.ajax({
         type: "GET",
-        url: app_url()+'/addtocart/'+id,
+        url: app_url()+'/addtocart/'+id+'/'+pricetype,
         success: function(resp) {
             $('.addtocartbutton'+id).html('Add To Cart');
             $('.cartnumber').attr('data-number', resp);

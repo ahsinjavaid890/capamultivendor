@@ -24,7 +24,7 @@
             <div class="container-fluid">
                 <div class="row">
                     @foreach($banners->where('type' , 'homepagetop') as $banner)
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="banner_image">
                             <a  href="{{route('website.productpage')}}">
                                 <img src="{{asset('public/uploads/'.$banner->banner)}}">
@@ -50,15 +50,15 @@
                         </div>
                         <div class="row">
                             @foreach($newcat as $r)
-                            <div class="col-md-2 mt-3">
+                            <div class="col-md-3 mt-3">
                                 <div class="card ">
                                     <div class="card-body p-0">
                                        <a href="{{ url('category') }}/{{ $r->url }}">
                                         @if($r->icon==null)
-                                                    <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%;" />
-                                                    @else
-                                                    <img src="{{asset('public/products/'.$r->icon)}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%;" />
-                                                @endif
+                                            <img src="{{asset('public/website/assets/images/icons/speakers.svg')}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%;" />
+                                            @else
+                                            <img src="{{asset('public/products/'.$r->icon)}}" alt="{{$r->category_name}}" id="{{ $r->id }}" style="width: 100%;height: 230px;" />
+                                        @endif
                                         </a> 
                                         <div class="cat-heading mt-2 mb-3">
                                             <a href="{{ url('category') }}/{{ $r->url }}"><p>{{$r->category_name}}</p></a>
@@ -150,7 +150,7 @@
             <div class="container-fluid">
                 <div class="row">
                     @foreach($banners->where('type' , 'homepagetop') as $banner)
-                    <div class="col-md-3 col-xs-12">
+                    <div class="col-md-4 col-xs-12">
                         <div class="banner-wrapper">
                             <a href="{{route('website.productpage')}}"><img src="{{asset('public/uploads/'.$banner->banner)}}" alt="" /></a>
                         </div>
@@ -215,7 +215,7 @@
             <div class="container-fluid">
                 <div class="row">
                     @foreach($banners->where('type' , 'homepagetop') as $banner)
-                    <div class="col-md-6 col-xs-12">
+                    <div class="col-md-4 col-xs-12">
                         <div class="banner-wrapper">
                             <a href="{{route('website.productpage')}}"><img src="{{asset('public/uploads/'.$banner->banner)}}" alt="" /></a>
                         </div>

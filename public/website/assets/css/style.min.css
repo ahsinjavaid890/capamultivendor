@@ -4275,7 +4275,7 @@ offcanvas-menu>ul>li .menu-expand {
 .product-details-content .pricing-meta .sale-price {
     font-size: 36px;
     font-weight: 700;
-    color: #009FBD;    text-decoration: none;
+    color: #64317c;    text-decoration: none;
 }
 .product-details-content .pricing-meta .amount {
     padding: 0 20px;
@@ -8655,4 +8655,25 @@ a:hover{
 	border: 1px solid #ddd;
 	padding: 40px;
 	border-radius: 15px;
+}
+
+.btn-price{
+	background: #6c4646;
+    color: #fff;
+}
+
+.btn-price:hover{
+    color: #fff;
+}
+.btn-price-selected{
+	background: #64317c;
+	color: white;
+}
+
+.btn-price-selected:hover{
+	color: white;
+}
+
+.buttonprices{
+	margin-bottom: 25px;
 }

@@ -43,7 +43,7 @@ Route::name('website.')->namespace('App\Http\Controllers\Website')->group(functi
 
     Route::post('/search','WebsiteController@search')->name('search');
 
-    Route::get('/addtocart/{id}','WebsiteController@addtocartgetmethod');
+    Route::get('/addtocart/{id}/{pricetype}','WebsiteController@addtocartgetmethod');
     Route::get('/showcart','WebsiteController@showcart');
     Route::get('/removecart/{id}','WebsiteController@removecartcartgetmethod');
     Route::get('/quickproductview/{id}','WebsiteController@quickproductview');
