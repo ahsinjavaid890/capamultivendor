@@ -8,3 +8,88 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[24-Feb-2023 10:36:32 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[24-Feb-2023 10:36:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:08 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:11 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:13 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:14 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:14 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:20 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:21 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:23 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:23 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:24 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[28-Feb-2023 07:07:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:42:43 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:42:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:42:48 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:42:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:42:52 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:42:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:42:55 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:42:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:42:57 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:42:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:43:00 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:43:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:43:17 UTC] PHP Warning:  require_once(/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php): Failed to open stream: No such file or directory in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21
+[13-Mar-2023 07:43:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/public/index.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/cb05z9p8pbff/public_html/aweentechnologies.com/ecommerce/index.php on line 21

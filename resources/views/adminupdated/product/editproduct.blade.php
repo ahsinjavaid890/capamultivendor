@@ -27,13 +27,44 @@
                                   <div class="shadow-block" id="pills-tabContent">
                                <div class="form-detail">
                                   <div class="row">
+                                     <div class="col-lg-4">
+                                       <label>Is Variated Product?</label>
+                                          <div class="switch">
+                                             @if(DB::table('product_attrs')->where('product_id' , $product->id)->count() > 0)
+                                            <input checked name="variated" class="switch__input" type="checkbox" id="variated">
+                                            @endif
+                                            <label aria-hidden="true" class="switch__label" for="variated">On</label>
+                                            <div aria-hidden="true" class="switch__marker"></div>
+                                          </div>
+                                     </div>
+                                     <div class="col-lg-4">
+                                          <label>For Vendor! if the product can be done as Gift?</label>
+                                          <div class="switch">
+                                            <input class="switch__input" type="checkbox" id="gift">
+                                            <label aria-hidden="true" class="switch__label" for="gift">On</label>
+                                            <div aria-hidden="true" class="switch__marker"></div>
+                                          </div>
+                                     </div>
+                                     <div class="col-lg-4">
+                                          <label>Products Warranty</label>
+                                          <select id="warranty" class="Addproduct form-control" name="warranty">
+                                             <option value="">Select Warenty</option>
+                                             <option @if($product->warranty == 'No Warenty') selected @endif value="No Warenty">No Warenty</option>
+                                             <option @if($product->warranty == 'Brand Warenty') selected @endif value="Brand Warenty">Brand Warenty</option>
+                                             <option @if($product->warranty == '1 Month Warenty') selected @endif value="1 Month Warenty">1 Month Warenty</option>
+                                             <option @if($product->warranty == '2 Month Warenty') selected @endif value="2 Month Warenty">2 Month Warenty</option>
+                                             <option @if($product->warranty == '3 Month Warenty') selected @endif value="3 Month Warenty">3 Month Warenty</option>
+                                             <option @if($product->warranty == '4 Month Warenty') selected @endif value="4 Month Warenty">4 Month Warenty</option>
+                                             <option @if($product->warranty == '5 Month Warenty') selected @endif value="5 Month Warenty">5 Month Warenty</option>
+                                             <option @if($product->warranty == '6 Month Warenty') selected @endif value="6 Month Warenty">6 Month Warenty</option>
+                                          </select>
+                                     </div>
                                      <div class="col-md-12">
                                         <div class="info-input mb-20px">
                                            <label>Product Name/Title <span class="link-danger">*</span></label>
                                            <input value="{{ $product->product_title }}" type="text" class="Addproduct" placeholder="Write product title here" id="prod_title" name="prod_title"/>
                                         </div>
                                      </div>
-                                     <br><br><br><br><br>
                                      <div class="col-md-6">
                                         <div class=" info-input">
                                            <label>Choose Category <span class="link-danger">*</span></label>
@@ -45,7 +76,6 @@
                                            </select>
                                         </div>
                                      </div>
-                                     <br><br><br><br><br>
                                      <div class="col-md-6">
                                         <div class="info-input">
                                            <label>Choose Sub-Category <span class="link-danger">*</span></label>
@@ -55,19 +85,6 @@
                                               <option @if($product->subcategory == $r->id) selected @endif  value="{{ $r->id }}">{{ $r->subcat_name }}</option>
                                               @endforeach
                                            </select>
-                                        </div>
-                                     </div>
-                                     <div class="col-md-6">
-                                        <div class="info-input mb-20px">
-                                           <label>Basic Price <span class="link-danger">*</span> ({{ Cmf::current_currency() }})</label>
-                                           <input value="{{ $product->prod_price }}" type="text" class="Addproduct" placeholder="Write Product Price here" id="prod_price" name="prod_price"/>
-                                        </div>
-                                     </div>
-                                     <br><br><br><br><br>
-                                     <div class="col-md-6">
-                                        <div class="info-input mb-20px">
-                                           <label>Premium Price <span class="link-danger">*</span> ({{ Cmf::current_currency() }})</label>
-                                           <input value="{{ $product->sale_price }}"  type="text" class="" placeholder="Write Sale Price here" id="sale_price" name="sale_price"/>
                                         </div>
                                      </div>
                                      <div class="col-md-12">
@@ -82,21 +99,37 @@
                                            <textarea  class="summernote"placeholder="Write product long description here" rows="8" id="long_desc" name="long_desc" class="Addproduct">{{ $product->long_desc }}</textarea>
                                         </div>
                                      </div>
-                                     
-                                     <div style="margin-top: 20px;" class="col-md-4">
+                                     <div class="col-md-4">
+                                        <div class="info-input mb-20px">
+                                           <label>Basic Price <span class="link-danger">*</span></label>
+                                           <input value="{{ $product->prod_price }}" type="text" class="Addproduct" placeholder="Write Product Price here" id="prod_price" name="prod_price"/>
+                                        </div>
+                                     </div>
+                                     <div class="col-md-4">
+                                        <div class="info-input mb-20px">
+                                           <label>Premium Price <span class="link-danger">*</span></label>
+                                           <input value="{{ $product->sale_price }}"  type="text" class="" placeholder="Write Sale Price here" id="sale_price" name="sale_price"/>
+                                        </div>
+                                     </div>
+                                     <div class="col-md-4">
+                                        <div class="info-input mb-20px">
+                                           <label>Cost Price <span class="link-danger">*</span></label>
+                                           <input value="{{ $product->cast_price }}"  type="text" class="Addproduct" placeholder="Write Cost Price here" id="cost_price" name="cost_price"/>
+                                        </div>
+                                     </div>
+                                     <div class="col-md-4">
                                         <div class="info-input mb-20px">
                                            <label>Product Code/SKU <span class="link-danger">*</span></label>
                                            <input value="{{ $product->product_code }}" type="text" class="Addproduct" placeholder="Write product code/sku here" id="prod_code" name="prod_code" />
                                         </div>
                                      </div>
-
-                                     <div style="margin-top: 20px;" class="col-md-4">
+                                     <div class="col-md-4">
                                         <div class="info-input mb-20px">
                                            <label>Product Unit <span class="link-danger">*</span></label>
                                            <input value="{{ $product->prodict_unit }}" type="text" class="Addproduct" id="prod_unit" name="prod_unit" placeholder="Unit(Kg,PC,etc)"/>
                                         </div>
                                      </div>
-                                     <div style="margin-top: 20px;" class="col-md-4">
+                                     <div class="col-md-4">
                                         <div class="info-input mb-20px">
                                            <label>Stock Alert <span class="link-danger">*</span></label>
                                            <input value="{{ $product->stock_alert }}" type="text" class="Addproduct" placeholder="Write Product quantity here" id="stock" name="stock"/>
@@ -119,7 +152,7 @@
                                      <label for="featured_img"><img src="{{asset('public/seller/assets/img/upload.svg')}}"/>Upload</label> 
                                   </div>
                                   <div class="uploaded-img">
-                                     <img style="width:120px;height: 120px;" src="{{asset('public/products/'.$product->featured_img)}}" class="featured_prev_img img-thumbnail" />
+                                     <img style="width:120px;height: 120px;" src="{{asset('products/'.$product->featured_img)}}" class="featured_prev_img img-thumbnail" />
                                      <div class="edit-trash d-flex">
                                         <img class="white featured_img_delete" onclick="removeFeatured()" src="{{asset('public/seller/assets/img/white-trash.svg')}}" style="display:none"/>
                                      </div>
@@ -152,9 +185,154 @@
                                        @endforeach
                                   </div>
                                </div>
+                               <div class="col-lg-12 vendor-input " style="margin-top:30px">
+                                  <input type="checkbox" class="refund_return" id="returnrefundable" name="returnrefundable" value="1">
+                                  <label for="returnrefundable">Refundable and return</label>
+                               </div>
                             </div>
                          </div>
-                        </div>
+                               </div>
+                            </div>
+
+                        <div class="col-md-12 mt-5">
+                           @if(DB::table('product_attrs')->where('product_id' , $product->id)->count() > 0)
+                           <div class="card mb-5">
+                              <div class="card-header">
+                                 Product Attribute
+                              </div>
+                              <div class="card-body">
+                                 <table class="table table-bordered">
+                                  <thead>
+                                     <tr>
+                                        <th>Varient</th>
+                                        <th>Attribute</th>
+                                        <th>Price</th>
+                                        <th>Qty</th>
+                                        <th>Image</th>
+                                        <th>Action</th>
+                                     </tr>
+                                  </thead>
+                                  <tbody id="product_attr">
+                                     <tr class="product_attr_row" id="0">
+                                        <td>
+                                           <select class="form-control varient_select0" id="0" name="varient[]">
+                                              <option value="0">-select varient-</option>
+                                              @foreach($varient as $varients)
+                                              <option value="{{$varients->id}}">{{$varients->varient_name}}</option>
+                                              @endforeach
+                                           </select>
+                                        </td>
+                                        <td>
+                                           <select class="form-control attribute_select0" id="0" name="attribute[]">
+                                              <option value="0">-select attribute-</option>
+                                           </select>
+                                        </td>
+                                        <td><input type="text" name="cprice[]" id="price" class="form-control"/></td>
+                                        <td><input type="text" name="qty[]" id="price" class="form-control"/></td>
+                                        <td><input type="file" name="image_attr[]" id="image_attr" class="form-control"/></td>
+                                        <td><button class="btn btn-success addmore"><i class="fa fa-plus"></i></button></td>
+                                     </tr>
+                                  </tbody>
+                               </table>
+                              </div>
+                           </div>
+                           @endif
+                            <div class="card product-attribute">
+                               <div class="card-body">
+                                     <div class="col-md-12">
+                                        <h5>Delivery and shipping details:</h5>
+                                     </div>
+                                     <div class="col-md-12 delivery_partner" style="display:block;margin-top:30px">
+                                        <table class="table table-bordered">
+                                           <thead>
+                                              <tr>
+                                                 <th>Express Delivery</th>
+                                                 <th>Time/days</th>
+                                                 <th>Area</th>
+                                                 <th>Cast</th>
+                                                 <th>Action</th>
+                                              </tr>
+                                           </thead>
+                                           <tbody id="expressdelivery_attr">
+                                             @if(DB::table('express_deliveries')->where('product_id'  , $product->id)->count() > 0)
+                                             @foreach(DB::table('express_deliveries')->where('product_id'  , $product->id)->get() as $r)
+                                              <tr class="express_delivery_row" id="0">
+                                                 <td>
+                                                    <select class="form-control experess Addproduct" id="0" name="express_delivery[]">
+                                                       <option @if($r->express_delivery == 0) selected @endif value="0">select delivery</option>
+                                                       <option @if($r->express_delivery == 1) selected @endif value="1">Abu Dhabi</option>
+                                                       <option @if($r->express_delivery == 2) selected @endif value="2">Sharjah</option>
+                                                       <option @if($r->express_delivery == 3) selected @endif value="3">Dubai</option>
+                                                       <option @if($r->express_delivery == 4) selected @endif value="4">Ras Al Khamiah</option>
+                                                       <option @if($r->express_delivery == 5) selected @endif value="5">Ajman</option>
+                                                       <option @if($r->express_delivery == 6) selected @endif value="6">Fujairah</option>
+                                                       <option @if($r->express_delivery == 7) selected @endif value="7">Al Ain</option>
+                                                       <option @if($r->express_delivery == 8) selected @endif value="8">Ummal Queen</option>
+                                                    </select>
+                                                 </td>
+                                                 <td>
+                                                    <input value="{{ $r->time_days }}" type="text" name="timedays[]" id="timedays" class="form-control Addproduct"/>
+                                                 </td>
+                                                 <td>
+                                                    <select class="form-control experess Addproduct" id="0" name="selectarea[]">
+                                                       <option @if($r->delivery_area == 0) selected @endif value="0">select area</option>
+                                                       <option @if($r->delivery_area == 1) selected @endif value="1">Abu Dhabi</option>
+                                                       <option @if($r->delivery_area == 2) selected @endif value="2">Sharjah</option>
+                                                       <option @if($r->delivery_area == 3) selected @endif value="3">Dubai</option>
+                                                       <option @if($r->delivery_area == 4) selected @endif value="4">Ras Al Khamiah</option>
+                                                       <option @if($r->delivery_area == 5) selected @endif value="5">Ajman</option>
+                                                       <option @if($r->delivery_area == 6) selected @endif value="6">Fujairah</option>
+                                                       <option @if($r->delivery_area == 7) selected @endif value="7">Al Ain</option>
+                                                       <option @if($r->delivery_area == 8) selected @endif value="8">Ummal Queen</option>
+                                                    </select>
+                                                 </td>
+                                                 <td><input value="{{ $r->delivery_cast }}" type="text" name="cast[]" id="cast" class="form-control Addproduct"/></td>
+                                                 <td><button class="btn btn-success addmoreexpress"><i class="fa fa-plus"></i></button></td>
+                                              </tr>
+                                              @endforeach
+                                              @else
+
+                                              <tr class="express_delivery_row" id="0">
+                                                 <td>
+                                                    <select class="form-control experess Addproduct" id="0" name="express_delivery[]">
+                                                       <option value="0">select delivery</option>
+                                                       <option value="1">Abu Dhabi</option>
+                                                       <option value="2">Sharjah</option>
+                                                       <option value="3">Dubai</option>
+                                                       <option value="4">Ras Al Khamiah</option>
+                                                       <option value="5">Ajman</option>
+                                                       <option value="6">Fujairah</option>
+                                                       <option value="7">Al Ain</option>
+                                                       <option value="8">Ummal Queen</option>
+                                                    </select>
+                                                 </td>
+                                                 <td>
+                                                    <input  type="text" name="timedays[]" id="timedays" class="form-control Addproduct"/>
+                                                 </td>
+                                                 <td>
+                                                    <select class="form-control experess Addproduct" id="0" name="selectarea[]">
+                                                       <option value="0">select area</option>
+                                                       <option value="1">Abu Dhabi</option>
+                                                       <option value="2">Sharjah</option>
+                                                       <option value="3">Dubai</option>
+                                                       <option value="4">Ras Al Khamiah</option>
+                                                       <option value="5">Ajman</option>
+                                                       <option value="6">Fujairah</option>
+                                                       <option value="7">Al Ain</option>
+                                                       <option value="8">Ummal Queen</option>
+                                                    </select>
+                                                 </td>
+                                                 <td><input type="text" name="cast[]" id="cast" class="form-control Addproduct"/></td>
+                                                 <td><button class="btn btn-success addmoreexpress"><i class="fa fa-plus"></i></button></td>
+                                              </tr>
+
+                                              @endif
+
+                                           </tbody>
+                                        </table>
+                                     </div>
+                               </div>
+                            </div>
                             </div>
                          <div class="next btn"><a href="javascript:void()" id="addProduct_btn">Update Stock</a></div>
                       </div>

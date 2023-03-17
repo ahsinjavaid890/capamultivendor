@@ -70,13 +70,13 @@ class WebsiteController extends Controller
     }
     public function continuetopayement(Request $request)
     {
-        $order_number = 'CAPA-'.strtoupper(Str::random(10));
+        $order_number = 'OB-'.strtoupper(Str::random(10));
         $previusorder =   DB::table('orders')->where('order_number' , $order_number)->get()->first();
         if(!empty($previusorder))
         {
-            $order_number = 'CAPA-'.strtoupper(Str::random(11));
+            $order_number = 'OB-'.strtoupper(Str::random(11));
         }else{
-            $order_number = 'CAPA-'.strtoupper(Str::random(10));
+            $order_number = 'OB-'.strtoupper(Str::random(10));
         }
 
         $order = new orders;
@@ -203,7 +203,7 @@ class WebsiteController extends Controller
         {
             $pdf = PDF::loadView('sellerupdated.orders.invoice', ['id'=>$orders->id,'created_at'=>$orders->created_at]);
             Storage::put('public/pdf/invoice.pdf', $pdf->output());
-            return $pdf->download('CAPA( Order ID = '.$id.').pdf');
+            return $pdf->download('OBEN( Order ID = '.$id.').pdf');
         }else{
             return response()->view('frontend.errors.404', [], 404);
         }

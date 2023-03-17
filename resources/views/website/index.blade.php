@@ -50,7 +50,7 @@
                         </div>
                         <div class="row">
                             @foreach($newcat as $r)
-                            <div class="col-md-2 mt-3">
+                            <div class="col-md-3 mt-3">
                                 <div class="card ">
                                     <div class="card-body p-0">
                                        <a href="{{ url('category') }}/{{ $r->url }}">

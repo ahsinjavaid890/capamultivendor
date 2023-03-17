@@ -682,14 +682,14 @@ public function addProductProcess(Request $request){
     $insertProd->subcategory=$request->prod_subcat;
     $insertProd->prod_price=$request->prod_price;
     $insertProd->sale_price=$request->sale_price;
-    $insertProd->cast_price=0;
+    $insertProd->cast_price=$request->cost_price;
     $insertProd->prodict_unit=$request->prod_unit;
     $insertProd->stock_alert=$request->stock;
     $insertProd->short_desc=$request->short_desc;
     $insertProd->long_desc=$request->long_desc;
     $insertProd->varient='0';        
     $insertProd->featured_img=$featured_img;
-    $insertProd->status=2;
+    // $insertProd->video=$prod_video;
     $insertProd->warranty=$warranty;
     $insertProd->added_by_seller=$added_by;
     $insertProd->refund_return=$returnrefundable;
@@ -703,10 +703,44 @@ public function addProductProcess(Request $request){
             $gallery->save();
         }
     }
+    $last_id = $insertProd->id;
+    if($request->variated == 'on')
+    {
+        $prod_att_price = $request->cprice;
+        $lenth_prod = count($prod_att_price);
+        for($i=0;$i<$lenth_prod;$i++){
+            $image_attr = time().'.'.$request->image_attr[$i]->extension();   
+            $request->image_attr[$i]->move(public_path('products'), $image_attr);
+            $prod_attr = new Product_attr;
+            $prod_attr->product_id=$last_id;
+            $prod_attr->qty=$request->qty[$i];
+            $prod_attr->price=$request->cprice[$i];
+            $prod_attr->varient=$request->varient[$i];
+            $prod_attr->attribute=$request->attribute[$i];
+            $prod_attr->img_attr=$image_attr[$i];
+            $prod_attr->save();
+        }
+    }
     
 
     
         // express delivery 
+
+    $express_delivery = $request->express_delivery;
+    $time_days = $request->timedays;
+    $express_area = $request->selectarea;
+    $cast = $request->cast;
+    $toal_express_size = count($express_delivery);
+    for($j=0;$j<$toal_express_size;$j++){
+        $save_express = new ExpressDelivery;
+        $save_express->product_id=$last_id;
+        $save_express->express_delivery=$express_delivery[$j];
+        $save_express->time_days=$time_days[$j];
+        $save_express->delivery_area=$express_area[$j];
+        $save_express->delivery_cast=$cast[$j];
+        $save_express->save();
+    }
+
 
     if($insertProd == true){
         return back()->with('success','product added successfull!');
@@ -721,6 +755,7 @@ public function updateProductProcess(Request $request)
             $featured_img = time().'.'.$request->featured_img->extension();   
             $request->featured_img->move(public_path('products'), $featured_img);
         }
+
         if($request->product_gallery_img)
         {
             foreach($request->product_gallery_img as $r){
@@ -748,12 +783,44 @@ public function updateProductProcess(Request $request)
         {
             $insertProd->featured_img=$featured_img;
         }
+        $insertProd->warranty=$request->warranty;
+        $insertProd->refund_return=$request->returnrefundable;
         $insertProd->save();
-
-
+        if($request->variated == 'on')
+        {
+            $prod_att_price = $request->cprice;
+            $lenth_prod = count($prod_att_price);
+            for($i=0;$i<$lenth_prod;$i++){
+                $image_attr = time().'.'.$request->image_attr[$i]->extension();   
+                $request->image_attr[$i]->move(public_path('products'), $image_attr);
+                $prod_attr = new Product_attr;
+                $prod_attr->product_id=$last_id;
+                $prod_attr->qty=$request->qty[$i];
+                $prod_attr->price=$request->cprice[$i];
+                $prod_attr->varient=$request->varient[$i];
+                $prod_attr->attribute=$request->attribute[$i];
+                $prod_attr->img_attr=$image_attr[$i];
+                $prod_attr->save();
+            }
+        }
+        ExpressDelivery::where('product_id' , $request->product_id)->delete();
+        $express_delivery = $request->express_delivery;
+        $time_days = $request->timedays;
+        $express_area = $request->selectarea;
+        $cast = $request->cast;
+        $toal_express_size = count($express_delivery);
+        for($j=0;$j<$toal_express_size;$j++){
+            $save_express = new ExpressDelivery;
+            $save_express->product_id=$request->product_id;
+            $save_express->express_delivery=$express_delivery[$j];
+            $save_express->time_days=$time_days[$j];
+            $save_express->delivery_area=$express_area[$j];
+            $save_express->delivery_cast=$cast[$j];
+            $save_express->save();
+        }
 
         if($insertProd == true){
-            return back()->with('success','Product Updated Successfully');
+            return back()->with('success','product Updated Successfully');
         }else{
             return back()->with('error','something went wrong !'); 
         }

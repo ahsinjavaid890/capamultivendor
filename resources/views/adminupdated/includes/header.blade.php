@@ -35,13 +35,13 @@
             <div class="dropdown">
                 <!--begin::Toggle-->
 
-                <div style="display:none;" class="topbar-item" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="false">
+                <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="false">
                     <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
                         <img src="{{asset('public/admin/assets/media/custom/sun.svg')}}">
                     </div>
                 </div>
 
-                <div style="display:none;" class="topbar-item" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="false">
+                <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="false">
                     <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
                         <span class="svg-icon svg-icon-xl svg-icon-primary">
                             <img src="{{asset('public/admin/assets/media/custom/notification-bell.svg')}}">
@@ -167,7 +167,7 @@
             </div>
             <!--end::Notifications-->
             <!--begin::User-->
-            <div style="display:none;" class="topbar-item">
+            <div class="topbar-item">
                 <div class="input-icon input-icon-right">
                     <input type="text" class="form-control input-sm-top" placeholder="Zipcode Search" />
                     <span><i class="flaticon2-search-1 icon-md text-primary"></i></span>
@@ -177,7 +177,7 @@
             <div class="dropdown">
                 <!--begin::Toggle-->
                 <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px">
-                    <div style=" border: 1px solid #64317c; " class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
+                    <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
                         <div class="d-flex flex-column text-right pr-3">
                             <span class="text-muted font-weight-bold font-size-base d-none d-md-inline">{{ Auth::user()->name }}</span>
                             <span class="text-dark-75 font-weight-bolder font-size-base d-none d-md-inline">Admin</span>
@@ -210,7 +210,7 @@
                     <!--begin::Nav-->
                     <div class="navi navi-spacer-x-0 pt-5">
                         <!--begin::Item-->
-                        <a href="javascript:void(0)" class="navi-item px-8">
+                        <a href="{{url('profile-settings/')}}" class="navi-item px-8">
                             <div class="navi-link">
                                 <div class="navi-icon mr-2">
                                     <img src="{{asset('public/admin/assets/media/custom/account-drop.svg')}}">
