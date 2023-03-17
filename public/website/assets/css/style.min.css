@@ -4615,8 +4615,7 @@ offcanvas-menu>ul>li .menu-expand {
 	background: #fff;
 	line-height: 24px;
 	text-align: left;
-	padding: 40px 30px 30px 30px;
-	border: 1px solid #ebebeb
+	padding: 30px 0px 0px 0px;
 }
 @media only screen and (max-width:360px) {
 .description-review-bottom {
@@ -8649,4 +8648,11 @@ a:hover{
 }
 .zoomWindowContainer .zoomWindow{
 	display: none !important;
+}
+
+
+.product-details-area{
+	border: 1px solid #ddd;
+	padding: 40px;
+	border-radius: 15px;
 }
