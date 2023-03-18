@@ -45,6 +45,28 @@
                             <div class="pro-details-list">
                                 <p>{{$products->short_desc}}</p>
                             </div>
+                            <div class="products-use mb-3">
+                                <div class="product-use-basic">
+                                    <h2>Product We Use In Basic</h2>
+                                        <ul class="mt-3">
+                                           <li>Tropolite, </li> 
+                                           <li>Pillsbury, </li>
+                                           <li>Morde, </li>
+                                           <li>Mala, </li>
+                                           <li>Delmonte, </li>
+                                        </ul>
+                                </div>
+                                <div class="product-use-premium" style="display: none;">
+                                    <h2>Product We Use In Premium</h2>
+                                        <ul class="mt-3"> 
+                                           <li>Pristine, </li>
+                                           <li>Tropolite, </li>
+                                           <li>Puratos, </li>
+                                           <li>Vian Huten, </li>
+                                           <li>Morde, </li>
+                                        </ul>
+                                </div>
+                            </div>
                             <form action="{{route('website.guestCheckout')}}" method="POST" id="productdetailFrm">
                                 @csrf
                                 <input type="hidden" name="product_id" value="{{$products->id}}" id="product_id"/>
@@ -79,16 +101,12 @@
                             </div>
                             <div class="pro-details-buttons">
                                 <div class=" pro-details-cart btn-hover">
-                                    <a class="addtocartbutton{{ $products->id }}" href="javascript:void(0)" onclick="addtocart({{$products->id}})">Add To Cart <svg id="shopping-cart_2_" data-name="shopping-cart (2)" xmlns="http://www.w3.org/2000/svg" width="22.545" height="22.545" viewBox="0 0 22.545 22.545">
-                                    <path id="Path_425" data-name="Path 425" d="M21.885,17.687c-18.3,0-17.488,0-17.489-.006a12.378,12.378,0,0,1-.179-1.506c8.783-.046-12.219,0,16.207,0A2.037,2.037,0,0,0,22.5,14.091V5.141a1.578,1.578,0,0,0-1.573-1.576L15.46,3.556v-1.4A1.411,1.411,0,0,0,14.051.749h-1.32a1.41,1.41,0,0,0-1.409,1.409V3.548l-5.866-.01-.44-2.421A1.359,1.359,0,0,0,3.68,0H.661a.661.661,0,0,0,0,1.321c3.2,0,3.048-.018,3.057.032C4.434,5.3,3.978,2.541,5.9,14.845l-1.69.009A1.328,1.328,0,0,0,2.9,16.347l.187,1.5A1.33,1.33,0,0,0,4.4,19.008H5.575a2.429,2.429,0,1,0,4.321,0h6.291a2.429,2.429,0,1,0,4.321,0h1.377a.661.661,0,1,0,0-1.321ZM12.644,2.157a.088.088,0,0,1,.088-.088h1.32a.088.088,0,0,1,.088.088V7.045a.661.661,0,0,0,.661.661h.981l-2.059,2.06a.467.467,0,0,1-.661,0L11,7.706h.981a.661.661,0,0,0,.661-.661V2.157ZM11.323,4.869V6.385h-1.1a1,1,0,0,0-.705,1.7L12.126,10.7a1.787,1.787,0,0,0,2.53,0l2.612-2.613a1,1,0,0,0-.705-1.7h-1.1V4.877l5.466.009a.255.255,0,0,1,.254.255v8.95a.721.721,0,0,1-.756.766H7.24l-1.562-10ZM8.843,20.116a1.108,1.108,0,1,1-1.108-1.108A1.109,1.109,0,0,1,8.843,20.116Zm10.612,0a1.108,1.108,0,1,1-1.108-1.108A1.109,1.109,0,0,1,19.456,20.116Z" transform="translate(0 0)" fill="#fff"/>
-                                    </svg></a>
+                                    <a class="addtocartbutton{{ $products->id }}" href="javascript:void(0)" onclick="addtocart({{$products->id}})">Add To Cart </a>
                                 </div>
                                 @if(Auth::guard('cust')->check())
                                 @else
                                 <div class=" pro-details-cart btn-hover">
-                                    <a href="javascript:void(0)" id="proceedAsGuest">Proceed as guest<svg  data-name="shopping-cart (2)" xmlns="http://www.w3.org/2000/svg" width="22.545" height="22.545" viewBox="0 0 22.545 22.545">
-                                    <path id="Path_425" data-name="Path 425" d="M21.885,17.687c-18.3,0-17.488,0-17.489-.006a12.378,12.378,0,0,1-.179-1.506c8.783-.046-12.219,0,16.207,0A2.037,2.037,0,0,0,22.5,14.091V5.141a1.578,1.578,0,0,0-1.573-1.576L15.46,3.556v-1.4A1.411,1.411,0,0,0,14.051.749h-1.32a1.41,1.41,0,0,0-1.409,1.409V3.548l-5.866-.01-.44-2.421A1.359,1.359,0,0,0,3.68,0H.661a.661.661,0,0,0,0,1.321c3.2,0,3.048-.018,3.057.032C4.434,5.3,3.978,2.541,5.9,14.845l-1.69.009A1.328,1.328,0,0,0,2.9,16.347l.187,1.5A1.33,1.33,0,0,0,4.4,19.008H5.575a2.429,2.429,0,1,0,4.321,0h6.291a2.429,2.429,0,1,0,4.321,0h1.377a.661.661,0,1,0,0-1.321ZM12.644,2.157a.088.088,0,0,1,.088-.088h1.32a.088.088,0,0,1,.088.088V7.045a.661.661,0,0,0,.661.661h.981l-2.059,2.06a.467.467,0,0,1-.661,0L11,7.706h.981a.661.661,0,0,0,.661-.661V2.157ZM11.323,4.869V6.385h-1.1a1,1,0,0,0-.705,1.7L12.126,10.7a1.787,1.787,0,0,0,2.53,0l2.612-2.613a1,1,0,0,0-.705-1.7h-1.1V4.877l5.466.009a.255.255,0,0,1,.254.255v8.95a.721.721,0,0,1-.756.766H7.24l-1.562-10ZM8.843,20.116a1.108,1.108,0,1,1-1.108-1.108A1.109,1.109,0,0,1,8.843,20.116Zm10.612,0a1.108,1.108,0,1,1-1.108-1.108A1.109,1.109,0,0,1,19.456,20.116Z" transform="translate(0 0)" fill="#fff"/>
-                                    </svg></a>
+                                    <a href="javascript:void(0)" id="proceedAsGuest">Proceed as guest</a>
                                 </div>
                                 @endif
                                 <div class="">
@@ -105,7 +123,7 @@
                                 @else
                                
                                 <div class="pro-details-cart btn-hover">
-                                    <a href="{{route('website.login')}}" type="btn">Add in Wishlist <i class="fa fa-heart" style="font-size:18px;margin-left:5px"></i>
+                                    <a href="{{route('website.login')}}" type="btn">Add in Wishlist </i>
                                     </a>
                                 </div>
                                 @endif

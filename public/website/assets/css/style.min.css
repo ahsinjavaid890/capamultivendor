@@ -4145,7 +4145,7 @@ offcanvas-menu>ul>li .menu-expand {
 }
 .product-dec-slider-2 .swiper-slide img {
 	width: 100%;
-	height: auto;padding:10px;
+	height: auto;
 	margin: auto;
 	-webkit-transition: all .3s linear;
 	transition: all .3s linear;
@@ -4431,6 +4431,7 @@ offcanvas-menu>ul>li .menu-expand {
     height: 60px;
     font-size: 12px;
     width: 178px;
+    text-align: center;
     font-weight: 700;
     border: none;
     border-radius: 5px;
@@ -8676,4 +8677,9 @@ a:hover{
 
 .buttonprices{
 	margin-bottom: 25px;
+}
+.products-use ul{
+	list-style: inherit;
+    font-size: 17px;
+    font-weight: 600;
 }
