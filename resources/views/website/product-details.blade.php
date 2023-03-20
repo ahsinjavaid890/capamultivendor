@@ -47,7 +47,7 @@
                             </div>
                             <div class="products-use mb-3">
                                 <div class="product-use-basic">
-                                    <h2>Product We Use In Basic</h2>
+                                    <h2>Product We Use In Regular</h2>
                                         <ul class="mt-3">
                                            <li>Tropolite, </li> 
                                            <li>Pillsbury, </li>
@@ -85,7 +85,7 @@
                                 @endforeach
 
                                 <div class="buttonprices d-flex">
-                                    <span onclick="selectprice('basicprice' , {{$products->prod_price}})" id="basicprice" class="btn btn-price btn-price-selected">Basic (INR {{$products->prod_price}})</span>
+                                    <span onclick="selectprice('basicprice' , {{$products->prod_price}})" id="basicprice" class="btn btn-price btn-price-selected">Regular (INR {{$products->prod_price}})</span>
                                     <span onclick="selectprice('premiumprice' , {{$products->sale_price}})" id="premiumprice" style="margin-left:10px;" class="btn btn-price">Premium (INR {{$products->sale_price}})</span>
 
                                     <input type="hidden" id="pricetype" value="basicprice" name="">
@@ -221,11 +221,19 @@
     function selectprice(type , price) {
 
         $('.btn-price').removeClass('btn-price-selected');
-
+        if(type == 'premiumprice')
+        {
+            $('.product-use-basic').hide();
+            $('.product-use-premium').show();
+        }else{
+            $('.product-use-premium').hide();
+            $('.product-use-basic').show();
+        }
         $('#'+type).addClass('btn-price-selected');
 
         $('#pricetype').val(type)
         $('.sale-price').html('INR '+price);
+        $('.').html('INR '+price);
     }
 </script>
 @endpush

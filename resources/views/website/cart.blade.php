@@ -19,7 +19,7 @@
 <div class="cart-main-area ptb-60px">
    <div class="container-fluid">
       <div class="row">
-         <div class="col-lg-8 col-md-8 col-sm-12 col-8">
+         <div class="col-md-8 mt-3">
             <div class="card">
                <div class="card-body">
                   <div class="form-detail">
@@ -42,7 +42,6 @@
                                <tr>
                                    <td class="product-name">
                                        <a class="product-thumb-title " href="{{url('product')}}/{{ $r['url'] }}">
-                                       <img class="img-responsive" src="{{ asset('products') }}/{{ $r['image'] }}" alt="" />
                                        <span>{{$r['name']}}</span>
                                        </a>
                                    </td>
@@ -69,7 +68,7 @@
                </div>
             </div>
          </div>
-         <div class="col-lg-4 col-md-4 col-sm-12 col-4">
+         <div class="col-md-4 mt-3">
             <div class="card">
                <div class="card-body">
                   <div class="your-cart-info">
