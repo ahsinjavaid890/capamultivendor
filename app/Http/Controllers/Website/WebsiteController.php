@@ -408,7 +408,7 @@ class WebsiteController extends Controller
                     <a href="'.url('cart').'" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
                     <a href="'.url('checkout').'" class="btn btn-outline-dark current-btn">checkout</a>
                 </div>
-                <p class="minicart-message">Free Shipping on All Orders Over 200.00 AED</p>
+                <p class="minicart-message">Free Shipping on All Orders Over 200.00 INR</p>
             </div>
             ';
         }else{

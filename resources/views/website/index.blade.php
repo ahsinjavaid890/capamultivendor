@@ -111,7 +111,7 @@
         <div id="new-arrivals" class="deal-area pt-60px pb-30px" style="background-color: #F2F2F2 !important; ">
             <div class="container-fluid">
                 <div class="card p-3">
-                    <div class="card-body" style="background-image: url('{{ url('public/website/assets/images/73655.webp') }}');background-size: cover; background-position: 2px -428px; padding-top: 125px; padding-bottom: 125px; background-repeat: no-repeat;">
+                    <div class="card-body cakeuncle_background" style="background-image: url('{{ url('public/website/assets/images/73655.webp') }}');background-size: cover; background-position: 2px -428px; padding-top: 125px; padding-bottom: 125px; background-repeat: no-repeat;">
                         <div class="col-md-12">
                             <div class="capa_logo">
                                 <a href="https://capacollege.in/"><img src="{{ url('public/website/assets/images/capa.png') }}"></a>

@@ -6,7 +6,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index.html"><img class="img-responsive" src="{{asset('public/website/assets/images/logo.png')}}" alt="logo.jpg" /></a>
+                        <a href="{{route('website.index')}}"><img class="img-responsive" src="{{asset('public/website/assets/images/logo.png')}}" alt="logo.jpg" /></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -15,9 +15,8 @@
                 <div class="col-auto">
                     <div class="header-tools justify-content-end">
                         <div class="cart-info d-flex align-self-center">
-                            <a href="compare.html" class="shuffle d-xs-none"  data-number="3"><i class="icon-shuffle"></i></a>
-                            <a href="#offcanvas-wishlist" class="heart offcanvas-toggle d-xs-none"  data-number="3"><i class="icon-heart"></i></a>
-                            <a href="#offcanvas-cart" class="bag offcanvas-toggle"data-number="{{ count((array) session('cart')) }}"><i class="icon-bag"></i><span></span></a>
+                            <a href="{{route('website.wishlist')}}" class="heart offcanvas-toggle d-xs-none"  data-number="3"><i class="icon-heart"></i></a>
+                            <a onclick="showcart()" href="#offcanvas-cart" class="bag offcanvas-toggle"data-number="{{ count((array) session('cart')) }}"><i class="icon-bag"></i><span></span></a>
                         </div>
                         <div class="mobile-menu-toggle">
                             <a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
@@ -68,7 +67,7 @@
                                             </a>
                                         </p>
                                         <small class="fst-italic"><a href="#" class="text-decoration-none text-reset">Outdoor</a> > <a href="#" class="text-decoration-none text-reset">Pools and Simms</a></small>
-                                        <p class="mb-0 fw-bold">QAR 529</p>
+                                        <p class="mb-0 fw-bold">INR 529</p>
                                     </div>
                                 </div> --}}
                             </div>

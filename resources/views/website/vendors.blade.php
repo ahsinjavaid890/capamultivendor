@@ -1,5 +1,24 @@
 @extends('website.layouts.master')
 @section('content')
+<style>
+
+@media only screen and (min-width: 780px) and (max-width: 1100px){
+.col-md-4 {
+    flex: 0 0 auto;
+    width: 100% !important;
+}
+}
+@media only screen and (max-width: 767px){
+.container-fluid {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.vendor-wrap.style-2 .vendor-img-action-wrap {
+    position: relative;
+    padding: 0px;
+}
+}
+</style>
     <div class="vendor-top-bar ptb-60px" style="background-color: #ecebeb;">
         <div class="container-fluid">
           <div class="archive-header mb-3">

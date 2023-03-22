@@ -2500,7 +2500,7 @@ body.offcanvas-open {
 }
 @media only screen and (max-width:479px) {
 .offcanvas {
-	width: 300px
+	width: 100%;
 }
 }
 .offcanvas .body.customScroll {
@@ -4133,6 +4133,50 @@ offcanvas-menu>ul>li .menu-expand {
 .product-dec-slider-2 {
 	margin: 30px 0 0 0
 }
+.newsletter-content h2 {
+    font-size: 26px !important;
+    margin-top: 20px;
+}
+#sign-up-tabs {
+    padding-bottom: 50px;
+    padding-top: 500px !important;
+}
+.archive-header{
+	padding: 42px 17px !important;
+}
+.archive-header h4{
+	font-size: 20px;
+}
+.archive-header {
+	background-color: #f5eff7;
+    border-radius: 20px;
+    padding: 70px 80px;
+    background-size: cover;
+}
+.footer-area .footer-top .single-wedge p {
+    line-height: 24px;
+    text-align: initial !important;
+}
+.footer-logo{
+	text-align: initial;
+}
+.list-product .img-block img {
+    height: 201px !important;
+    width: 100% !important;
+    /* border-radius: 13px; */
+    object-fit: cover !important;
+    border-radius: 14px !important;
+    }
+.vendor-wrap .vendor-content-wrap {
+    width: 100%;
+    padding: 30px 0px 30px 0px !important;
+}
+.vendor-info{
+	display: block !important;
+}
+.vendor-info a{
+	margin-top: 10px;
+}
 }
 .product-dec-slider-2 .swiper-slide {
 /*	margin: auto;*/
@@ -4155,6 +4199,73 @@ offcanvas-menu>ul>li .menu-expand {
 .product-dec-slider-2 .swiper-slide img {
 	width: 60px;
 	height: 60px
+}
+.newsletter-content h2 {
+    font-size: 26px !important;
+    margin-top: 20px;
+}
+#sign-up-tabs {
+    padding-bottom: 50px;
+    padding-top: 500px !important;
+}
+.archive-header{
+	padding: 42px 17px !important;
+}
+.archive-header h4{
+	font-size: 20px;
+}
+.archive-header {
+	background-color: #f5eff7;
+    border-radius: 20px;
+    padding: 70px 80px;
+    background-size: cover;
+}
+.footer-area .footer-top .single-wedge p {
+    line-height: 24px;
+    text-align: initial !important;
+}
+.footer-logo{
+	text-align: initial;
+}
+.list-product .img-block img {
+    height: 201px !important;
+    width: 100% !important;
+    /* border-radius: 13px; */
+    object-fit: cover !important;
+    border-radius: 14px !important;
+    }
+}
+@media only screen and (min-width: 780px) and (max-width: 1100px){
+.cat-heading p {
+    font-size: 25px !important;
+}
+.col-md-2 {
+    flex: 0 0 auto;
+    width: 24.666667%;
+}
+.list-product .product-decs a {
+    font-size: 11px !important;
+}
+.newsletter .newsletter-inner .newsletter-content .form-subcriber{
+	margin-bottom: 25px;
+}
+.blog-content {
+    padding: 0 !important;
+    text-align: center;
+}
+.blog-title h4 a {
+    font-size: 13px !important;
+}
+.blog-image img {
+    height: 132px !important;
+}
+.col-md-4 {
+    flex: 0 0 auto;
+    width: 49.333333%;
+}
+.vendor-wrap.style-2 .vendor-img-action-wrap {
+    /* position: relative; */
+    padding: 0px !important;
 }
 }
 @media only screen and (max-width:360px) {
@@ -8155,13 +8266,7 @@ body.contact-page .static-area {margin: 0;}
 	box-shadow: 5px 5px 15px rgb(0 0 0 / 5%);
 }
 .blog-image img{
-	height: 250px !important;
-}
-.archive-header {
-	background-color: #f5eff7;
-    border-radius: 20px;
-    padding: 70px 80px;
-    background-size: cover;
+	height: 250px;
 }
 .breadcrumb{
 	display: inline-block;
@@ -8439,7 +8544,7 @@ element.style {
 .list-product
 {
 /*	border-color:#73408b !important;*/
-    border-radius: 8px;
+    border-radius: 14px;
 }
 a:hover{
 	color: #63317c  !important;
@@ -8538,14 +8643,43 @@ a:hover{
 	margin-top: -6px;
 }
 }
-@media only screen and (min-width:300px) and (max-width:767px){
+@media only screen and (min-width:280px) and (max-width:767px){
 	.newsletter .newsletter-inner {
     background-color: #f5eff7;
     background-size: cover;
     padding: 0px 0px 0px 10px;
 }
 .newsletter-content h2 {
-    font-size: 13px;
+    font-size: 13px !important;
+}
+.product-details-area {
+    border: 1px solid #ddd;
+    padding: 0px !important;
+}
+.cakeuncle_background{
+	background-position: center !important;
+}
+.capa_logo img {
+    width: 100% !important;
+}
+.capa_heading h1 {
+    font-size: 18px !important; 
+}
+.pt-60px {
+    padding-top: 15px !important;
+}
+.product-details-content{
+	padding: 10px;
+}
+.offcanvas .body.customScroll {
+    height: 97px !important;
+}
+.container-fluid{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.btn-price{
+	font-size: 12px !important;
 }
 .newsletter .newsletter-inner .newsletter-content p {
     font-size: 13px;
