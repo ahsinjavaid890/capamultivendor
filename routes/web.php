@@ -19,6 +19,16 @@ use App\Http\Controllers\GoogleController;
 
 // Auth::routes();
 
+Route::get('/privacy-policy', function(){
+    return view('website.privacypolicy'); // Your Blade template name
+});
+
+Route::get('/terms-and-conditions', function(){
+    return view('website.termsandcondition'); // Your Blade template name
+});
+
+
+
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 Route::get('deletegalleryimages/{id}', [GoogleController::class, 'deletegalleryimages']);

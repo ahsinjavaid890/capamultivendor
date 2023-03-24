@@ -55,8 +55,8 @@
                                     <h4 class="footer-herading">Compnay Links</h4>
                                     <div class="footer-links">
                                         <ul>                                        
-                                            <li><a class="mx-3" href="#">Privacy Policy</a></li>
-                                            <li><a class="mx-3" href="#">Terms and conditions</a></li>
+                                            <li><a class="mx-3" href="{{ url('privacy-policy') }}">Privacy Policy</a></li>
+                                            <li><a class="mx-3" href="{{ url('terms-and-conditions') }}">Terms and conditions</a></li>
                                         </ul>
                                     </div>
                                 </div>
