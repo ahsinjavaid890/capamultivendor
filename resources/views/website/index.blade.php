@@ -23,7 +23,25 @@
           <div class="banner_image mb-5 mt-5">
             <div class="container-fluid">
                 <div class="row">
-                    @foreach($banners->where('type' , 'homepagetop') as $banner)
+                    @foreach($banners->where('url' , 'Premium') as $banner)
+                    <div class="col-md-3">
+                        <div class="banner_image">
+                            <a  href="{{route('website.productpage')}}">
+                                <img src="{{asset('public/uploads/'.$banner->banner)}}">
+                            </a>
+                        </div>
+                    </div>
+                    @endforeach
+                    @foreach($banners->where('url' , 'regular') as $banner)
+                    <div class="col-md-3">
+                        <div class="banner_image">
+                            <a  href="{{route('website.productpage')}}">
+                                <img src="{{asset('public/uploads/'.$banner->banner)}}">
+                            </a>
+                        </div>
+                    </div>
+                    @endforeach
+                    @foreach($banners->where('url' , 'Fondant') as $banner)
                     <div class="col-md-3">
                         <div class="banner_image">
                             <a  href="{{route('website.productpage')}}">

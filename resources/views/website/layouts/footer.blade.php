@@ -65,9 +65,9 @@
                             <div class="col-md-6 col-lg-3 ">
                                 <div class="single-wedge ps-5">
                                     <h4 class="footer-herading">Contact Us</h4>
-                                    <p class="fs-6 mb-2">Office Address: CAPA Chandigarh - Quite Office No. 1, First Floor, ( Flower Market, Opposite Khukhrain Bhawan) Sector 35-A Chandigarh!</p>
-                                    <p class="fs-6 mb-2">WhatsApp US : +91 79732-45822</p>
-                                    <p class="fs-6 mb-2">Email Address: cakeuncle@gmail.com</p>
+                                    <p class="fs-6 mb-2">Office Address: Quite Office no.6, Ground Floor, Flower Market, Sector 35 A Chandigarh</p>
+                                    <p class="fs-6 mb-2">WhatsApp US : +91 88743-88780</p>
+                                    <p class="fs-6 mb-2">Email Address: cakeunclechd@gmail.com</p>
                                 </div>
                             </div>
                         </div>
