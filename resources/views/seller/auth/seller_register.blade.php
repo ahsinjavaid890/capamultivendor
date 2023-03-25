@@ -57,11 +57,13 @@
                     <div class="col-lg-12">
                         <label>City<span>*</span></label>
                         <select name="city" type="text" required class="seller_register">
-                            <option value="0">select city</option>
-                            <option value="1">Mumbai</option>
-                            <option value="2">Delhi</option>
-                            <option value="3">Kokata</option>
-                            <option value="4">Utar Pardesh</option>
+                            <option value="">Select Cities</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Mohali">Mohali</option>
+                            <option value="Panchkula">Panchkula</option>
+                            <option value="Zirakpur">Zirakpur</option>
+                            <option value="Haryana & hp">Haryana & hp</option>
+                            <option value="more cities from nearby areas of Punjab">More cities from nearby areas of Punjab</option>
                         </select>
                     </div>
                     <div class="col-lg-12 checkbox-input">

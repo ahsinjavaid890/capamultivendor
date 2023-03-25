@@ -25,7 +25,7 @@
                         @endif
                         <li><a href="{{route('seller.register')}}"><img
                                     src="{{asset('public/website/assets/images/icons/shop.svg')}}" alt="" /> Become A
-                                Vendor</a></li>
+                                Seller</a></li>
                         <li><a href="{{route('website.trackorder')}}"><img
                                     src="{{asset('public/website/assets/images/icons/order.svg')}}" alt="" /> Track Your
                                 Order</a></li>
@@ -109,7 +109,7 @@
                                 <li class=""><a href="{{route('website.index')}}">Home</a></li>
                                 <li><a href="{{route('website.categoriesPage')}}">Our Categories</a></li>
                                 <li><a href="{{ route('website.blogs') }}">Blogs</a></li>
-                                <li><a href="{{route('website.vendors')}}">Vendor</a></li>
+                                <li><a href="{{route('website.vendors')}}">Seller</a></li>
                                 <li><a href="{{route('website.contact')}}">Contact Us</a></li>
                                 <!-- <li><a href="{{route('website.servicePage')}}">Services</a></li>                                    -->
                                 <!-- <li><a href="javascript:void(0)">Login as Vendor</a></li> -->

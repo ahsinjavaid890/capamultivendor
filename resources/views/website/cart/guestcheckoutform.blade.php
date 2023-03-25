@@ -27,11 +27,13 @@
         <div class="billing-select mb-20px">
             <label>Emirates *</label>
             <select required name="emirates" id="emirates" class="shippingadd form-control">
-                <option value="">Select Emirates</option>
-                <option>Mumbai</option>
-                <option>Delhi</option>
-                <option>Kolkata</option>
-                <option>Behar</option>
+                <option value="">Select Cities</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Mohali">Mohali</option>
+                <option value="Panchkula">Panchkula</option>
+                <option value="Zirakpur">Zirakpur</option>
+                <option value="Haryana & hp">Haryana & hp</option>
+                <option value="more cities from nearby areas of Punjab">More cities from nearby areas of Punjab</option>
             </select>
         </div>
     </div>

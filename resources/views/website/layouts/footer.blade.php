@@ -57,6 +57,7 @@
                                         <ul>                                        
                                             <li><a class="mx-3" href="{{ url('privacy-policy') }}">Privacy Policy</a></li>
                                             <li><a class="mx-3" href="{{ url('terms-and-conditions') }}">Terms and conditions</a></li>
+                                            <li><a class="mx-3" href="{{ url('cancellation-and-refund') }}">Cancellation and Refund</a></li>
                                         </ul>
                                     </div>
                                 </div>
