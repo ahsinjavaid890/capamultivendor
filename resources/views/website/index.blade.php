@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row">
                     @foreach($banners->where('type' , 'homepagemain') as $banner)
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <div class="banner_image">
                             <a href="{{route('website.productpage')}}">
                                 <img src="{{asset('public/uploads/'.$banner->banner)}}">
@@ -19,41 +19,6 @@
                 </div>
             </div>
         </div>
-
-          <div class="banner_image mb-5 mt-5">
-            <div class="container-fluid">
-                <div class="row">
-                    @foreach($banners->where('url' , 'Premium') as $banner)
-                    <div class="col-md-3">
-                        <div class="banner_image">
-                            <a  href="{{route('website.productpage')}}">
-                                <img src="{{asset('public/uploads/'.$banner->banner)}}">
-                            </a>
-                        </div>
-                    </div>
-                    @endforeach
-                    @foreach($banners->where('url' , 'regular') as $banner)
-                    <div class="col-md-3">
-                        <div class="banner_image">
-                            <a  href="{{route('website.productpage')}}">
-                                <img src="{{asset('public/uploads/'.$banner->banner)}}">
-                            </a>
-                        </div>
-                    </div>
-                    @endforeach
-                    @foreach($banners->where('url' , 'Fondant') as $banner)
-                    <div class="col-md-3">
-                        <div class="banner_image">
-                            <a  href="{{route('website.productpage')}}">
-                                <img src="{{asset('public/uploads/'.$banner->banner)}}">
-                            </a>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-
         <div id="new-arrivals" class="deal-area pt-60px pb-30px"  style="background-color: #F2F2F2 !important;">
             <div class="container-fluid">
                 <div class="card p-3">

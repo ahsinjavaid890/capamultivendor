@@ -27,6 +27,10 @@ Route::get('/terms-and-conditions', function(){
     return view('website.termsandcondition'); // Your Blade template name
 });
 
+Route::get('/cancellation-and-refund', function(){
+    return view('website.cancellation'); // Your Blade template name
+});
+
 
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
