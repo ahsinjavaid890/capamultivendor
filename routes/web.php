@@ -27,10 +27,6 @@ Route::get('/terms-and-conditions', function(){
     return view('website.termsandcondition'); // Your Blade template name
 });
 
-Route::get('/cancellation-and-refund', function(){
-    return view('website.cancellation'); // Your Blade template name
-});
-
 
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
@@ -143,7 +139,7 @@ Route::name('website.')->namespace('App\Http\Controllers\Website')->group(functi
     
     Route::post('/get-allcategories','WebsiteController@allcategories')->name('allcategories');
 
-    Route::get('/search-form-cat','WebsiteController@searchFRM')->name('searchFRM'); 
+    Route::get('/search','WebsiteController@searchFRM')->name('searchFRM'); 
     
     Route::post('/filter-by-price','WebsiteController@filterprice')->name('filterprice');
 

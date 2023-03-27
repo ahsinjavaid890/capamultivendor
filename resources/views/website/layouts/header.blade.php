@@ -1,5 +1,5 @@
 <header class="header-wrapper">
-    <div class="header-nav">
+    <div class="header-nav"> 
         <div class="container">
             <div class="header-nav-wrapper d-md-flex d-sm-flex d-xl-flex d-lg-flex justify-content-between">
                 <div class="header-static-nav">
@@ -72,7 +72,7 @@
                 <div class="col-md-5">
                     <div class="search-element media-body">
                         <form class="d-flex" action="{{route('website.searchFRM')}}" method="GET">
-                            <input type="text" placeholder="Enter your search key ... " id="searchItem"
+                            <input @if(isset($search)) value="{{ $search }}" @endif type="text" placeholder="Enter your search key ... " id="searchItem"
                                 name="searchq" data-url="{{ route('website.search') }}" />
                             <a href="javascript:void(0)" id="searchbtn"> <button><i
                                         class="icon-magnifier"></i></button></a>

@@ -1552,22 +1552,16 @@ public function newarrival()
 // search form
 
 public function searchFRM(Request $request){
-    $q = $request->searchq;
-    $cat = Category::where('category_name','=',$q)->first();
-    if($cat){
+    $search = $request->searchq;
     $products=Product::leftJoin('categories','categories.id','=','products.category')
-    ->leftJoin('sub_categories','sub_categories.id','=','products.subcategory') 
-    
-    ->select('products.*','categories.id as cat_id','sub_categories.id as subcat_id','categories.category_name as cat_name','sub_categories.category_name as subparent_id','subcat_name')
-    ->where('products.category','=',$cat['id'])
-    ->where('products.status','=','2')
-    ->orderBy('products.id','desc')
-    ->get(); 
-    } else{
-        $products=[];
-    } 
-    return view('website.category-details',compact('products'));
-
+                       ->leftJoin('sub_categories','sub_categories.id','=','products.subcategory') 
+                       ->leftJoin('varient_attrs','varient_attrs.id','=','products.varient')
+                       ->select('products.*','categories.id as cat_id','sub_categories.id as subcat_id','categories.category_name as cat_name','sub_categories.category_name as subparent_id','subcat_name')
+                       ->where('products.status','=','2')
+                       ->where('products.product_title', 'LIKE', "%$search%")
+                       ->orderBy('products.id','desc')
+                       ->get();
+    return view('website.search',compact('products','search'));
 }
 
 

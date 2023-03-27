@@ -159,15 +159,15 @@
                 </div>
 
                 <div class="row mt-5" style="margin: 0 auto 10px;">
-                   <div class="col-md-2" style="padding:0 7px 0">
+                   <div class="col-md-3" style="padding:0 7px 0">
                       <img class=" responsive-img " src="https://assets.winni.in/groot/2022/06/27/productdetailpage/desktop/customerstaisfaction.jpg" style="box-shadow: 0px 0px 4px #00000029;width:100%;height:100%">
                    </div>
-                   <div class="col-md-2" style="padding:0 7px 0">
+                   <div class="col-md-3" style="padding:0 7px 0">
                       <img class="responsive-img " src="https://assets.winni.in/groot/2022/06/27/productdetailpage/desktop/customer.jpg" style="box-shadow: 0px 0px 4px #00000029;width:100%;height:100%" "="">
                    </div>
-                   <div class="col-md-2" style="padding:0 7px 0">
+                   <!-- <div class="col-md-2" style="padding:0 7px 0">
                       <img class="   responsive-img " src="https://assets.winni.in/groot/2022/06/27/productdetailpage/desktop/pincodes.jpg" style="box-shadow: 0px 0px 4px #00000029;width:100%;height:100%" "="">
-                   </div>
+                   </div> -->
                    <div class="col-md-3" style="padding:0 7px 0">
                       <img class="   responsive-img " src="https://assets.winni.in/groot/2022/06/27/productdetailpage/desktop/purchaseprotection.jpg" style="box-shadow: 0px 0px 4px #00000029;width:100%;height:100%" "="">
                    </div>

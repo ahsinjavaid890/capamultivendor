@@ -52,7 +52,7 @@
                             </div>
                             <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
                                 <div class="single-wedge navigation">
-                                    <h4 class="footer-herading">Compnay Links</h4>
+                                    <h4 class="footer-herading">Company Links</h4>
                                     <div class="footer-links">
                                         <ul>                                        
                                             <li><a class="mx-3" href="{{ url('privacy-policy') }}">Privacy Policy</a></li>
