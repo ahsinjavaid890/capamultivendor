@@ -90,11 +90,11 @@ begin::Aside-->
                                     <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">All Attributes</span>
                                 </a>
                             </li>
-                            <li class="menu-item" aria-haspopup="true">
+                           <!--  <li class="menu-item" aria-haspopup="true">
                                 <a href="{{ url('admin/allbrands') }}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">All Brands</span>
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="menu-item" aria-haspopup="true">
                                 <a href="{{ url('admin/allproducts') }}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">All Products</span>

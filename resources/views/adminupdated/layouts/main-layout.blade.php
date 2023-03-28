@@ -24,7 +24,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">  
   <input type="hidden" value="{{ url('') }}" id="app_url">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <link href="{{ asset('public/admin/assets/media/logos/favicon.ico') }}" rel="shortcut icon" />
+  <link href="{{ asset('public/admin/assets/media/logos/capafav.png') }}" rel="shortcut icon" />
 
   
 </head>

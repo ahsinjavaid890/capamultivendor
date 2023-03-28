@@ -25,7 +25,7 @@
                     <div class="card-body cakeuncle_background" style="background-image: url('{{ url('public/website/assets/images/73655.webp') }}');background-size: cover; background-position: 2px -428px; padding-top: 125px; padding-bottom: 125px; background-repeat: no-repeat;">
                         <div class="col-md-12">
                             <div class="capa_logo">
-                                <a href="https://capacollege.in/"><img src="{{ url('public/website/assets/images/capa.png') }}"></a>
+                                <a href="https://capacollege.in/"><img src="{{ url('public/website/assets/images/capaad.png') }}"></a>
                             </div>
                             <div class="capa_heading">
                                 <a href="https://capacollege.in/"><h1 class="text-white">Learn advance bakery at CAPA ( A Unit of Cakeuncle)</h1></a>

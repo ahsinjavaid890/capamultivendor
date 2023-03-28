@@ -6,7 +6,7 @@
         <div class="d-flex align-items-stretch mr-2">
             <!--begin::Page Title-->
             <h3 class="d-none text-dark d-lg-flex align-items-center mr-10 mb-0">
-               CapaMultivendor Admin Dashboard
+               Dashboard
             </h3>
             <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                 <li class="breadcrumb-item">
