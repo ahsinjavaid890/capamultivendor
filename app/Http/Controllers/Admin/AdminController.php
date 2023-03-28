@@ -107,7 +107,7 @@ class AdminController extends Controller
     public function vendorActive(Request $request){
         $active = Seller::where('id','=',$request->id)
                   ->update([
-                      'status'=>'2'
+                      'status'=>'2','isMembership'=>'2','isCompleted'=>'2'
                   ]);
           if($active==true){
               return response()->json('1');
