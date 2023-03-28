@@ -1,18 +1,24 @@
 @extends('sellerupdated.layouts.main-layout')
-@section('title','Add New Products')
+@section('title','Add New Products') 
 @section('content')
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Entry-->
+    <link rel="stylesheet" type="text/css" href="{{ url('public/admin/assets/css/productstyle.css') }}">
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->
-        <div class="container-fluid">
+        <div class=" container-fluid ">
             <!--begin::Card-->
-            <div class="row mb-4">
-               <div class="col-md-12">
-               <h1 class="mt-4 main-title">Add Product</h1>
-               </div>
-            </div>
-                <form action="{{route('seller.addProductProcess')}}" method="POST" enctype="multipart/form-data">
+            <div class="card card-custom mt-5">
+               <div class="card-header flex-wrap py-5">
+                    <div class="card-title">
+                        <h3 class="card-label">
+                            Add Products
+                            <div class="text-muted pt-2 font-size-sm">Manage All Products</div>
+                        </h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="{{route('seller.addProductProcess')}}" method="POST" enctype="multipart/form-data">
                       @csrf   
                       <div class="row">
                          <div class="col-md-7 col-left">
@@ -21,43 +27,13 @@
                                   <div class="shadow-block" id="pills-tabContent">
                                <div class="form-detail">
                                   <div class="row">
-                                     <div class="col-lg-4">
-                                       <label>Is Variated Product?</label>
-                                          <div class="switch">
-                                            <input name="variated" class="switch__input" type="checkbox" id="variated">
-                                            <label aria-hidden="true" class="switch__label" for="variated">On</label>
-                                            <div aria-hidden="true" class="switch__marker"></div>
-                                          </div>
-                                     </div>
-                                     <div class="col-lg-4">
-                                          <label>For Vendor! if the product can be done as Gift?</label>
-                                          <div class="switch">
-                                            <input class="switch__input" type="checkbox" id="gift">
-                                            <label aria-hidden="true" class="switch__label" for="gift">On</label>
-                                            <div aria-hidden="true" class="switch__marker"></div>
-                                          </div>
-                                     </div>
-                                     <div class="col-lg-4">
-                                          <label>Products Warranty</label>
-                                          <select id="warranty" class="Addproduct form-control" name="warranty">
-                                             <option value="">Select Warenty</option>
-                                             <option value="No Warenty">No Warenty</option>
-                                             <option value="Brand Warenty">Brand Warenty</option>
-                                             <option value="1 Month Warenty">1 Month Warenty</option>
-                                             <option value="2 Month Warenty">2 Month Warenty</option>
-                                             <option value="3 Month Warenty">3 Month Warenty</option>
-                                             <option value="4 Month Warenty">4 Month Warenty</option>
-                                             <option value="5 Month Warenty">5 Month Warenty</option>
-                                             <option value="6 Month Warenty">6 Month Warenty</option>
-                                          </select>
-                                     </div>
                                      <div class="col-md-12">
                                         <div class="info-input mb-20px">
                                            <label>Product Name/Title <span class="link-danger">*</span></label>
                                            <input type="text" class="Addproduct" placeholder="Write product title here" id="prod_title" name="prod_title"/>
                                         </div>
                                      </div>
-                                     <div class="col-md-6">
+                                     <div style="margin-top: 20px;" class="col-md-6">
                                         <div class=" info-input">
                                            <label>Choose Category <span class="link-danger">*</span></label>
                                            <select class="form-select Addproduct" id="prod_cat" name="prod_cat">
@@ -68,7 +44,7 @@
                                            </select>
                                         </div>
                                      </div>
-                                     <div class="col-md-6">
+                                     <div style="margin-top: 20px;" class="col-md-6">
                                         <div class="info-input">
                                            <label>Choose Sub-Category <span class="link-danger">*</span></label>
                                            <select class="form-select Addproduct" id="prod_subcat" name="prod_subcat">
@@ -76,49 +52,44 @@
                                            </select>
                                         </div>
                                      </div>
-                                     <div class="col-md-12">
+                                     <div style="margin-top: 20px;" class="col-md-6">
+                                        <div class="info-input mb-20px">
+                                           <label>Basic Price <span class="link-danger">*</span></label>
+                                           <input type="text" class="Addproduct" placeholder="Write Product Price here" id="prod_price" name="prod_price"/>
+                                        </div>
+                                     </div>
+                                     <div style="margin-top: 20px;" class="col-md-6">
+                                        <div class="info-input mb-20px">
+                                           <label>Premium Price <span class="link-danger">*</span></label>
+                                           <input type="text" class="" placeholder="Write Sale Price here" id="sale_price" name="sale_price"/>
+                                        </div>
+                                     </div>
+                                     <div style="margin-top: 20px;" class="col-md-12">
                                         <div class="info-input mb-20px">
                                            <label>Product Short Description <span class="link-danger">*</span></label>
                                            <textarea placeholder="Write product long description here" rows="8" id="short_desc" name="short_desc" class="Addproduct"></textarea>
                                         </div>
                                      </div>
-                                     <div class="col-md-12">
+                                     <div style="margin-top: 20px;" class="col-md-12">
                                         <div class="info-input mb-20px">
                                            <label>Product Long Description <span class="link-danger">*</span></label>
                                            <textarea  class="summernote"placeholder="Write product long description here" rows="8" id="long_desc" name="long_desc" class="Addproduct"></textarea>
                                         </div>
                                      </div>
-                                     <div class="col-md-4">
-                                        <div class="info-input mb-20px">
-                                           <label>Product Price <span class="link-danger">*</span></label>
-                                           <input type="text" class="Addproduct" placeholder="Write Product Price here" id="prod_price" name="prod_price"/>
-                                        </div>
-                                     </div>
-                                     <div class="col-md-4">
-                                        <div class="info-input mb-20px">
-                                           <label>Sale Price <span class="link-danger">*</span></label>
-                                           <input type="text" class="" placeholder="Write Sale Price here" id="sale_price" name="sale_price"/>
-                                        </div>
-                                     </div>
-                                     <div class="col-md-4">
-                                        <div class="info-input mb-20px">
-                                           <label>Cost Price <span class="link-danger">*</span></label>
-                                           <input type="text" class="Addproduct" placeholder="Write Cost Price here" id="cost_price" name="cost_price"/>
-                                        </div>
-                                     </div>
-                                     <div class="col-md-4">
+                                     
+                                     <div style="margin-top: 20px;" class="col-md-4">
                                         <div class="info-input mb-20px">
                                            <label>Product Code/SKU <span class="link-danger">*</span></label>
                                            <input type="text" class="Addproduct" placeholder="Write product code/sku here" id="prod_code" name="prod_code" />
                                         </div>
                                      </div>
-                                     <div class="col-md-4">
+                                     <div style="margin-top: 20px;" class="col-md-4">
                                         <div class="info-input mb-20px">
                                            <label>Product Unit <span class="link-danger">*</span></label>
                                            <input type="text" class="Addproduct" id="prod_unit" name="prod_unit" placeholder="Unit(Kg,PC,etc)"/>
                                         </div>
                                      </div>
-                                     <div class="col-md-4">
+                                     <div style="margin-top: 20px;" class="col-md-4">
                                         <div class="info-input mb-20px">
                                            <label>Stock Alert <span class="link-danger">*</span></label>
                                            <input type="text" class="Addproduct" placeholder="Write Product quantity here" id="stock" name="stock"/>
@@ -140,17 +111,18 @@
                                      <input class="form-control" type="file" id="featured_img" onchange="previewFile()" name="featured_img">
                                      <label for="featured_img"><img src="{{asset('public/seller/assets/img/upload.svg')}}"/>Upload</label> 
                                   </div>
+
                                   <div class="uploaded-img">
-                                     <img style="width:120px;" class="featured_prev_img img-thumbnail" />
+                                     <img style="width:120px;height: 120px;" class="featured_prev_img img-thumbnail" />
                                      <div class="edit-trash d-flex">
                                         <img class="white featured_img_delete" onclick="removeFeatured()" src="{{asset('public/seller/assets/img/white-trash.svg')}}" style="display:none"/>
                                      </div>
                                   </div>
                                </div>
-                               <div class="info-input">
+                               <!-- <div class="info-input">
                                   <label style="font-weight:500;font-size:18px">youtube link <span class="link-danger">*</span></label>
                                   <input type="text" id="prod_video" name="prod_video" placeholder="https://www.youtube.com/watch?v=suk3mW0tDPA" class="form-control"/>    
-                               </div>
+                               </div> -->
                                <div class="product-img upload-content">
                                   <div class="featured-image d-flex">
                                      <p>Gallery Images<span class="link-danger">*</span></p>
@@ -168,113 +140,13 @@
                          </div>
                                </div>
                             </div>
-                        <div class="col-md-12 mt-5">
-                           <div class="card mb-5">
-                              <div class="card-header">
-                                 Product Attribute
-                              </div>
-                              <div class="card-body">
-                                 <table class="table table-bordered">
-                                  <thead>
-                                     <tr>
-                                        <th>Varient</th>
-                                        <th>Attribute</th>
-                                        <th>Price</th>
-                                        <th>Qty</th>
-                                        <th>Image</th>
-                                        <th>Action</th>
-                                     </tr>
-                                  </thead>
-                                  <tbody id="product_attr">
-                                     <tr class="product_attr_row" id="0">
-                                        <td>
-                                           <select class="form-control varient_select0" id="0" name="varient[]">
-                                              <option value="0">-select varient-</option>
-                                              @foreach($varient as $varients)
-                                              <option value="{{$varients->id}}">{{$varients->varient_name}}</option>
-                                              @endforeach
-                                           </select>
-                                        </td>
-                                        <td>
-                                           <select class="form-control attribute_select0" id="0" name="attribute[]">
-                                              <option value="0">-select attribute-</option>
-                                           </select>
-                                        </td>
-                                        <td><input type="text" name="cprice[]" id="price" class="form-control"/></td>
-                                        <td><input type="text" name="qty[]" id="price" class="form-control"/></td>
-                                        <td><input type="file" name="image_attr[]" id="image_attr" class="form-control"/></td>
-                                        <td><button class="btn btn-success addmore"><i class="fa fa-plus"></i></button></td>
-                                     </tr>
-                                  </tbody>
-                               </table>
-                              </div>
-                           </div>
-                            <div class="card product-attribute">
-                               <div class="card-body">
-                                     @if(Auth::guard('seller')->user()->delivery_by=='vendor')
-                                     <div class="col-md-12">
-                                        <h5>Delivery and shipping details:</h5>
-                                     </div>
-                                     <div class="col-md-12 delivery_partner" style="display:block;margin-top:30px">
-                                        <table class="table table-bordered">
-                                           <thead>
-                                              <tr>
-                                                 <th>Express Delivery</th>
-                                                 <th>Time/days</th>
-                                                 <th>Area</th>
-                                                 <th>Cast</th>
-                                                 <th>Action</th>
-                                              </tr>
-                                           </thead>
-                                           <tbody id="expressdelivery_attr">
-                                              <tr class="express_delivery_row" id="0">
-                                                 <td>
-                                                    <select class="form-control experess Addproduct" id="0" name="express_delivery[]">
-                                                       <option value="0">select delivery</option>
-                                                       <option value="1">Abu Dhabi</option>
-                                                       <option value="2">Sharjah</option>
-                                                       <option value="3">Dubai</option>
-                                                       <option value="4">Ras Al Khamiah</option>
-                                                       <option value="5">Ajman</option>
-                                                       <option value="6">Fujairah</option>
-                                                       <option value="7">Al Ain</option>
-                                                       <option value="8">Ummal Queen</option>
-                                                    </select>
-                                                 </td>
-                                                 <td>
-                                                    <input type="text" name="timedays[]" id="timedays" class="form-control Addproduct"/>
-                                                 </td>
-                                                 <td>
-                                                    <select class="form-control experess Addproduct" id="0" name="selectarea[]">
-                                                       <option value="0">select area</option>
-                                                       <option value="1">Abu Dhabi</option>
-                                                       <option value="2">Sharjah</option>
-                                                       <option value="3">Dubai</option>
-                                                       <option value="4">Ras Al Khamiah</option>
-                                                       <option value="5">Ajman</option>
-                                                       <option value="6">Fujairah</option>
-                                                       <option value="7">Al Ain</option>
-                                                       <option value="8">Ummal Queen</option>
-                                                    </select>
-                                                 </td>
-                                                 <td><input type="text" name="cast[]" id="cast" class="form-control Addproduct"/></td>
-                                                 <td><button class="btn btn-success addmoreexpress"><i class="fa fa-plus"></i></button></td>
-                                              </tr>
-                                           </tbody>
-                                        </table>
-                                     </div>
-                                     @endif
-                               </div>
-                            </div>
-                            </div>
-                         <div class="next btn"><a href="javascript:void()" id="addProduct_btn">Update Stock</a></div>
+                         <div class="next btn"><a href="javascript:void(0)" id="addProduct_btn">Update Stock</a></div>
                       </div>
                    </form>
-            <!--end::Card-->
+                </div>
+            </div>             
         </div>
-        <!--end::Container-->
     </div>
-    <!--end::Entry-->
 </div>
 @endsection
 @section('script')

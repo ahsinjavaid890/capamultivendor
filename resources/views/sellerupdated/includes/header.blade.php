@@ -37,7 +37,7 @@
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px" aria-expanded="false">
                     <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
                         <span class="svg-icon svg-icon-xl svg-icon-primary">
-                            <img src="{{asset('public/sellernew/media/custom/notification-bell.svg')}}">
+                            <!-- <img src="{{asset('public/sellernew/media/custom/notification-bell.svg')}}"> -->
                         </span>
                     </div>
                 </div>
@@ -162,8 +162,8 @@
             <!--begin::User-->
             <div class="topbar-item">
                 <div class="input-icon input-icon-right">
-                    <input type="text" class="form-control input-sm-top" placeholder="Search" />
-                    <span><i class="flaticon2-search-1 icon-md text-primary"></i></span>
+                    <!-- <input type="text" class="form-control input-sm-top" placeholder="Search" /> -->
+                    <!-- <span><i class="flaticon2-search-1 icon-md text-primary"></i></span> -->
                 </div>
             </div>
             <!--begin::User-->
@@ -204,8 +204,8 @@
                         <!--end::Symbol-->
                         <!--begin::Text-->
                         <div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5">
-                            Western Flyer Express <br>
-                            <small>Verified Carrier</small>
+                            {{ Auth::guard('seller')->user()->fname }} {{ Auth::guard('seller')->user()->lname }} <br>
+                            <small>{{ Auth::guard('seller')->user()->shop_name }}</small>
                         </div>
                         <!--end::Text-->
                     </div>

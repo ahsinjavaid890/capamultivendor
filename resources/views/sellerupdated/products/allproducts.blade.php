@@ -21,7 +21,6 @@
                     <table id="example" class="table table-bordered table-centered mb-0">
                        <thead>
                           <tr>
-                             <th></th>
                              <th>Featured Image</th>
                              <th>Product Title</th>
                              <th>Category</th>
@@ -34,8 +33,7 @@
                        <tbody>
                           @foreach($product_list as $product)
                           <tr>
-                             <td><input type="checkbox" id="makecheckbox" class="makecheckbox" value="{{$product->id}}"/></td>
-                             <td class="d-flex"><img class="img-thumbnail" src="{{asset('public/products/'.$product->featured_img)}}" style="width:100px;"/></td>
+                             <td class="text-center"><img class="img-thumbnail" src="{{asset('public/products/'.$product->featured_img)}}" style="width:100px;height: 100px;"/></td>
                              <td>{{$product->product_title}}</td>
                              <td>{{$product->cat_name}}</td>
                              <td>{{$product->subcat_name}}</td>

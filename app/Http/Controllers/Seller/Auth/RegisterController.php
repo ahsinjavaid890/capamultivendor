@@ -50,6 +50,7 @@ class RegisterController extends Controller
             $setcustomer->password = Hash::make($request->password);
             $setcustomer->city = $request->city;
             $setcustomer->otp = $otp;
+            $setcustomer->isVerify = 2;
             $setcustomer->status='1';
             $setcustomer->save();
             $lastid = $setcustomer->id;            
@@ -61,9 +62,10 @@ class RegisterController extends Controller
             $sellerDocs->save();               
             $fullname = $request->fname.' '.$request->lname; 
             if($setcustomer==true){                
-            $this->basic_email($last_email,$fullname,$otp);
-
-              return redirect('/signup-otp'.'/'.encrypt($last_email).'/'.encrypt($request->password))->with('success','please check your inbox to verify your email!');
+            // $this->basic_email($last_email,$fullname,$otp);
+            Auth::guard('seller')->attempt(['email'=>$request->email,'password'=>$request->password]);
+            return redirect()->intended('seller/seller-profile')->with('success','Seller Verfied Successfull!');
+              // return redirect('/signup-otp'.'/'.encrypt($last_email).'/'.encrypt($request->password))->with('success','please check your inbox to verify your email!');
 
                 // if(Auth::guard('seller')->attempt(['email'=>$last_email,'password'=>$request->password])){
                 //     return redirect()->intended('seller/seller-profile')->with('success','Seller Registered Successfull!');

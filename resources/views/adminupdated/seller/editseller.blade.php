@@ -1,7 +1,6 @@
 @extends('adminupdated.layouts.main-layout')
 @section('title','Edit Seller')
 @section('content')
-
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Entry-->
     <div class="d-flex flex-column-fluid">
@@ -14,184 +13,86 @@
             	 </div>
             </div>
             <div class="card card-custom mt-5">
+                <div class="card-body">
+                	<form action="{{route('admin.updatevendorprocess')}}" method="POST" enctype="multipart/form-data" id="updatevendor">
+                        @csrf
+                        <div class="row form-detail">
+                           <div class="col-md-6">
+                              <label>Email Address</label>
+                              <div class="info-input mb-20px">
+                                 <input style="height:52px;"  type="email" value="{{$vendors->email}}" class="form-control" name="personal_eamil" readonly/>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <label>Shop Name</label>
+                              <div class="info-input mb-20px">
+                                 <input required style="height:52px;"  name="shop_name" type="text" value="{{$vendors->shop_name}}" class="form-control" name="shop_name"/>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <label>Shop Logo</label>
+                              <div class="info-input mb-20px">
+                                 <input  name="shop_logo" type="file" style="height:52px;" class="form-control" name="shop_logo"/>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <label>Shop Banner</label>
+                              <div class="info-input mb-20px">
+                                 <input  name="shop_banner" type="file" style="height:52px;" class="form-control"/>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <label>Shop Address</label>
+                              <div class="info-input mb-20px">
+                                 <input value="{{$vendors->shop_address}}" required name="shop_address" type="text" style="height:52px;" class="form-control"/>
+                              </div>
+                           </div>
+                           
+                        </div>
+                       </div> 
+                        
+                        <div class="card card-custom mt-5">
                 <div class="card-header flex-wrap py-5">
                     <div class="card-title">
                         <h3 class="card-label">
-                            Edit Sallers
-                            <div class="text-muted pt-2 font-size-sm">
-                                <a class="badge badge-success" href="">Basic Details</a>
-                                <a class="badge badge-primary" href="">Contact Info</a>
-                                <a class="badge badge-primary" href="">Documents</a>
-                            </div>
+                            Complete Your Seller Profile (Payement Details)
+                            <div class="text-muted pt-2 font-size-sm">Payement Details</div>
                         </h3>
                     </div>
                 </div>
                 <div class="card-body">
-                	<form action="{{route('admin.updatevendorprocess')}}" method="POST" enctype="multipart/form-data" id="updatevendor">
-                        @csrf
-                        <div class="tabs-main-block">
-                        <h1 class="mt-4 main-title">Personal Information</h1>
-                        <div class="form-detail personal-info">
-                            <div class="row">
-                            <input type="hidden" value="{{$vendors->id}}" id="id" name="id">
-                            <input type="hidden" value="{{$vendors->bank}}" id="bankname">
-                            <input type="hidden" value="{{$vendors->registered_as}}" id="registered_as">
-                            <input type="hidden" value="{{$vendors->delivery_by}}" id="delivery_by">
-                            <input type="hidden" value="{{$vendors->product_type}}" id="product_type">
-                            <input type="hidden" value="{{$vendors->city}}" id="city">
-                                <div class="col-md-6">
-                                    <label>First name</label>
-                                    <input type="email" class="form-control form-control-lg form-control-solid" value="{{$vendors->fname}}" name="fname"/>
-                                </div>
-                                <div class="col-md-6">
-                                    <label>Last name <span style="color:red">*</span></label>
-                                    <input type="email" class="form-control form-control-lg form-control-solid" value="{{$vendors->lname}}" name="lname"/>
-                                </div>
-                            </div>
-                            <div class="row mt-5">
-                                <div class="col-md-6">
-                                    <label>Email Address</label>
-                                    <input type="email" class="form-control form-control-lg form-control-solid" value="{{$vendors->email}}" name="email"/>
-                                </div>
-                                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
-                                <div class="col-md-6">
-                                    <label>Emirates ID</label>
-                                    <input placeholder="000000-000000-000000-000000" data-inputmask="'mask': '999999-999999-999999-999999'" class="form-control form-control-lg form-control-solid" type="text" value="{{$vendors->emirates_id}}" name="emiratesid"/>
-                                </div>
-                                <script>
-                                  $(":input").inputmask();
-                                </script>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-md-12">   
-                                    <div class="payment-detail info-input">
-                                        <label>Payment Details</label>
-                                        <select id="payment_option" class="paymentOption form-control form-control-lg form-control-solid" name="paymentoption">
-                                            <option value="0">-select payment option-</option>
-                                            <option @if($vendors->payment_option == 'Paypal') selected @endif value="paypal">Paypal</option>
-                                            <option @if($vendors->payment_option == 'stripe') selected @endif value="stripe">Stripe</option>
-                                            <option @if($vendors->payment_option == 'bank') selected @endif value="bank">Bank Transfer</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="payment-detail info-input paypal_section mt-3" @if($vendors->payment_option != 'Paypal') style="display:none" @else  @endif >
-                              <label>PayPal Id<span class="link-danger">*</span></label>
-                              <input type="text" class="form-control form-control-lg form-control-solid" id="paypal_id" />
-                           </div>
-                           <div class="payment-detail info-input stripe_section mt-3" @if($vendors->payment_option != 'stripe') style="display:none" @else  @endif>
-                              <label>Stripe Id<span class="link-danger">*</span></label>
-                              <input type="text" class="form-control form-control-lg form-control-solid" id="stripe_id" />
-                           </div> 
-                           <div class="row mt-3">
-                                <div class="col-md-12 bank_details" @if($vendors->payment_option != 'bank') style="display:none" @else  @endif>
+                    <div class="tab-pane show active px-7" id="kt_user_edit_tab_1" role="tabpanel">
+                        <div class="row form-detail">
+                            <div class="col-md-12 bank_details">
                               <div class="row">
                                  <div class="col-md-6">
                                     <div class="info-input mb-20px">
                                        <label>Account holder name<span style="color:red">*</span></label>
-                                       <input type="text" class="form-control form-control-lg form-control-solid" id="personal_accountTitle" value="{{$vendors->account_title}}"/>
+                                       <input style="height:52px;" type="text" class="form-control" name="personal_accountTitle" value="{{$vendors->account_title}}"/>
                                     </div>
                                  </div>
                                  <div class="col-md-6">
                                     <div class="payment-detail info-input">
                                        <label>Bank Name<span class="link-danger">*</span></label>
-                                       <select class="form-control form-control-lg form-control-solid" id="personal_bank">
-                                          <option value="0">-select bank-</option>
-                                          <option value="Emirates NBD">Emirates NBD</option>
-                                          <option value="ADCB">ADCB</option>
-                                          <option value="Bank Islamic">Bank Islamic</option>
-                                          <option value="Dubai Islamic Bank">Dubai Islamic Bank</option>
-                                       </select>
+                                       <input style="height:52px;" type="text" class="form-control" name="bank" value="{{$vendors->bank}}"/>
                                     </div>
                                  </div>
                               </div>
-                           </div>   
-                            <div class="col-md-12 bank_details" @if($vendors->payment_option != 'bank') style="display:none" @else  @endif>
+                           </div>
+                           <div class="col-md-12 bank_details">
                               <div class="info-input mb-20px">
                                  <label>Account Number (IBAN)<span style="color:red">*</span></label>
-                                 <input type="text" class="form-control form-control-lg form-control-solid" id="personal_accountno" value="{{$vendors->account_no}}"  maxlength="23"/>
+                                 <input style="height:52px;" type="text" class="form-control" name="personal_accountno" value="{{$vendors->account_no}}"  maxlength="23"/>
                               </div>
-                           </div> 
-                           </div> 
-                           <div class="row">
-                               <div class="col-md-6">                                    
-                                    <div class="register-yourself checkout-radio mt-3 d-flex">
-                                       <h4 style="margin-right: 20px;">Register Yourself As</h4>
-                                       <div class="both-radio d-flex">
-                                          <div style="margin-right: 20px;" class="radio-button">
-                                             <div class="input-label me-5">
-                                                <input style="height: 20px;width: 20px;" type="checkbox" name="delivery" id="licensed_seller" class="registeras personal_info" value="Licensed"/>
-                                                <label for="licensed_seller">Licensed Seller</label>
-                                             </div>
-                                          </div>
-                                          <div class="radio-button">
-                                             <div class="input-label">
-                                                <input style="height: 20px;width: 20px;" type="checkbox" name="delivery" id="freelancer_seller" class="registeras personal_info" value="Freelancer"/>
-                                                <label for="freelancer_seller">Freelancer Seller</label>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>  
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="register-yourself checkout-radio mt-3 d-flex">
-                                       <h4 style="margin-right: 20px;">Products Delivery Via</h4>
-                                       <div class="both-radio d-flex">
-                                          <div style="margin-right: 20px;" class="radio-button">
-                                             <div class="input-label me-5">
-                                                <input style="height: 20px;width: 20px;" type="checkbox" name="delivery" id="licensed_seller" class="registeras personal_info" value="Licensed"/>
-                                                <label for="licensed_seller">Vendor</label>
-                                             </div>
-                                          </div>
-                                          <div class="radio-button">
-                                             <div class="input-label">
-                                                <input style="height: 20px;width: 20px;" type="checkbox" name="delivery"  id="delivery_third" class="deliveryvia personal_info" value="third party"/>
-                                                <label for="freelancer_seller">Third Party Delivery Service</label>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                </div>
-                           </div>                                    
-                            <div class="row">
-                                <div class="col-md-6 cmp_name">
-                                    <div class="info-input mb-20px">
-                                        <label>Company Name <span style="color:red">*</span></label>
-                                        <input type="text" class="form-control form-control-lg form-control-solid" value="{{$vendors->company_name}}" name="companyname"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 cmp_add">
-                                    <div class="info-input mb-20px">
-                                        <label>Company Address </label>
-                                        <input id="personal_companyadd" type="text" class="form-control form-control-lg form-control-solid" value="{{$vendors->company_address}}" name="companyadd"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 cmp_loc">
-                                   <div class="info-input mb-20px">
-                                      <iframe
-                                         id="ifrm_preview"
-                                         width="100%"
-                                         height="450"
-                                         frameborder="0" style="border:0"
-                                         referrerpolicy="no-referrer-when-downgrade"
-                                         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPraI53LsplwhkIsXED0pMxPniz3YKYfg&q=''"
-                                         allowfullscreen>
-                                      </iframe>
-                                   </div>
-                                </div>
-                            </div>  
-                            <div class="row mt-5">
-                                <div class="col-md-12">
-                                    <button class="btn btn-success vendorupdate">Update Basic Details</button>
-                                </div>
-                            </div>                                          
-                            </div>
+                           </div>
+                           <br><br><br><br><br><br><br>
+                           <div class="col-md-12">
+                               <button type="submit" class="btn btn-success">Save</button>
+                           </div>
                         </div>
-                       </div> 
-                        
-                        
+                    </div>
+                </div>
+            </div>
                     </form>
                 </div>
             </div>

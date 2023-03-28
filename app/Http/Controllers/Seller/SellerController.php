@@ -114,43 +114,17 @@ class SellerController extends Controller
         return redirect()->back()->with('message', 'Store Banner Updated Successfully');
     }
     public function completeProfile(Request $request){
-        $emirates = $request->emirates;
-        $account_title = $request->account_title;
-        $bank = $request->bank;
-        $account_no = $request->account_no;
-        $paypal_id = $request->paypal_id;
-        $stripe_id = $request->stripe_id;
-        $registered_as = $request->registered_as;
-        $company_name = $request->company_name;
-        $company_address = $request->company_address;
-        $payment_option = $request->payment_option;
-        $delivery_by = $request->delivery_by;
-        $product_type = $request->product_type;
-        $product_collection = collect($product_type)->implode(',');
-
-        $seller_id = Auth::guard('seller')->user()->id;
-
-        $update_seller_profile = Seller::where('id',$seller_id)
-                                ->update([
-                                    'emirates_id'=>$emirates,
-                                    'account_title'=>$account_title,
-                                    'bank'=>$bank,
-                                    'account_no'=>$account_no,
-                                    'paypal_id'=>$paypal_id,
-                                    'stripe_id'=>$stripe_id,
-                                    'registered_as'=>$registered_as,
-                                    'company_name'=>$company_name,
-                                    'company_address'=>$company_address,
-                                    'payment_option'=>$payment_option,
-                                    'delivery_by'=>$delivery_by,
-                                    'product_type'=>$product_collection
-                                ]);
-               if($update_seller_profile==true){
-                   return response()->json('1');
-               }else{
-                return response()->json('2');
-               }                 
-               
+        $seller_id  = Auth::guard('seller')->user()->id;
+        $store = Seller::find($seller_id);
+        $store->shop_name = $request->shop_name;
+        $store->shop_address = $request->shop_address;
+        $store->account_title = $request->account_title;
+        $store->bank = $request->bank;
+        $store->account_no = $request->account_no;
+        $store->shop_logo = Cmf::sendimagetodirectory($request->file('shop_logo'));
+        $store->shop_banner = Cmf::sendimagetodirectory($request->file('shop_banner'));
+        $store->save();
+        return redirect()->intended('seller/seller-profile')->with('message','Seller Profile Complete. We Will Approve You Soon!');
     }
 
     public function update_contact_info(Request $request){
@@ -270,9 +244,9 @@ class SellerController extends Controller
         $marketplace = $this->online_marketplace();
         if($completed==1){
             // return view('sellerupdated.profile.complete_profile',compact('cat','membership','online_directory','marketplace'));
-            return view('seller.complete_profile',compact('cat','membership','online_directory','marketplace'));
+            return view('sellerupdated.profile.complete_profile',compact('cat','membership','online_directory','marketplace'));
         }else{
-            return view('sellerupdated.profile.profile',compact('getdata','choosen_plan'));
+            return view('sellerupdated.profile.complete_profile',compact('cat','membership','online_directory','marketplace'));
         }
     }
     public function membershipplan(Request $request)
@@ -298,16 +272,8 @@ class SellerController extends Controller
                        ->where('added_by_seller','=',$added_seller)
                        ->orderBy('products.id','desc')
                        ->get();
-        if($choosen_plan)
-        {
-            if($choosen_plan['online_directory']==1 && $choosen_plan['marketplace']==0){
-                return view('sellerupdated.service.allservices',compact('services'));
-            }else{                   
-                return view('sellerupdated.products.add_product',compact('cat','subcat','varient','attribute','sizes','product_list','choosen_plan'));
-            }
-        }else{
-           return redirect()->route('seller.home')->with('warning','Your Plan is Not Active!');
-        } 
+                   
+        return view('sellerupdated.products.add_product',compact('cat','subcat','varient','attribute','sizes','product_list','choosen_plan'));
     }
 
     public function editproduct($id)
@@ -736,96 +702,56 @@ public function AttributeDelete(Request $request){
     
     
     // add product process
-    
-    public function addProductProcess(Request $request){
-    
-        $added_by = Auth::guard('seller')->user()->id;
-        $featured_img = time().'.'.$request->featured_img->extension();   
-        $request->featured_img->move(public_path('products'), $featured_img);
-        $returnrefundable = $request->returnrefundable;
-        $warranty=$request->warranty;
-        $insertProd = new Product;
-        $insertProd->product_title=$request->prod_title;
-        $insertProd->url=Cmf::shorten_url($request->prod_title);
-        $insertProd->product_code=$request->prod_code;
-        $insertProd->category=$request->prod_cat;
-        $insertProd->subcategory=$request->prod_subcat;
-        $insertProd->prod_price=$request->prod_price;
-        $insertProd->sale_price=$request->sale_price;
-        $insertProd->cast_price=$request->cost_price;
-        $insertProd->prodict_unit=$request->prod_unit;
-        $insertProd->stock_alert=$request->stock;
-        $insertProd->short_desc=$request->short_desc;
-        $insertProd->long_desc=$request->long_desc;
-        $insertProd->varient='0';        
-        $insertProd->featured_img=$featured_img;
-        // $insertProd->video=$prod_video;
-        $insertProd->warranty=$warranty;
-        $insertProd->added_by_seller=$added_by;
-        $insertProd->refund_return=$returnrefundable;
-        $insertProd->save();
-        if($request->product_gallery_img)
-        {
-            foreach($request->product_gallery_img as $r){
-                $gallery = new productgallerimages();
-                $gallery->product_id = $insertProd->id;
-                $gallery->image = Cmf::sendimagetodirectory($r);
-                $gallery->save();
-            }
-        }
-        $last_id = $insertProd->id;
-        if($request->variated == 'on')
-        {
-            $prod_att_price = $request->cprice;
-            $lenth_prod = count($prod_att_price);
-            for($i=0;$i<$lenth_prod;$i++){
-                $image_attr = time().'.'.$request->image_attr[$i]->extension();   
-                $request->image_attr[$i]->move(public_path('products'), $image_attr);
-                $prod_attr = new Product_attr;
-                $prod_attr->product_id=$last_id;
-                $prod_attr->qty=$request->qty[$i];
-                $prod_attr->price=$request->cprice[$i];
-                $prod_attr->varient=$request->varient[$i];
-                $prod_attr->attribute=$request->attribute[$i];
-                $prod_attr->img_attr=$image_attr[$i];
-                $prod_attr->save();
-            }
-        }
-        
-
-        
-            // express delivery 
-
-        $express_delivery = $request->express_delivery;
-        $time_days = $request->timedays;
-        $express_area = $request->selectarea;
-        $cast = $request->cast;
-        $toal_express_size = count($express_delivery);
-        for($j=0;$j<$toal_express_size;$j++){
-            $save_express = new ExpressDelivery;
-            $save_express->product_id=$last_id;
-            $save_express->express_delivery=$express_delivery[$j];
-            $save_express->time_days=$time_days[$j];
-            $save_express->delivery_area=$express_area[$j];
-            $save_express->delivery_cast=$cast[$j];
-            $save_express->save();
-        }
-    
-    
-        if($insertProd == true){
-            return back()->with('success','product added successfull!');
-        }else{
-            return back()->with('error','something went wrong !'); 
+public function addProductProcess(Request $request){
+    $added_by = Auth::guard('seller')->user()->id;
+    $featured_img = time().'.'.$request->featured_img->extension();   
+    $request->featured_img->move(public_path('products'), $featured_img);
+    $returnrefundable = $request->returnrefundable;
+    $warranty=$request->warranty;
+    $insertProd = new Product;
+    $insertProd->product_title=$request->prod_title;
+    $insertProd->url=Cmf::shorten_url($request->prod_title);
+    $insertProd->product_code=$request->prod_code;
+    $insertProd->category=$request->prod_cat;
+    $insertProd->subcategory=$request->prod_subcat;
+    $insertProd->prod_price=$request->prod_price;
+    $insertProd->sale_price=$request->sale_price;
+    $insertProd->cast_price=0;
+    $insertProd->prodict_unit=$request->prod_unit;
+    $insertProd->stock_alert=$request->stock;
+    $insertProd->short_desc=$request->short_desc;
+    $insertProd->long_desc=$request->long_desc;
+    $insertProd->varient='0';        
+    $insertProd->featured_img=$featured_img;
+    $insertProd->status=1;
+    $insertProd->warranty=$warranty;
+    $insertProd->added_by_seller=$added_by;
+    $insertProd->refund_return=$returnrefundable;
+    $insertProd->save();
+    if($request->product_gallery_img)
+    {
+        foreach($request->product_gallery_img as $r){
+            $gallery = new productgallerimages();
+            $gallery->product_id = $insertProd->id;
+            $gallery->image = Cmf::sendimagetodirectory($r);
+            $gallery->save();
         }
     }
-    public function updateProductProcess(Request $request)
+        // express delivery 
+
+    if($insertProd == true){
+        return back()->with('success','product added successfull!');
+    }else{
+        return back()->with('error','something went wrong !'); 
+    }
+}    
+public function updateProductProcess(Request $request)
     {
         if($request->featured_img)
         {
             $featured_img = time().'.'.$request->featured_img->extension();   
             $request->featured_img->move(public_path('products'), $featured_img);
         }
-
         if($request->product_gallery_img)
         {
             foreach($request->product_gallery_img as $r){
@@ -835,10 +761,6 @@ public function AttributeDelete(Request $request){
                 $gallery->save();
             }
         }
-
-        
-
-
         $insertProd = Product::find($request->product_id);
         $insertProd->product_title=$request->prod_title;
         $insertProd->url=Cmf::shorten_url($request->prod_title);
@@ -857,48 +779,16 @@ public function AttributeDelete(Request $request){
         {
             $insertProd->featured_img=$featured_img;
         }
-        $insertProd->warranty=$request->warranty;
-        $insertProd->refund_return=$request->returnrefundable;
         $insertProd->save();
-        if($request->variated == 'on')
-        {
-            $prod_att_price = $request->cprice;
-            $lenth_prod = count($prod_att_price);
-            for($i=0;$i<$lenth_prod;$i++){
-                $image_attr = time().'.'.$request->image_attr[$i]->extension();   
-                $request->image_attr[$i]->move(public_path('products'), $image_attr);
-                $prod_attr = new Product_attr;
-                $prod_attr->product_id=$last_id;
-                $prod_attr->qty=$request->qty[$i];
-                $prod_attr->price=$request->cprice[$i];
-                $prod_attr->varient=$request->varient[$i];
-                $prod_attr->attribute=$request->attribute[$i];
-                $prod_attr->img_attr=$image_attr[$i];
-                $prod_attr->save();
-            }
-        }
-        ExpressDelivery::where('product_id' , $request->product_id)->delete();
-        $express_delivery = $request->express_delivery;
-        $time_days = $request->timedays;
-        $express_area = $request->selectarea;
-        $cast = $request->cast;
-        $toal_express_size = count($express_delivery);
-        for($j=0;$j<$toal_express_size;$j++){
-            $save_express = new ExpressDelivery;
-            $save_express->product_id=$request->product_id;
-            $save_express->express_delivery=$express_delivery[$j];
-            $save_express->time_days=$time_days[$j];
-            $save_express->delivery_area=$express_area[$j];
-            $save_express->delivery_cast=$cast[$j];
-            $save_express->save();
-        }
+
+
 
         if($insertProd == true){
-            return back()->with('success','product Updated Successfully');
+            return back()->with('success','Product Updated Successfully');
         }else{
             return back()->with('error','something went wrong !'); 
         }
-    }
+    } 
     public function productActive(Request $request){
         $active = Product::where('id','=',$request->id)
                   ->update([

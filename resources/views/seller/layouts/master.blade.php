@@ -9,9 +9,9 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Dashboard</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="{{asset('seller/css/styles.css')}}" rel="stylesheet" />
-        <link href="{{asset('seller/css/responsive.css')}}" rel="stylesheet" />
-        <link href="{{asset('seller/css/responsive.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/seller/css/styles.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/seller/css/responsive.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/seller/css/responsive.css')}}" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

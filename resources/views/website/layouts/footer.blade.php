@@ -35,7 +35,7 @@
                                     <div class="footer-logo">
                                         <img style="width: 40%;" src="{{ url('public/website/assets/images/footerlogo.png') }}">
                                     </div>
-                                    <p class="text-infor">CAPA was born as a small enterprise with big dreams in Chandigarh in 2017. We aimed to introduce the bakery as a career choice for entrepreneur.</p>
+                                    <p class="text-infor">Welcome to the world of sweetness, where flour, sugar, and creativity come together in harmony! Cakeuncle's Family is circle of strength, love and trust so welcome to Cakeuncle Family</p>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">

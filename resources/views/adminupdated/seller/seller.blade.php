@@ -58,11 +58,9 @@
                                 @elseif($vendor->status==2)
                                <button class="btn btn-outline-success deactivate" title="Active" data="{{$vendor->id}}"><i class="fa fa-check"></i></button>
                                 @endif
-                                <a href="{{url('admin/editvendors')}}/{{$vendor->id}}/basic"><button class="btn btn-outline-primary" title="Edit"><i class="fa fa-pen"></i></button></a>
+                                <a href="{{url('admin/editvendors')}}/{{$vendor->id}}/basic"><button class="btn btn-outline-primary" title="Edit"><i class="fa fa-eye"></i></button></a>
                                 <button class="btn btn-outline-danger delete" title="Delete" data="{{$vendor->id}}"><i class="fa fa-trash"></i></button>
-                                <a href="{{route('admin.vendor_membership',[encrypt($vendor->id)])}}"><button class="btn btn-outline-warning mt-2" title="Plan details">Membership</button></a>
-                                </td>
-                                
+                                </td>                                
                             </tr>
                              @endforeach                                              
                         </tbody>
