@@ -8525,6 +8525,7 @@ element.style {
 }
 .banner_image{
 	box-shadow: 5px 5px 15px rgb(0 0 0 / 5%);
+	margin-top: 15px;
 }
 .category_image img{
 	width: 72%;
