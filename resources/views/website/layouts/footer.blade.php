@@ -33,7 +33,7 @@
                             <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
                                 <div class="single-wedge">
                                     <div class="footer-logo">
-                                        <img style="width: 40%;" src="{{ url('public/website/assets/images/footerlogo.png') }}">
+                                        <img style="width: 66%;" src="{{ url('public/website/assets/images/footerlogo.png') }}">
                                     </div>
                                     <p class="text-infor">Welcome to the world of sweetness, where flour, sugar, and creativity come together in harmony! Cakeuncle's Family is circle of strength, love and trust so welcome to Cakeuncle Family</p>
                                 </div>
@@ -66,7 +66,7 @@
                             <div class="col-md-6 col-lg-3 ">
                                 <div class="single-wedge ps-5">
                                     <h4 class="footer-herading">Contact Us</h4>
-                                    <p class="fs-6 mb-2">Office Address: Quite Office no.6, Ground Floor, Flower Market, Sector 35 A Chandigarh</p>
+                                    <p class="fs-6 mb-2">Address: Quite Office no.6, Ground Floor, Flower Market, Sector 35 A Chandigarh</p>
                                     <p class="fs-6 mb-2">WhatsApp US : +91 88743-88780</p>
                                     <p class="fs-6 mb-2">Email Address: cakeunclechd@gmail.com</p>
                                 </div>
